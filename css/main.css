@@ -1,0 +1,223 @@
+:root {
+  font-size: 20px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(90deg, rgb(65, 132, 200) 0%, rgb(226, 110, 187) 100%);
+}
+body h1 {
+  font-size: 4rem;
+}
+body h2 {
+  font-size: 3rem;
+}
+body h3 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  max-width: 1400px;
+}
+
+.all {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 40px;
+  padding-top: 30px;
+  margin-top: 70px;
+}
+
+nav .container-fluid {
+  background-color: white;
+  border-radius: 40px;
+  border: 2px solid black;
+  position: fixed;
+  max-width: 1400px;
+  margin-top: 70px;
+  z-index: 1000;
+}
+nav .container-fluid a.nav-link {
+  transition: 0.2s;
+}
+nav .container-fluid a.nav-link:hover {
+  scale: 1.1;
+}
+
+.hero {
+  height: 500px;
+  background-image: url("../img/school-book-1560339_640.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-radius: 40px;
+}
+.hero h1 {
+  color: white;
+  text-shadow: 5px 5px 5px rgb(27, 37, 172);
+  padding-top: 50px;
+}
+.hero p {
+  color: white;
+  text-shadow: 5px 5px 5px rgb(27, 37, 172);
+  padding-top: 20px;
+}
+
+.reviews__box {
+  position: relative;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
+  transition: transform 0.3s;
+}
+.reviews__box:hover {
+  transform: scale(0.95);
+}
+.reviews__box-img {
+  position: absolute;
+  top: 8%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.reviews__box-img img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  color: #1b25ac;
+}
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.atuty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atut {
+  background-color: white;
+  text-align: center;
+  margin: 30px;
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10%;
+  box-shadow: 7px 3px 3px black;
+}
+.atut i {
+  font-size: 60px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.subject {
+  height: 150px;
+  width: 150px;
+  border: #ff3ea2 7px solid;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.subject-def {
+  background-position: center;
+  background-size: 300px auto;
+  background-repeat: no-repeat;
+  box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
+}
+
+.subject1 {
+  background-image: url(../img/mat-but.png);
+}
+
+.subject7 {
+  background-image: url(../img/eng-but.png);
+}
+
+.subject6 {
+  background-image: url(../img/inf-but.png);
+}
+
+.subject5 {
+  background-image: url(../img/inf-but.png);
+}
+
+.subject4 {
+  background-image: url(../img/chem-but.png);
+}
+
+.subject3 {
+  background-image: url(../img/phy-but.png);
+}
+
+.subject2 {
+  background-image: url(../img/biol-but.png);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 50px;
+  background: none;
+}
+
+.card-body {
+  background-color: white;
+}
+
+.card-group > .card:not(:first-child) .card-img-top {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.card-group > .card:not(:last-child) .card-img-top {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.nav-tabs {
+  background-color: white;
+}
+.nav-tabs .nav-link {
+  font-weight: bold;
+  color: black;
+}
+
+.tab-content > .active {
+  background-color: #ff3ea2;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin: 0 20px;
+  }
+  .hero {
+    background-image: url("../img/school-book-1560339_1920.jpg");
+  }
+}/*# sourceMappingURL=main.css.map */
