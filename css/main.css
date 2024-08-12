@@ -1,20 +1,25 @@
+@charset "UTF-8";
 :root {
-  font-size: 20px;
+  font-size: 10px;
 }
 
 body {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
   background: linear-gradient(90deg, rgb(65, 132, 200) 0%, rgb(226, 110, 187) 100%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
 }
 body h1 {
   font-size: 4rem;
+  font-family: "Kodchasan", sans-serif;
 }
 body h2 {
   font-size: 3rem;
+  font-family: "Kodchasan", sans-serif;
 }
 body h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: "Kodchasan", sans-serif;
 }
 
 a {
@@ -26,47 +31,118 @@ a {
   max-width: 1400px;
 }
 
-.all {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 40px;
-  padding-top: 30px;
-  margin-top: 70px;
+header {
+  font-size: 1.8rem;
+  background-color: #4AE8FF;
+}
+header .top {
+  display: flex;
+  padding: 5px;
+}
+header span {
+  padding: 2px 20px;
+}
+header .menu-right {
+  width: 35%;
+  justify-content: end;
+}
+header .menu-right span {
+  background-color: #ff3ea2;
+  color: #e9fcff;
+}
+header .menu-left {
+  margin: auto;
+  width: 65%;
+  justify-content: space-between;
+}
+header .menu-left span {
+  background-color: #e9fcff;
+  color: #1b25ac;
+}
+header a {
+  transition: 0.3s;
 }
 
-nav .container-fluid {
-  background-color: white;
-  border-radius: 40px;
-  border: 2px solid black;
+.menu-nav {
   position: fixed;
-  max-width: 1400px;
-  margin-top: 70px;
-  z-index: 1000;
+  width: 100vw;
+  z-index: 100;
+  top: 50px;
+  animation: nav-top 1s linear 1 forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -40s);
+  color: #280F91;
 }
-nav .container-fluid a.nav-link {
-  transition: 0.2s;
+.menu-nav .bar {
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
+  width: 100vw;
 }
-nav .container-fluid a.nav-link:hover {
-  scale: 1.1;
+.menu-nav .menu {
+  background-color: white;
+}
+.menu-nav .menu img {
+  height: 80px;
+}
+.menu-nav .menu .menu-item {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-size: 2rem;
+}
+.menu-nav #menuitems {
+  display: none;
 }
 
 .hero {
-  height: 500px;
-  background-image: url("../img/school-book-1560339_640.jpg");
+  height: 100vh;
+  background-image: url(../images/Zdjęcia/zdjęcie\ tytuł\ strony.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
 }
 .hero h1 {
   color: white;
   text-shadow: 5px 5px 5px rgb(27, 37, 172);
-  padding-top: 50px;
 }
-.hero p {
+.hero button {
+  width: 500px;
+  margin-top: 20px;
+  padding: 20px 2px;
+  margin-top: 40px;
   color: white;
-  text-shadow: 5px 5px 5px rgb(27, 37, 172);
-  padding-top: 20px;
+  border: none;
+}
+.hero button:first-of-type {
+  background-color: #ff3ea2;
+}
+.hero button:last-of-type {
+  background-color: #4AE8FF;
+}
+
+.stats {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.stats .stats-item {
+  text-align: center;
+  height: 160px;
+  border-right: #280F91 solid 2px;
+  color: #280F91;
+  margin: 20px 0px;
+}
+.stats .stats-item span {
+  font-weight: bold;
+  font-size: 4rem;
+}
+.stats .stats-item:last-of-type {
+  border: none;
 }
 
 .reviews__box {
@@ -132,9 +208,6 @@ nav .container-fluid a.nav-link:hover {
   border: #ff3ea2 7px solid;
   border-radius: 20px;
   margin: 20px;
-}
-
-.subject-def {
   background-position: center;
   background-size: 300px auto;
   background-repeat: no-repeat;
@@ -212,12 +285,44 @@ nav .container-fluid a.nav-link:hover {
 }
 
 @media (min-width: 992px) {
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 40px;
-    padding-left: 40px;
-    margin: 0 20px;
+  body {
+    font-size: 2.5rem;
   }
-  .hero {
-    background-image: url("../img/school-book-1560339_1920.jpg");
+  body h1 {
+    font-size: 6rem;
+  }
+  body h2 {
+    font-size: 4.5rem;
+  }
+  body h3 {
+    font-size: 3.5rem;
+  }
+  header a:hover {
+    transform: scale(1.2);
+  }
+  .menu-nav .bar {
+    display: none;
+  }
+  .menu-nav #menuitems {
+    display: flex;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+  }
+  .menu-nav .menu-item {
+    text-align: center;
+    align-self: center;
+  }
+}
+@media (max-width: 361px) {
+  header {
+    font-size: 1.5rem;
+  }
+}
+@keyframes nav-top {
+  to {
+    top: 5px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,20 +1,25 @@
 @use './colors' as *;
 :root {
-	font-size: 20px;
+	font-size: 10px;
 }
+
 body {
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
 	background: linear-gradient(90deg, rgba(65, 132, 200, 1) 0%, rgba(226, 110, 187, 1) 100%);
 	h1 {
 		font-size: 4rem;
+		font-family: 'Kodchasan', sans-serif;
 	}
 	h2 {
 		font-size: 3rem;
+		font-family: 'Kodchasan', sans-serif;
 	}
 	h3 {
-		font-size: 2rem;
+		font-size: 2.5rem;
+		font-family: 'Kodchasan', sans-serif;
 	}
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
 }
 a {
 	text-decoration: none;
@@ -23,55 +28,126 @@ a {
 .container {
 	max-width: 1400px;
 }
-.all {
-	background-color: rgba(360, 360, 360, 0.4);
-	border-radius: 40px;
-	padding-top: 30px;
-	margin-top: 70px;
-}
 
-// NAV
-
-nav {
-	.container-fluid {
-		background-color: white;
-		border-radius: 40px;
-		border: 2px solid black;
-		position: fixed;
-		max-width: 1400px;
-		margin-top: 70px;
-		z-index: 1000;
-		a.nav-link {
-			transition: 0.2s;
-		}
-		a.nav-link:hover {
-			scale: 1.1;
+header {
+	font-size: 1.8rem;
+	background-color: #4AE8FF;
+	.top {
+		display: flex;
+		padding: 5px;
+	}
+	span {
+		padding: 2px 20px;
+	}
+	.menu-right {
+		width: 35%;
+		justify-content: end;
+		span {
+			background-color: #ff3ea2;
+			color: #e9fcff;
 		}
 	}
-}
+	.menu-left {
+		margin: auto;
+		width: 65%;
+		justify-content: space-between;
+		span {
+			background-color: #e9fcff;
+			color: #1b25ac;
+		}
+	}
+	a {
+		transition: 0.3s;
+	}
 
+}
+// NAV
+.menu-nav{
+	position: fixed;
+	width: 100vw;
+	z-index: 100;
+	top: 50px;
+	animation: nav-top 1s linear 1 forwards;   
+	animation-play-state: paused;   
+	animation-delay: calc(var(--scroll) * -40s);
+	color: #280F91;
+	.bar {
+		text-align: center;
+		background-color: white;
+		cursor: pointer;
+		width: 100vw;
+	}
+	.menu{
+		background-color: white;
+		img {
+			height: 80px;
+		}
+		.menu-item{
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-left: 10px;
+			font-size: 2rem;	
+			
+		}
+	}
+	#menuitems {
+		display: none;		
+	}
+}
 //GŁÓWNA
 .hero {
-	height: 500px;
-	background-image: url('../img/school-book-1560339_640.jpg');
+	height: 100vh;
+	background-image: url(../images/Zdjęcia/zdjęcie\ tytuł\ strony.png);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
-	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 20px;
 
 	h1 {
 		color: white;
 		text-shadow: 5px 5px 5px $darkcolor;
-		padding-top: 50px;
 	}
-	p {
-		color: white;
-		text-shadow: 5px 5px 5px $darkcolor;
-		padding-top: 20px;
-	}
+button {
+	width: 500px;
+	margin-top: 20px;
+	padding: 20px 2px;
+	margin-top: 40px;
+	color: white;
+	border: none;
+}
+button:first-of-type {
+	background-color: #ff3ea2;
+}
+button:last-of-type {
+	background-color: #4AE8FF;
+}
 }
 
+//STATS
+.stats {
+
+	background-color: rgba($color: white, $alpha: .2);
+	.stats-item {
+		text-align: center;
+		height: 160px;
+		border-right: #280F91 solid 2px;
+		color: #280F91;
+		margin: 20px 0px;
+		span {
+			font-weight: bold;
+			font-size: 4rem;
+		}
+		
+	}
+	.stats-item:last-of-type {
+		border: none;
+	}
+}
 //REVIEWS
 
 .reviews {
@@ -139,8 +215,6 @@ nav {
 	border: #ff3ea2 7px solid;
 	border-radius: 20px;
 	margin: 20px;
-}
-.subject-def {
 	background-position: center;
 	background-size: 300px auto;
 	background-repeat: no-repeat;
@@ -204,12 +278,49 @@ nav {
 //CENNIK
 
 @media (min-width: 992px) {
-	.navbar-expand-lg .navbar-nav .nav-link {
-		padding-right: 40px;
-		padding-left: 40px;
-		margin: 0 20px;
+	body {
+		h1 {
+			font-size: 6rem;
+		}
+		h2 {
+			font-size: 4.5rem;
+		}
+		h3 {
+			font-size: 3.5rem;
+		}
+		font-size: 2.5rem;
 	}
-	.hero {
-		background-image: url('../img/school-book-1560339_1920.jpg');
+	header {
+		a:hover {
+			transform: scale(1.2);
+		}
+	}
+	.menu-nav {
+		.bar{
+display: none;
+		}
+		#menuitems {
+			display: flex;
+			border-bottom-left-radius: 25px;
+			border-bottom-right-radius: 25px;
+			justify-content: space-around;
+			align-items: center;
+			height: 7rem;
+		}
+		.menu-item {
+			text-align: center;
+			align-self: center;
+		}
+	}
+}
+@media (max-width: 361px) {
+	header {
+		font-size: 1.5rem;
+	}
+}
+
+@keyframes nav-top {
+	to {
+		top: 5px;
 	}
 }
