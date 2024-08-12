@@ -31,7 +31,7 @@ a {
 
 header {
 	font-size: 1.8rem;
-	background-color: #4AE8FF;
+	background-color: #4ae8ff;
 	.top {
 		display: flex;
 		padding: 5px;
@@ -59,45 +59,43 @@ header {
 	a {
 		transition: 0.3s;
 	}
-
 }
 // NAV
-.menu-nav{
+.menu-nav {
 	position: fixed;
 	width: 100vw;
 	z-index: 100;
 	top: 50px;
-	animation: nav-top 1s linear 1 forwards;   
-	animation-play-state: paused;   
+	animation: nav-top 1s linear 1 forwards;
+	animation-play-state: paused;
 	animation-delay: calc(var(--scroll) * -40s);
-	color: #280F91;
+	color: #280f91;
 	.bar {
 		text-align: center;
 		background-color: white;
 		cursor: pointer;
 		width: 100vw;
 	}
-	.menu{
+	.menu {
 		background-color: white;
 		img {
 			height: 80px;
 		}
-		.menu-item{
+		.menu-item {
 			font-weight: bold;
 			text-transform: uppercase;
 			margin-left: 10px;
-			font-size: 2rem;	
-			
+			font-size: 2rem;
 		}
 	}
 	#menuitems {
-		display: none;		
+		display: none;
 	}
 }
 //GŁÓWNA
 .hero {
 	height: 100vh;
-	background-image: url(../images/Zdjęcia/zdjęcie\ tytuł\ strony.png);
+	background-image: url(../images/Zdjęcia/zdjęcie\ tytuł\ strony.png);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -112,37 +110,35 @@ header {
 		color: white;
 		text-shadow: 5px 5px 5px $darkcolor;
 	}
-button {
-	width: 500px;
-	margin-top: 20px;
-	padding: 20px 2px;
-	margin-top: 40px;
-	color: white;
-	border: none;
-}
-button:first-of-type {
-	background-color: #ff3ea2;
-}
-button:last-of-type {
-	background-color: #4AE8FF;
-}
+	button {
+		width: 500px;
+		margin-top: 20px;
+		padding: 20px 2px;
+		margin-top: 40px;
+		color: white;
+		border: none;
+	}
+	button:first-of-type {
+		background-color: #ff3ea2;
+	}
+	button:last-of-type {
+		background-color: #4ae8ff;
+	}
 }
 
 //STATS
 .stats {
-
-	background-color: rgba($color: white, $alpha: .2);
+	background-color: rgba($color: white, $alpha: 0.2);
 	.stats-item {
 		text-align: center;
 		height: 160px;
-		border-right: #280F91 solid 2px;
-		color: #280F91;
+		border-right: #280f91 solid 2px;
+		color: #280f91;
 		margin: 20px 0px;
 		span {
 			font-weight: bold;
 			font-size: 4rem;
 		}
-		
 	}
 	.stats-item:last-of-type {
 		border: none;
@@ -296,8 +292,8 @@ button:last-of-type {
 		}
 	}
 	.menu-nav {
-		.bar{
-display: none;
+		.bar {
+			display: none;
 		}
 		#menuitems {
 			display: flex;

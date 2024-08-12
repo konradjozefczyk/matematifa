@@ -33,7 +33,7 @@ a {
 
 header {
   font-size: 1.8rem;
-  background-color: #4AE8FF;
+  background-color: #4ae8ff;
 }
 header .top {
   display: flex;
@@ -71,7 +71,7 @@ header a {
   animation: nav-top 1s linear 1 forwards;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -40s);
-  color: #280F91;
+  color: #280f91;
 }
 .menu-nav .bar {
   text-align: center;
@@ -97,7 +97,7 @@ header a {
 
 .hero {
   height: 100vh;
-  background-image: url(../images/Zdjęcia/zdjęcie tytuł strony.png);
+  background-image: url(../images/Zdjęcia/zdjęcie\ tytuł\ strony.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -124,7 +124,7 @@ header a {
   background-color: #ff3ea2;
 }
 .hero button:last-of-type {
-  background-color: #4AE8FF;
+  background-color: #4ae8ff;
 }
 
 .stats {
@@ -133,8 +133,8 @@ header a {
 .stats .stats-item {
   text-align: center;
   height: 160px;
-  border-right: #280F91 solid 2px;
-  color: #280F91;
+  border-right: #280f91 solid 2px;
+  color: #280f91;
   margin: 20px 0px;
 }
 .stats .stats-item span {
