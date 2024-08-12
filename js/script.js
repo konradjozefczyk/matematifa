@@ -78,3 +78,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		observer.observe(counter)
 	})
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+	const observeElements = selector => {
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('show')
+					observer.unobserve(entry.target)
+				}
+			})
+		})
+
+		document.querySelectorAll(selector).forEach(element => {
+			observer.observe(element)
+		})
+	}
+
+	// Obserwacja elementów z klasą 'about-us-bgc' i 'certif-bgc'
+	observeElements('.about-us-bgc')
+	observeElements('.certif-bgc')
+	observeElements('.rev-bgc')
+})

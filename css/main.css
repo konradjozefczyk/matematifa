@@ -445,6 +445,51 @@ header a {
   width: 300px;
 }
 
+.pricebox {
+  background-color: #00bfdb;
+  text-align: center;
+  border-bottom: 2px solid #280f91;
+  border-top: 2px solid #280f91;
+}
+.pricebox form {
+  text-align: left;
+}
+.pricebox form input[type=radio] {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fab800;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0 0 5px 0px #ff3ea2 inset;
+}
+.pricebox form input[type=radio]:hover {
+  box-shadow: 0 0 5px 0px #ff3ea2 inset;
+}
+.pricebox form input[type=radio]:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.pricebox form input[type=radio]:checked:before {
+  background: #ff3ea2;
+}
+.pricebox form label {
+  margin-left: 12px;
+  font-size: 2rem;
+}
+.pricebox form p {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.pricebox button {
+  margin-top: 20px;
+}
+
 .heartbeat {
   animation: heartbeat 5s ease-in-out infinite both;
 }
@@ -499,7 +544,15 @@ header a {
   line-height: 1.5;
   color: white;
 }
+.text-info .about-us-bgc.show,
+.text-info .certif-bgc.show,
+.text-info .rev-bgc.show {
+  animation: showleft 2s forwards;
+}
 .text-info .about-us-bgc {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
   background-color: #00bfdb;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -519,6 +572,9 @@ header a {
   border-radius: 20px;
 }
 .text-info .certif-bgc {
+  transform: translateX(50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
   background-color: #ff3ea2;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -544,6 +600,9 @@ header a {
 }
 .text-info .rev-bgc {
   background-color: #4ae8ff;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
   margin-top: 100px;
   display: flex;
   justify-content: center;
@@ -689,5 +748,11 @@ header a {
   45% {
     transform: scale(1);
     animation-timing-function: ease-out;
+  }
+}
+@keyframes showleft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }/*# sourceMappingURL=main.css.map */
