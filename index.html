@@ -24,8 +24,10 @@
     <header>
         <div class="container top">
             <div class="menu-left top">
-                <a href="#"><span class="rounded-pill"><i class="fa-solid fa-phone"></i> 577 617 797</span></a>
-                <a href="#"><span class="rounded-pill"><i class="fa-regular fa-envelope"></i></span></a>
+                <a href="#"><span class="rounded-pill d-flex d-md-flex d-lg-flex"><i class="fa-solid fa-phone"></i> 577
+                        617 797</span></a>
+                <a href="#"><span class="rounded-pill d-flex d-md-flex d-lg-flex"><i
+                            class="fa-regular fa-envelope"></i></span></a>
                 <a href="#"><span class="rounded-pill  d-none d-md-none d-lg-flex">formularz</span></a>
             </div>
             <div class="menu-right top d-none d-md-flex">
@@ -39,11 +41,21 @@
         <button class="bar" onclick="menuOpen()"><i class="fa-solid fa-bars"></i></button>
         <div class="menu" id="menuitems">
             <img src="./images/logo z tekstem.png" alt="">
-            <div class="menu-item">O nas</div>
-            <div class="menu-item">Oferta</div>
-            <div class="menu-item">Cennik</div>
-            <div class="menu-item">Opinie</div>
-            <div class="menu-item">Jak zacząć?</div>
+            <div class="menu-item">
+                <p>O nas</p>
+            </div>
+            <div class="menu-item">
+                <p>Oferta</p>
+            </div>
+            <div class="menu-item">
+                <p>Cennik</p>
+            </div>
+            <div class="menu-item">
+                <p>Opinie</p>
+            </div>
+            <div class="menu-item">
+                <p>Jak zacząć?</p>
+            </div>
 
         </div>
     </div>
@@ -75,40 +87,130 @@
                 <p>lat doświadczenia</p>
             </div>
         </div>
-        <div>
-            <h2>Przedmioty</h2>
+        <div class="container offer-subject">
+            <h2>Korepetycje - Przedmioty</h2>
+            <p>W szkole .matematify na pierwszym miejscu stawiamy ucznia i jego potrzeby. Wszystkie lekcje, które
+                prowadzimy są indywidualne, a przerabiany materiał i tempo nauki dostosujemy do Ciebie!
+            </p>
+            <p class="yellow-text">Zapoznaj się z naszą ofertą:</p>
             <div class="row">
-                <div class="subject subject1"></div>
-                <div class="subject subject2"></div>
-                <div class="subject subject3"></div>
-                <div class="subject subject4"></div>
-                <div class="subject subject5"></div>
-                <div class="subject subject6"></div>
-                <div class="subject subject7"></div>
+                <div class="subject subject1">
+                    <div class="sub-name rounded-pill">Matematyka</div>
+                </div>
+                <div class="subject subject2">
+                    <div class="sub-name rounded-pill">Biologia</div>
+                </div>
+                <div class="subject subject3">
+                    <div class="sub-name rounded-pill">Informatyka</div>
+                </div>
+                <div class="subject subject4">
+                    <div class="sub-name rounded-pill">Fizyka</div>
+                </div>
+                <div class="subject subject5">
+                    <div class="sub-name rounded-pill">Chemia</div>
+                </div>
+                <div class="subject subject6">
+                    <div class="sub-name rounded-pill">Język polski</div>
+                </div>
+                <div class="subject subject7">
+                    <div class="sub-name rounded-pill">Angielski</div>
+                </div>
+            </div>
+
+            <p>W Matematify ciągle pracujemy nad ulepszeniem jakości naszych usług, żeby jak najlepiej dopasować je do
+                naszych uczniów. Skontaktuj się z nami żeby dowiedzieć się więcej co do dostępności korepetytorów
+                prowadzących te przedmioty.
+            </p>
+
+            <p class="blue-text">Z chęcią pomożemy Ci znaleźć nauczyciela, który poprowadzi lekcje na jak najwyższym
+                poziomie z wybranych przedmiotów.
+            </p>
+            <div class="sub-but"> <button class="rounded-pill">Formularz kontaktowy</button>
+                <button class="rounded-pill">Cennik</button>
+            </div>
+
+        </div>
+        <div class="card-group container">
+            <div class="card">
+                <img src="./images/Zdjęcia/różowe łuki/dziewczyna lewo.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Indywidualne <br> od 75 zł / h</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>możliwość bezpłatnej lekcji próbnej</li>
+                        <li>100% uwagi korepetytora na jednym uczniu</li>
+                        <li>indywidualnie dobierany materiał</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/Zdjęcia/różowe łuki/chłopak centrum.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">2-osobowe <br> od 299zł / miesiąc</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>możliwe zapisy ze znajomym</li>
+                        <li>korzystniejsza cena</li>
+                        <li>dostępne przedmioty: matematyka, fizyka, chemia</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/Zdjęcia/różowe łuki/dziewczyna  prawo.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Wykłady maturalne <br> od 269 zł / miesiąc</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>najintensywniejsza powtórka przed maturą</li>
+                        <li>najniższa cena za godzinę</li>
+                        <li>wyłącznie najlepsi korepetytorzy</li>
+                        <li>dostępne przedmioty: matematyka</li>
+                    </ul>
+                    </p>
+                </div>
             </div>
         </div>
+        <div class="btn-aft"><button class="rounded-pill btn-after-arch">Zapisz się na lekcję próbną</button></div>
         <div>
-            <h2>Gwarancja jakości</h2>
-            <h3>Certyfikowane korepetycje</h3>
-            <p>Posiadamy certyfikaty Laur Zaufania oraz jesteśmy kilkukrotnymi laureatami certyfikatów Orły Edukacji
-                oraz Firma Godna Zaufania</p>
+            <h2>Prowadzimy korepetycje za pomocą</h2>
+            <div class="tech container">
+                <div class="right-side-tech">
+                    <p>Komunikatory głosowe</p>
+                </div>
+                <div class="row center-tech">
+                    <div class="tech-icon">
+                        <div class="back-tech1 back-tech-def"></div>
+
+                    </div>
+                    <div class="tech-icon">
+                        <div class="back-tech2 back-tech-def"></div>
+
+                    </div>
+                    <div class="tech-icon">
+                        <div class="back-tech3 back-tech-def"></div>
+                    </div>
+                    <div class="tech-icon">
+                        <div class="back-tech4 back-tech-def"></div>
+
+                    </div>
+                </div>
+                <div class="right-side-tech">Wirtualne tablice</div>
+            </div>
+        </div>
+        <div class="add">
+            <div class="add-text">
+                <p>Wypróbuj nasze nowoczesne podejście <br>do korepetycji online na DARMOWEJ lekcji próbnej!</p>
+            </div>
+            <button class="rounded-pill">zapisz się na lekcję próbną</button>
+            <div class="add-img"> <img src="./images/grafikidekoracyjne/komputer.png" alt="">
+
+            </div>
         </div>
 
-        <div>
-            <h2>O nas</h2>
-            <p>Certyfikowane centrum korepetycji Matematify zostało założone w 2019 roku i działa do dziś. Po pięciu
-                latach działalności jesteśmy wiodącą szkołą korepetycji oferującą zajęcia indywidualne oraz grupowe.
-                Proponujemy najwyższej jakości korepetycje online w całej Polsce, a nawet za jej granicami. Wyróżniamy
-                się wśród innych firm nie tylko naszą bogatą ofertą, ale też podejściem do nauczania, gdyż korzystamy z
-                nowoczesnych narzędzi, które przenoszą korepetycje online na nowy poziom jakości, takich jak
-                interaktywna tablica i panel ucznia.
-            </p>
-            <img src="./img/BBCC6CCB-EA50-4D40-B650-AF20A001332B_1_105_c.jpeg" width="540px">
 
-            <p>Naszą koronną cechą jest cierpliwość, dlatego uczeń bez skrępowania może po kilka razy zadawać to samo
-                pytanie, a my będziemy wyszukiwać najróżniejszych sposobów, żeby wytłumaczyć problem. </p>
-            <img src="./img/260.png" alt="">
-        </div>
+
         <div>
             <h2>Opinie</h2>
             <span>Ponad 200 pozytywnych opinii w Google i w najpopularniejszym serwisie związanym z
@@ -178,66 +280,8 @@
                 <button>Zobacz więcej opinii</button>
             </section>
         </div>
-        <div class="atuty">
-            <div class="atut"><i class="fa-solid fa-location-dot"></i><br>Zajęcia online z każdego miejsca na świecie
-            </div>
-            <div class="atut"><i class="fa-solid fa-person"></i><br>Doświadczona pełna pasji kadra</div>
-            <div class="atut"><i class="fa-solid fa-computer"></i><br>Dostęp do panelu klienta</div>
-        </div>
-        <div>
-            <h2>Przedmioty</h2>
-            <div class="row">
-                <div class="subject subject1 subject-def subject-jumps"></div>
-                <div class="subject subject2 subject-def"></div>
-                <div class="subject subject3 subject-def"></div>
-                <div class="subject subject4 subject-def"></div>
-                <div class="subject subject5 subject-def"></div>
-                <div class="subject subject6 subject-def"></div>
-                <div class="subject subject7 subject-def"></div>
-            </div>
-        </div>
-        <div class="card-group">
-            <div class="card">
-                <img src="./img/179.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Indywidualne <br> od 75 zł / h</h5>
-                    <p class="card-text">
-                    <ul>
-                        <li>możliwość bezpłatnej lekcji próbnej</li>
-                        <li>100% uwagi korepetytora na jednym uczniu</li>
-                        <li>indywidualnie dobierany materiał</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./img/179.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">2-osobowe <br> od 299zł / miesiąc</h5>
-                    <p class="card-text">
-                    <ul>
-                        <li>możliwe zapisy ze znajomym</li>
-                        <li>korzystniejsza cena</li>
-                        <li>dostępne przedmioty: matematyka, fizyka, chemia</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./img/179.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Wykłady maturalne <br> od 269 zł / miesiąc</h5>
-                    <p class="card-text">
-                    <ul>
-                        <li>najintensywniejsza powtórka przed maturą</li>
-                        <li>najniższa cena za godzinę</li>
-                        <li>wyłącznie najlepsi korepetytorzy</li>
-                        <li>dostępne przedmioty: matematyka</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
+
+
         <div class="container my-5">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -367,38 +411,57 @@
         <div class="center-button">
             <span>I w wielu innych miejscowościach</span>
         </div>
-        <div class="card-group" id="start">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">1.</h5>
-                    <p class="card-text">Wypełnij formularz
-                        lub zadzwoń pod numer 792 877 872. </p>
-                    <br>
-                    <p class="card-text">Zadzwonimy do Ciebie w ciągu kilku godzin</p>
-                    <button class="rounded-pill">Zapisz się na zajęcia</button>
-                </div>
+        <h2>Jak zapisać się na korepetycje?</h2>
+       <div class="steps container">
+        <div class="step">
+            <div class="step-numb heartbeat">1</div>
+            <div class="step-text"><p>Wypełnij formularz lub zadzwoń pod numer
+                792 877 872</p>
+            <p>Zadzwonimy do Ciebie w ciągu kilku godzin!</p>
+        <button>Zapisz się na zajęcia</button></div>
+        </div>
+        <div class="step">
+            <div class="step-numb heartbeat">2</div>
+            <div class="step-text"><p>Dostaniesz informacje dotyczące lekcji i szczegóły dotyczące płatności. Po pierwszych zajęciach podejmij decyzję, czy chcesz podjąć współpracę, czy może wolisz zmienić korepetytora. Zmiana korepetytora jest bezpłatna.</p></div>
+        </div>
+        <div class="step">
+            <div class="step-numb heartbeat">3</div>
+            <div class="step-text"><p>Korzystaj w pełni z naszej oferty! <ul>
+                <li>wybierz odpowiedni pakiet cenowy oraz format zajęć
+                </li>
+                <li>korzystaj z panelu klienta i spersonalizowanego planu.</li>
+            </ul></p>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">2.</h5>
-                    <p class="card-text">Dostaniesz informacje dotyczące lekcji i szczegóły dotyczące płatności. Po
-                        pierwszych zajęciach podejmij decyzję, czy chcesz podjąć współpracę, czy może wolisz zmienić
-                        korepetytora. Zmiana korepetytora jest bezpłatna.
-                    </p>
-                </div>
+        </div>
+       </div>
+    </div>
+    <div class="text-info">
+        <h2>Dowiedz się więcej o Matematify</h2>
+        <div class="about-us-bgc">
+            <div class="about-us">
+                <h3>O nas:</h3>
+                <p>Certyfikowane centrum korepetycji Matematify zostało założone w 2019 roku i działa do dziś. Po pięciu
+                    latach działalności jesteśmy wiodącą szkołą korepetycji oferującą zajęcia indywidualne oraz grupowe.
+                    Proponujemy najwyższej jakości korepetycje online w całej Polsce, a nawet za jej granicami.
+                    Wyróżniamy się wśród innych firm nie tylko naszą bogatą ofertą, ale też podejściem do nauczania,
+                    gdyż korzystamy z nowoczesnych narzędzi, które przenoszą korepetycje online na nowy poziom jakości,
+                    takich jak interaktywna tablica i panel ucznia.
+                </p>
+                <p>Naszą koronną cechą jest cierpliwość, dlatego uczeń bez skrępowania może po kilka razy zadawać to
+                    samo pytanie, a my będziemy wyszukiwać najróżniejszych sposobów, żeby wytłumaczyć problem.</p>
+                <img src="./images/Zdjęcia/O nas.png" alt="">
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">3.</h5>
-                    <p class="card-text">Korzystaj w pełni z naszej oferty!
-                        <li>wybierz odpowiedni pakiet cenowy oraz format zajęć</li>
-                        <li>korzystaj z panelu klienta i spersonalizowanego planu.</li>
-                    </p>
+        </div>
+        <div class="certif-bgc">
+            <div class="certif">
+                <h3>Certyfikowane centrum korepetycji</h3>
+                <p>Posiadamy certyfikaty Laur Zaufania oraz jesteśmy kilkukrotnymi laureatami certyfikatów Orły Edukacji oraz Firma Godna Zaufania</p>
+                <div class="orly">
                 </div>
             </div>
         </div>
-    </div>
 
+    </div>
     <script src="https://kit.fontawesome.com/b353d3f355.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

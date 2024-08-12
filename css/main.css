@@ -8,6 +8,7 @@ body {
   background: linear-gradient(90deg, rgb(65, 132, 200) 0%, rgb(226, 110, 187) 100%);
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
+  color: white;
 }
 body h1 {
   font-size: 4rem;
@@ -16,10 +17,15 @@ body h1 {
 body h2 {
   font-size: 3rem;
   font-family: "Kodchasan", sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
 }
 body h3 {
   font-size: 2.5rem;
   font-family: "Kodchasan", sans-serif;
+  color: white;
 }
 
 a {
@@ -33,7 +39,7 @@ a {
 
 header {
   font-size: 1.8rem;
-  background-color: #4ae8ff;
+  background-color: #6fa5dd;
 }
 header .top {
   display: flex;
@@ -41,23 +47,24 @@ header .top {
 }
 header span {
   padding: 2px 20px;
+  height: 30px;
 }
 header .menu-right {
   width: 35%;
-  justify-content: end;
+  justify-content: center;
 }
 header .menu-right span {
   background-color: #ff3ea2;
   color: #e9fcff;
 }
 header .menu-left {
-  margin: auto;
   width: 65%;
-  justify-content: space-between;
+  justify-content: start;
 }
 header .menu-left span {
   background-color: #e9fcff;
   color: #1b25ac;
+  margin: 0px 40px;
 }
 header a {
   transition: 0.3s;
@@ -119,12 +126,18 @@ header a {
   margin-top: 40px;
   color: white;
   border: none;
+  font-weight: bold;
+  box-shadow: 10px 5px 5px black;
+  transition: 0.5s;
+}
+.hero button:hover {
+  scale: 0.9;
 }
 .hero button:first-of-type {
   background-color: #ff3ea2;
 }
 .hero button:last-of-type {
-  background-color: #4ae8ff;
+  background-color: #00bfdb;
 }
 
 .stats {
@@ -143,6 +156,100 @@ header a {
 }
 .stats .stats-item:last-of-type {
   border: none;
+}
+
+.offer-subject .sub-but {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.offer-subject button {
+  width: 400px;
+  height: 150px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 4px 4px 20px rgba(0, 52, 59, 0.5);
+  transition: 0.5s;
+}
+.offer-subject button:hover {
+  scale: 0.9;
+}
+.offer-subject button:first-of-type {
+  background-color: #1b25ac;
+}
+.offer-subject button:last-of-type {
+  background-color: #a12665;
+}
+.offer-subject p {
+  margin: 40px 40px 40px 40px;
+  color: white;
+  text-align: center;
+}
+.offer-subject .yellow-text {
+  color: #fdcd12;
+  font-weight: bold;
+  text-align: center;
+}
+.offer-subject .blue-text {
+  color: #4ae8ff;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subject {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  margin: 20px;
+  background-position: center;
+  background-size: 300px auto;
+  background-repeat: no-repeat;
+  box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subject .sub-name {
+  background-color: #e9fcff;
+  padding: 10px 4px;
+  font-weight: bold;
+  color: #280f91;
+  width: 200px;
+  text-align: center;
+}
+
+.subject1 {
+  background-image: url(../images/przedmioty/matmapol.png);
+}
+
+.subject7 {
+  background-image: url(../images/przedmioty/angielski.png);
+}
+
+.subject6 {
+  background-image: url(../images/przedmioty/matmapol.png);
+}
+
+.subject5 {
+  background-image: url(../images/przedmioty/chemia.png);
+}
+
+.subject4 {
+  background-image: url(../images/przedmioty/fizyka.png);
+}
+
+.subject3 {
+  background-image: url(../images/przedmioty/informatyka.png);
+}
+
+.subject2 {
+  background-image: url(../images/przedmioty/biologia.png);
 }
 
 .reviews__box {
@@ -202,55 +309,20 @@ header a {
   padding-top: 20px;
 }
 
-.subject {
-  height: 150px;
-  width: 150px;
-  border: #ff3ea2 7px solid;
-  border-radius: 20px;
-  margin: 20px;
-  background-position: center;
-  background-size: 300px auto;
-  background-repeat: no-repeat;
-  box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
-}
-
-.subject1 {
-  background-image: url(../img/mat-but.png);
-}
-
-.subject7 {
-  background-image: url(../img/eng-but.png);
-}
-
-.subject6 {
-  background-image: url(../img/inf-but.png);
-}
-
-.subject5 {
-  background-image: url(../img/inf-but.png);
-}
-
-.subject4 {
-  background-image: url(../img/chem-but.png);
-}
-
-.subject3 {
-  background-image: url(../img/phy-but.png);
-}
-
-.subject2 {
-  background-image: url(../img/biol-but.png);
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .card {
   margin: 50px;
   background: none;
+  border: none;
+}
+
+.card-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #1b25ac;
 }
 
 .card-body {
@@ -284,6 +356,199 @@ header a {
   justify-content: space-around;
 }
 
+.btn-aft {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-after-arch {
+  color: white;
+  padding: 20px 10px;
+  margin-top: 30px;
+  background-color: #00bfdb;
+}
+
+.tech {
+  display: flex;
+  margin-top: 50px;
+}
+.tech .right-side-tech {
+  width: 10%;
+  background-color: green;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  font-size: 50px;
+}
+.tech .center-tech {
+  width: 80%;
+  display: flex;
+}
+.tech .center-tech .tech-icon {
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #00bfdb;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.tech .center-tech .tech-icon .back-tech-def {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 370px;
+  height: 100%;
+  width: 100%;
+}
+.tech .center-tech .tech-icon .back-tech1 {
+  background-image: url("../images/index/googgle meet osobno.png");
+}
+.tech .center-tech .tech-icon .back-tech2 {
+  background-image: url("../images/index/ziteboard osobno.png");
+}
+.tech .center-tech .tech-icon .back-tech3 {
+  background-image: url("../images/index/osobno skype.png");
+}
+.tech .center-tech .tech-icon .back-tech4 {
+  background-image: url("../images/index/jamboard osobno.png");
+}
+.tech .center-tech .tech-icon p {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.add {
+  height: auto;
+  width: 100%;
+  background-image: url(../images/grafikidekoracyjne/linia.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+  position: relative;
+  display: none;
+}
+.add .add-text {
+  color: white;
+  margin: 30px 20px;
+  padding-top: 30px;
+}
+.add button {
+  color: #1b25ac;
+  padding: 5px 20px;
+  margin-left: 20px;
+  background-color: white;
+}
+.add .add-img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.add .add-img img {
+  width: 300px;
+}
+
+.heartbeat {
+  animation: heartbeat 5s ease-in-out infinite both;
+}
+
+.steps {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.steps .step {
+  width: 30%;
+  position: relative;
+  background-color: #e9fcff;
+  color: #1b25ac;
+  height: 500px;
+}
+.steps .step .step-numb {
+  position: absolute;
+  left: 30%;
+  top: -15%;
+  width: 150px;
+  height: 150px;
+  background-color: #00bfdb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 6rem;
+  font-weight: bold;
+}
+.steps .step-text {
+  padding: 100px 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.step:first-of-type .step-numb {
+  background-color: #ff3ea2;
+}
+
+.step:last-of-type .step-numb {
+  background-color: #fdcd12;
+}
+
+.text-info {
+  font-size: 2rem;
+}
+.text-info p {
+  margin-top: 40px;
+  line-height: 1.5;
+  color: white;
+}
+.text-info .about-us-bgc {
+  background-color: #00bfdb;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-right: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0px;
+}
+.text-info .about-us-bgc .about-us {
+  width: 80%;
+  padding-left: 40px;
+  text-align: justify;
+}
+.text-info .about-us-bgc .about-us img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.text-info .certif-bgc {
+  background-color: #ff3ea2;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  margin-top: 100px;
+}
+.text-info .certif-bgc .certif {
+  width: 80%;
+  padding-right: 40px;
+  text-align: justify;
+}
+.text-info .certif-bgc .orly {
+  background-image: url(../images/certyfikaty/orły\ wyostrz1.png);
+  height: 230px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 @media (min-width: 992px) {
   body {
     font-size: 2.5rem;
@@ -299,6 +564,9 @@ header a {
   }
   header a:hover {
     transform: scale(1.2);
+  }
+  .add {
+    display: block;
   }
   .menu-nav .bar {
     display: none;
@@ -324,5 +592,39 @@ header a {
 @keyframes nav-top {
   to {
     top: 5px;
+  }
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2024-8-12 16:45:9
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
   }
 }/*# sourceMappingURL=main.css.map */
