@@ -117,3 +117,48 @@ document.querySelectorAll('.faq-question').forEach(item => {
 		faqItem.classList.toggle('active')
 	})
 })
+
+let currentQuestion = 1;
+
+function nextQuestion() {
+    const currentElement = document.querySelector(`.question[data-question="${currentQuestion}"]`);
+    const input = currentElement.querySelector('input, textarea');
+    
+    if (input.checkValidity()) {
+        currentElement.classList.remove('active');
+        currentQuestion++;
+        document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.add('active');
+    } else {
+        input.nextElementSibling.style.display = 'block';
+    }
+}
+
+function previousQuestion() {
+    document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.remove('active');
+    currentQuestion--;
+    document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.add('active');
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(this);
+
+    fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert('Formularz został wysłany.');
+        this.reset();
+        currentQuestion = 1;
+        document.querySelectorAll('.question').forEach(el => el.classList.remove('active'));
+        document.querySelector('.question[data-question="1"]').classList.add('active');
+    })
+    .catch(error => {
+        console.error('Błąd:', error);
+        alert('Wystąpił błąd. Spróbuj ponownie później.');
+    });
+});
+
