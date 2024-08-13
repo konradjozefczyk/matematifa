@@ -42,7 +42,8 @@ header {
 }
 header .top {
   display: flex;
-  padding: 5px;
+  padding: 3.5px;
+  align-items: center;
 }
 header span {
   padding: 2px 10px;
@@ -56,6 +57,7 @@ header .menu-right {
 header .menu-right span {
   background-color: #ff3ea2;
   color: #e9fcff;
+  line-height: 24px;
 }
 header .menu-left {
   width: 100%;
@@ -65,6 +67,7 @@ header .menu-left span {
   background-color: #e9fcff;
   color: #1b25ac;
   margin: 0px 40px;
+  line-height: 24px;
 }
 header .menu-left .formul {
   display: none;
@@ -72,16 +75,13 @@ header .menu-left .formul {
 header .menu-left .phone {
   width: 40px;
 }
-header a {
-  transition: 0.3s;
-}
 
 .menu-nav {
   position: fixed;
   width: 100vw;
   z-index: 100;
   top: 50px;
-  animation: nav-top 1s linear 1 forwards;
+  animation: nav-top 0.3s linear 1 forwards;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -40s);
   color: #280f91;
@@ -108,7 +108,13 @@ header a {
   display: none;
 }
 
+.hero.show {
+  animation: showleft 2s forwards;
+}
+
 .hero {
+  transform: translateY(50%);
+  opacity: 0;
   height: 100vh;
   background-image: url(../images/Zdjęcia/zdjęcie\ tytuł\ strony.png);
   background-position: center;
@@ -536,6 +542,53 @@ header a {
   background-color: #fdcd12;
 }
 
+.faq-section {
+  padding: 20px;
+  padding-bottom: 100px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: #280f91;
+}
+.faq-section h2 {
+  margin-bottom: 50px;
+  color: #280f91;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-toggle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 1.8rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px; /* dostosuj w zależności od długości odpowiedzi */
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
 .text-info {
   font-size: 2rem;
 }
@@ -543,6 +596,9 @@ header a {
   margin-top: 40px;
   line-height: 1.5;
   color: white;
+}
+.text-info h2 {
+  margin-bottom: 40px;
 }
 .text-info .about-us-bgc.show,
 .text-info .certif-bgc.show,
@@ -638,6 +694,16 @@ header a {
   text-align: center;
 }
 
+.textse {
+  padding: 20px;
+  line-height: 1;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+.textse h3 {
+  font-size: 2rem;
+}
+
 @media (min-width: 992px) {
   body {
     font-size: 2.5rem;
@@ -653,6 +719,15 @@ header a {
   }
   header a:hover {
     transform: scale(1.2);
+  }
+  header .menu-left {
+    width: 65%;
+  }
+  header .menu-left .formul {
+    display: flex;
+  }
+  header .menu-right {
+    display: flex;
   }
   .stats .stats-item {
     border-right: #280f91 solid 2px;
@@ -674,6 +749,7 @@ header a {
   }
   .menu-nav .bar {
     display: none;
+    height: 7 rem;
   }
   .menu-nav #menuitems {
     display: flex;
@@ -681,7 +757,7 @@ header a {
     border-bottom-right-radius: 25px;
     justify-content: space-around;
     align-items: center;
-    height: 7rem;
+    height: 100%;
   }
   .menu-nav .menu-item {
     text-align: center;
@@ -713,7 +789,7 @@ header a {
 }
 @keyframes nav-top {
   to {
-    top: 5px;
+    top: 0px;
   }
 }
 /* ----------------------------------------------

@@ -61,7 +61,7 @@
 
     <div>
 
-        <section class="hero" data-aos="fade-up" data-aos-duration="3000">
+        <section class="hero">
             <h1>Korepetycje <br>Online
             </h1>
             <button class="rounded-pill">Zacznij od darmowej lekcji próbnej</button>
@@ -131,7 +131,8 @@
         </div>
         <div class="card-group container">
             <div class="card">
-                <img src="./images/Zdjęcia/różowe łuki/dziewczyna lewo.png" class="card-img-top" alt="...">
+                <img src="./images/Zdjęcia/różowe łuki/dziewczyna lewo.png" class="card-img-top" alt="..."
+                    loading="lazy">
                 <div class="card-body">
                     <h5 class="card-title">Indywidualne <br> od 75 zł / h</h5>
                     <p class="card-text">
@@ -144,7 +145,8 @@
                 </div>
             </div>
             <div class="card">
-                <img src="./images/Zdjęcia/różowe łuki/chłopak centrum.png" class="card-img-top" alt="...">
+                <img src="./images/Zdjęcia/różowe łuki/chłopak centrum.png" class="card-img-top" alt="..."
+                    loading="lazy">
                 <div class="card-body">
                     <h5 class="card-title">2-osobowe <br> od 299zł / miesiąc</h5>
                     <p class="card-text">
@@ -157,7 +159,8 @@
                 </div>
             </div>
             <div class="card">
-                <img src="./images/Zdjęcia/różowe łuki/dziewczyna  prawo.png" class="card-img-top" alt="...">
+                <img src="./images/Zdjęcia/różowe łuki/dziewczyna  prawo.png" class="card-img-top" alt="..."
+                    loading="lazy">
                 <div class="card-body">
                     <h5 class="card-title">Wykłady maturalne <br> od 269 zł / miesiąc</h5>
                     <p class="card-text">
@@ -203,181 +206,222 @@
                 <p>Wypróbuj nasze nowoczesne podejście <br>do korepetycji online na DARMOWEJ lekcji próbnej!</p>
             </div>
             <button class="rounded-pill">zapisz się na lekcję próbną</button>
-            <div class="add-img"> <img src="./images/grafikidekoracyjne/komputer.png" alt="">
+            <div class="add-img"> <img src="./images/grafikidekoracyjne/komputer.png" alt="" loading="lazy">
 
             </div>
         </div>
 
-
-
-
-
-
-        <div class="container my-5">
-            <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Matematyka</button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Fizyka</button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Chemia</button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Informatyka</button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Język polski</button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Biologia</button>
-                </div>
-            </nav>
-
-
-
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    Hello</div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Hello2
-                </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Hello3
-                </div>
+    </div>
+    <section id="cennik" class="container pricebox">
+        <h2>Dobierz spersonalizowaną ofertę</h2>
+        <span>wybierz odpowiednią opcję i zobacz cennik na korepetycje, których szukasz</span>
+        <form class="quiz-box">
+            <div class="answer-box">
+                <p class="question">Wybierz zajęcia:</p>
+                <input type="radio" name="question-1" id="answer-1" class="answer" value="100">
+                <label for="answer-1">Indywidualne</label> <br>
+                <input type="radio" name="question-1" id="answer-2" class="answer" value="200">
+                <label for="answer-2">2-osobowe</label> <br>
+                <input type="radio" name="question-1" id="answer-3" class="answer" value="300">
+                <label for="answer-3">Wykład maturalny</label>
             </div>
+            <div class="answer-box">
+                <p class="question">Poziom:</p>
+                <input type="radio" name="question-2" id="answer-4" class="answer" value="10">
+                <label for="answer-4">Szkoła podstawowa</label> <br>
+                <input type="radio" name="question-2" id="answer-5" class="answer" value="20">
+                <label for="answer-5">Szkoła średnia poziom podstawowy</label> <br>
+                <input type="radio" name="question-2" id="answer-6" class="answer" value="30">
+                <label for="answer-6">Szkoła średnia poziom rozszerzony</label> <br>
+                <input type="radio" name="question-2" id="answer-7" class="answer" value="40">
+                <label for="answer-7">Studia wyższe</label>
+            </div>
+            <div class="answer-box">
+                <p class="question">Przedmiot:</p>
+                <input type="radio" name="question-3" id="answer-8" class="answer" value="1">
+                <label for="answer-8">Matematyka</label>
+                <input type="radio" name="question-3" id="answer-9" class="answer" value="2">
+                <label for="answer-9">Fizyka</label>
+                <input type="radio" name="question-3" id="answer-10" class="answer" value="3">
+                <label for="answer-10">Chemia</label>
+                <input type="radio" name="question-3" id="answer-11" class="answer" value="4">
+                <label for="answer-11">Biologia</label>
+            </div>
+            <button onclick="cennik()">Zobacz ofertę</button>
 
+        </form>
+        <div id="change"></div>
+        <div class="modal modal-active">
+            <p></p>
+            <button class="close-modal">X</button>
         </div>
-        <section id="cennik" class="container pricebox">
-            <h2>Dobierz spersonalizowaną ofertę</h2>
-            <span>wybierz odpowiednią opcję i zobacz cennik na korepetycje, których szukasz</span>
-            <form class="quiz-box">
-                <div class="answer-box">
-                    <p class="question">Wybierz zajęcia:</p>
-                    <input type="radio" name="question-1" id="answer-1" class="answer" value="100">
-                    <label for="answer-1">Indywidualne</label> <br>
-                    <input type="radio" name="question-1" id="answer-2" class="answer" value="200">
-                    <label for="answer-2">2-osobowe</label> <br>
-                    <input type="radio" name="question-1" id="answer-3" class="answer" value="300">
-                    <label for="answer-3">Wykład maturalny</label>
-                </div>
-                <div class="answer-box">
-                    <p class="question">Poziom:</p>
-                    <input type="radio" name="question-2" id="answer-4" class="answer" value="10">
-                    <label for="answer-4">Szkoła podstawowa</label> <br>
-                    <input type="radio" name="question-2" id="answer-5" class="answer" value="20">
-                    <label for="answer-5">Szkoła średnia poziom podstawowy</label> <br>
-                    <input type="radio" name="question-2" id="answer-6" class="answer" value="30">
-                    <label for="answer-6">Szkoła średnia poziom rozszerzony</label> <br>
-                    <input type="radio" name="question-2" id="answer-7" class="answer" value="40">
-                    <label for="answer-7">Studia wyższe</label>
-                </div>
-                <div class="answer-box">
-                    <p class="question">Przedmiot:</p>
-                    <input type="radio" name="question-3" id="answer-8" class="answer" value="1">
-                    <label for="answer-8">Matematyka</label>
-                    <input type="radio" name="question-3" id="answer-9" class="answer" value="2">
-                    <label for="answer-9">Fizyka</label>
-                    <input type="radio" name="question-3" id="answer-10" class="answer" value="3">
-                    <label for="answer-10">Chemia</label>
-                    <input type="radio" name="question-3" id="answer-11" class="answer" value="4">
-                    <label for="answer-11">Biologia</label>
-                </div>
-                <button onclick="cennik()">Zobacz ofertę</button>
-
-            </form>
-            <div id="change"></div>
-            <div class="modal modal-active">
-                <p></p>
-                <button class="close-modal">X</button>
+    </section>
+    <div class="container">
+        <h2>Działamy na terenie całej Polski</h2>
+        <div class="d-md-none short-list">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Wybierz swoje miasto
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Korepetycje Warszawa</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Wrocław</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Kraków</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Gdańsk</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Poznań</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Łódź</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Gdynia</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Katowice</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Toruń</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Bydgoszcz</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Gliwice</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Zielona Góra</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Bytom</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Szczecin</a></li>
+                <li><a class="dropdown-item" href="#">Korepetycje Chorzów</a></li>
+                <li><a class="dropdown-item" href="#">Częstochowa</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container text-start d-none d-sm-none d-md-flex">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 items">Korepetycje Online</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Warszawa</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Kraków</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Wrocław</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Gdynia</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Gdańsk</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Bydgoszcz</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Łódź</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Poznań</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Gliwice</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Lublin</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Białystok</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Rzeszów</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Toruń</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Zielona Góra</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Szczecin</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Bytom</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Chorzów</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Kielce</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Sosnowiec</div>
+            <div class="col-lg-3 col-md-4 items">Korepetycje Częstochowa</div>
+        </div>
+    </div>
+    <div class="center-button">
+        <span>I w wielu innych miejscowościach</span>
+    </div>
+    <h2>Jak zapisać się na korepetycje?</h2>
+    <div class="steps container">
+        <div class="step">
+            <div class="step-numb heartbeat">1</div>
+            <div class="step-text">
+                <p>Wypełnij formularz lub zadzwoń pod numer
+                    792 877 872</p>
+                <p>Zadzwonimy do Ciebie w ciągu kilku godzin!</p>
+                <button>Zapisz się na zajęcia</button>
             </div>
-        </section>
-        <div class="container">
-            <h2>Działamy na terenie całej Polski</h2>
-            <div class="d-md-none short-list">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Wybierz swoje miasto
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Korepetycje Warszawa</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Wrocław</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Kraków</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Gdańsk</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Poznań</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Łódź</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Gdynia</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Katowice</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Toruń</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Bydgoszcz</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Gliwice</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Zielona Góra</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Bytom</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Szczecin</a></li>
-                    <li><a class="dropdown-item" href="#">Korepetycje Chorzów</a></li>
-                    <li><a class="dropdown-item" href="#">Częstochowa</a></li>
+        </div>
+        <div class="step">
+            <div class="step-numb heartbeat">2</div>
+            <div class="step-text">
+                <p>Dostaniesz informacje dotyczące lekcji i szczegóły dotyczące płatności. Po pierwszych zajęciach
+                    podejmij decyzję, czy chcesz podjąć współpracę, czy może wolisz zmienić korepetytora. Zmiana
+                    korepetytora jest bezpłatna.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-numb heartbeat">3</div>
+            <div class="step-text">
+                <p>Korzystaj w pełni z naszej oferty!
+                <ul>
+                    <li>wybierz odpowiedni pakiet cenowy oraz format zajęć
+                    </li>
+                    <li>korzystaj z panelu klienta i spersonalizowanego planu.</li>
                 </ul>
-            </div>
-        </div>
-        <div class="container text-start d-none d-sm-none d-md-flex">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 items">Korepetycje Online</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Warszawa</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Kraków</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Wrocław</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Gdynia</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Gdańsk</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Bydgoszcz</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Łódź</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Poznań</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Gliwice</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Lublin</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Białystok</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Rzeszów</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Toruń</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Zielona Góra</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Szczecin</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Bytom</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Chorzów</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Kielce</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Sosnowiec</div>
-                <div class="col-lg-3 col-md-4 items">Korepetycje Częstochowa</div>
-            </div>
-        </div>
-        <div class="center-button">
-            <span>I w wielu innych miejscowościach</span>
-        </div>
-        <h2>Jak zapisać się na korepetycje?</h2>
-        <div class="steps container">
-            <div class="step">
-                <div class="step-numb heartbeat">1</div>
-                <div class="step-text">
-                    <p>Wypełnij formularz lub zadzwoń pod numer
-                        792 877 872</p>
-                    <p>Zadzwonimy do Ciebie w ciągu kilku godzin!</p>
-                    <button>Zapisz się na zajęcia</button>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-numb heartbeat">2</div>
-                <div class="step-text">
-                    <p>Dostaniesz informacje dotyczące lekcji i szczegóły dotyczące płatności. Po pierwszych zajęciach
-                        podejmij decyzję, czy chcesz podjąć współpracę, czy może wolisz zmienić korepetytora. Zmiana
-                        korepetytora jest bezpłatna.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-numb heartbeat">3</div>
-                <div class="step-text">
-                    <p>Korzystaj w pełni z naszej oferty!
-                    <ul>
-                        <li>wybierz odpowiedni pakiet cenowy oraz format zajęć
-                        </li>
-                        <li>korzystaj z panelu klienta i spersonalizowanego planu.</li>
-                    </ul>
-                    </p>
-                </div>
+                </p>
             </div>
         </div>
     </div>
+    </div>
+    <div class="faq-section container">
+        <h2>Często zadawane pytania</h2>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>1. Jak prowadzone są zajęcia online?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lekcje online są prowadzone z wykorzystaniem komunikatora głosowego (Skype, Google Meets, Discord)
+                    oraz wirtualnej tablicy (Ziteboard). Przed pierwszymi zajęciami uczeń otrzymuje maila z instrukcją
+                    oraz szczegółami dotyczącymi tej formy zajęć.
+
+                    Poza tym, oferujemy bezpłatną 30-minutową próbną lekcję. Podczas lekcji próbnej korepetytor poznaje
+                    ucznia, tłumaczy wybrane przez korepetytora zagadnienie celem zademonstrowania organizacji lekcji
+                    online.
+                    </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>2. Czy jest możliwość korepetycji z dojazdem?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lekcje z dojazdem są możliwe w większych miastach, jednak ich dostępność jest ograniczona ze względu
+                    na grafik korepetytorów. W przypadku zajęć online jest o wiele większa dostępność terminów niż w
+                    przypadku zajęć stacjonarnych. Próbna indywidualna 30-minutowa lekcja, zajęcia grupowe oraz wykłady
+                    odbywają się zawsze w formie zdalnej. </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>3. Kim są korepetytorzy Matematify?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Nasi pracownicy to studenci kierunkowi, którzy posiadają doświadczenie w prowadzeniu zajęć oraz
+                    zawodowi nauczyciele. W Matematify ciągle pracujemy nad ulepszeniem jakości naszych usług, więc
+                    podczas rekrutacji korepetytorzy przechodzą odpowiednie testy wiedzy, a po zatrudnieniu uczestniczą
+                    w szkoleniach podnoszących ich kwalifikacje.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>4. Jak można zapłacić za zajęcia?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Szczegółowe informacje o płatności klient otrzymuje w mailu powitalnym, który otrzyma po zapisaniu
+                    się na zajęcia. Możliwa jest płatność przelewem.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>5. Czy muszę rezygnować z zajęć jeśli czuję, że korepetytor lub partner z którym jestem w grupie
+                    mi nie odpowiadają?
+                </span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>W Matematify na pierwszym miejscu stawiamy uczniów, ich plany i potrzeby. Jeśli odnosisz wrażenie, że
+                    korepetytor lub partner do których zostałeś przydzielony nie spełniają Twoich oczekiwań lub czujesz,
+                    że zajęcia grupowe nie są dla Ciebie dobrym rozwiązaniem, poinformuj nas o tym. W zależności od
+                    sytuacji, możemy dopasować Ciebie do innej grupy z tym samym lub innym korepetytorem, oraz zawsze
+                    możesz po zakończeniu miesiąca przejść na zajęcia indywidualne. Wierzymy, że każdy uczeń jest inny i
+                    staramy się dopasować nasze zajęcia idealnie do potrzeb naszych uczniów.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="text-info">
-        <h2>Dowiedz się więcej o Matematify</h2>
+        <h2>Dowiedz się więcej o Matematify</h2>  
         <div class="about-us-bgc">
+            
             <div class="about-us">
                 <h3>O nas:</h3>
                 <p>Certyfikowane centrum korepetycji Matematify zostało założone w 2019 roku i działa do dziś. Po pięciu
@@ -389,7 +433,7 @@
                 </p>
                 <p>Naszą koronną cechą jest cierpliwość, dlatego uczeń bez skrępowania może po kilka razy zadawać to
                     samo pytanie, a my będziemy wyszukiwać najróżniejszych sposobów, żeby wytłumaczyć problem.</p>
-                <img src="./images/Zdjęcia/O nas.png" alt="">
+                <img src="./images/Zdjęcia/O nas.png" alt="" loading="lazy">
             </div>
         </div>
         <div class="certif-bgc">
@@ -406,9 +450,9 @@
             <div class="rev">
                 <h3>Opinie</h3>
                 <p>Ponad 200 pozytywnych opinii w Google i w najpopularniejszym serwisie związanym z korepetycjami.</p>
-                <div class="rev-img"> <img src="./images/certyfikaty/gwiazdki 5.png" alt="">
+                <div class="rev-img"> <img src="./images/certyfikaty/gwiazdki 5.png" alt="" loading="lazy">
                     <p>Na e-korepetycje.net</p>
-                    <img src="./images/certyfikaty/GWIAZDKI 4.png" alt="">
+                    <img src="./images/certyfikaty/GWIAZDKI 4.png" alt="" loading="lazy">
                     <p>Na Google</p>
                 </div>
 
@@ -430,7 +474,8 @@
                             <div class="reviews__box-info">
                                 <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
                                 <p class="reviews__box-text">
-                                    Lorem, ipsum sdfsgfgdwerwgwfvdolor sit amet consectetur adipidsssicing elit. Nam soluta
+                                    Lorem, ipsum sdfsgfgdwerwgwfvdolor sit amet consectetur adipidsssicing elit. Nam
+                                    soluta
                                     voluptatum
                                     officia
                                     reprehenderit dicta nisi commodi culpa expedita in reiciendis!
@@ -455,6 +500,112 @@
             </div>
         </div>
 
+    </div>
+    <div class="textse container">
+        <h2>.korepetycje dostosowane do każdego ucznia </h2>
+        <h3>Korepetycje dla maturzystów</h3>
+        <p>Jeśli szukasz efektywnych korepetycji online, jesteś na dobrej drodze! W Matematify zdajemy sobie sprawę, jak
+            istotny jest wynik egzaminu maturalnego dla Twojej przyszłości. Nasze korepetycje z matematyki, fizyki,
+            chemii, biologii, informatyki, języka polskiego oraz angielskiego prowadzone są przez doświadczonych
+            specjalistów, którzy doskonale wiedzą, z czym się mierzysz.
+
+            Nasi korepetytorzy to eksperci, którzy sami kiedyś przeszli przez to, co Ty teraz przeżywasz. Dzięki temu
+            wiedzą, jak skutecznie poprowadzić Cię w stronę sukcesu. Egzamin maturalny potrafi być stresujący, dlatego
+            na naszych zajęciach zadbamy o Twój komfort. Nauka w Matematify jest nastawiona na Ciebie, bo wiemy, że
+            najlepsze efekty osiąga się na zajęciach indywidualnych. Skupiamy się na realizacji Twoich planów i
+            wspieramy Cię na każdym kroku.
+
+            Matematify oferuje szeroki zakres korepetycji online, które odbywają się w komfortowej przestrzeni
+            dostosowanej do Twoich potrzeb. Nasi profesjonalni korepetytorzy pomogą Ci w przygotowaniach do matury z
+            matematyki, fizyki, chemii, biologii, informatyki, języka polskiego oraz angielskiego. Przygotowania do
+            egzaminu to nie tylko nauka podczas lekcji indywidualnej, ale także samodzielna praca. W razie jakichkolwiek
+            trudności, zawsze możesz zwrócić się do swojego korepetytora, który rozwieje Twoje wątpliwości i udzieli
+            merytorycznej odpowiedzi.
+
+            Oprócz zajęć indywidualnych, oferujemy także grupowe zajęcia i wykłady maturalne, gdzie omawiamy arkusze z
+            poprzednich lat. To doskonała okazja, by sprawdzić swoją wiedzę z rówieśnikami, poczuć klimat egzaminu
+            maturalnego i wymienić się spostrzeżeniami na temat matury.
+
+            Wybierz Matematify, aby skutecznie przygotować się do matury z matematyki, fizyki, chemii, biologii,
+            informatyki, języka polskiego i angielskiego. Osiągnij swoje cele dzięki naszym profesjonalnym korepetycjom
+            online!</p>
+        <h3>Korepetycje dla 8-klasistów</h3>
+        <p>Zbliża się egzamin 8-klasisty, a Ty szukasz skutecznego wsparcia w nauce? W Matematify wiemy, jak ważny jest
+            ten moment w Twoim życiu. Nasze korepetycje online z matematyki, języka polskiego i angielskiego zostały
+            stworzone z myślą o tym, by pomóc Ci osiągnąć najlepsze wyniki i pewnie wejść na kolejny etap edukacji.
+
+            Nasi korepetytorzy to doświadczeni specjaliści, którzy doskonale rozumieją wyzwania, przed którymi stoisz. Z
+            nami przygotujesz się do egzaminu 8-klasisty bez stresu i w przyjaznej atmosferze. Oferujemy indywidualne
+            podejście do każdego ucznia, dostosowując tempo i zakres materiału do Twoich potrzeb, abyś mógł/mogła skupić
+            się na osiągnięciu swoich celów.
+
+            Korepetycje online w Matematify to nie tylko lekcje, ale kompleksowe wsparcie na każdym etapie przygotowań.
+            Podczas zajęć rozwiejemy Twoje wątpliwości, wytłumaczymy trudniejsze zagadnienia i zadbamy o to, byś czuł/a
+            się pewnie podczas egzaminu. Pomożemy Ci solidnie przygotować się z matematyki, języka polskiego i
+            angielskiego, koncentrując się na kluczowych zagadnieniach, które mogą pojawić się na egzaminie.
+
+            Oprócz indywidualnych zajęć oferujemy także sesje grupowe i warsztaty tematyczne, na których będziesz
+            miał/miała okazję sprawdzić swoją wiedzę w praktyce, rozwiązując przykładowe arkusze egzaminacyjne oraz
+            dyskutując z rówieśnikami. To idealna okazja, by wzmocnić swoje umiejętności i zdobyć pewność siebie przed
+            egzaminem.
+
+            Z Matematify przygotowania do egzaminu 8-klasisty z matematyki, języka polskiego i angielskiego stają się
+            prostsze. Zaufaj naszym korepetycjom online i zdobądź wysokie wyniki!
+        </p>
+        <h3>Korepetycje - pomoc w bieżącej nauce</h3>
+        <p>Czy szkolne przedmioty sprawiają Ci trudności, a każda lekcja to źródło stresu? Potrzebujesz regularnej
+            pomocy, aby czuć się pewniej na zajęciach i poprawić swoje oceny? A może masz ambitne plany związane z
+            konkretną dziedziną i chcesz zgłębiać swoją wiedzę poza programem szkolnym? Bez względu na to, jakie są
+            Twoje cele, trafiłeś/aś w odpowiednie miejsce!
+
+            Oferujemy profesjonalne korepetycje z matematyki, chemii, informatyki, biologii, fizyki, języka polskiego
+            oraz wielu innych przedmiotów na poziomie szkoły podstawowej, ponadpodstawowej (liceum/technikum) oraz
+            akademickim. Dzięki naszym zajęciom będziesz przygotowany na lekcje w szkole, poradzisz sobie z bieżącymi
+            kartkówkami, sprawdzianami, a prace domowe przestaną być uciążliwe!
+
+            Nasze korepetycje prowadzimy z wykorzystaniem nowoczesnej tablicy interaktywnej, co pozwala uczniowi na
+            bieżąco śledzić wyjaśnienia korepetytora. Każdy z naszych nauczycieli dba o to, abyś czuł/a się swobodnie,
+            ucząc się w spokojnej i przyjaznej atmosferze. Tempo zajęć dostosowujemy do Twoich potrzeb, zapewniając
+            indywidualne podejście. W trakcie spotkań 100% uwagi poświęcamy właśnie Tobie. Jeśli masz wątpliwości co do
+            jakiegoś zagadnienia, nasz korepetytor cierpliwie wyjaśni je ponownie, aż poczujesz się pewnie.
+
+            Jeśli Twoje dziecko ma zaległości z powodu nieobecności na zajęciach szkolnych, korepetycje Matematify to
+            idealne rozwiązanie. Nasi doświadczeni nauczyciele pomogą nie tylko nadrobić zaległy materiał, ale także
+            przygotują ucznia do nadchodzących kartkówek i sprawdzianów. Zależnie od potrzeb, dopasujemy formę zajęć,
+            aby były one maksymalnie skuteczne, co pozwoli zdobyć dobre oceny w szkole i przygotować się na wyzwania
+            naukowe na kolejnych etapach edukacji.
+
+            W Matematify rozumiemy, że nie każdy lubi rywalizację, która towarzyszy zajęciom w szkole. Na naszych
+            indywidualnych lekcjach stawiamy na komfort ucznia, eliminując presję i stres. U nas nie ma oceniania - jest
+            tylko wsparcie i pomoc!
+
+            Oferujemy bieżącą pomoc we wszystkich przedmiotach, abyś mógł/mogła czerpać satysfakcję z nauki i widzieć
+            pozytywne efekty swoich starań. Dołącz do Matematify i poczuj różnicę w podejściu do edukacji!
+        </p>
+        <h3>Korepetycje dla studentów</h3>
+        <p>W naszej szkole oferujemy również wsparcie i pomoc dla studentów na każdym roku studiów! Specjalizujemy się w
+            pomocy przy kierunkach związanych z matematyką, fizyką oraz chemią.
+
+            Nasi korepetytorzy to specjaliści i absolwenci kierunków ścisłych, którzy dobrze wiedzą z czym mierzą się
+            studenci. Dzięki własnym doświadczeniom pomogą Ci opanować trudny i niezrozumiały materiał w łatwy i
+            przyswajalny dla Ciebie sposób!
+
+            Z naszą pomocą przekonasz się, iż żaden przedmiot nie zatrzyma Twojego przyszłego sukcesu. Z pewnością my do
+            tego nie dopuścimy! Pomożemy Ci zarówno z bieżącymi problemami jak i wszelkimi zaległościami.
+
+            Dzięki naszym lekcjom będziesz przygotowany podczas zajęć na studiach, poradzisz sobie z bieżącymi
+            wejściówkami oraz egzaminami a wizja nadchodzącej sesji przestanie przyprawiać Cię o stres.
+
+            Nasze korepetycje prowadzone są na nowoczesnej tablicy interaktywnej, dzięki czemu uczeń w czasie
+            rzeczywistym widzi wszystko, co wyjaśnia korepetytor. W naszej szkole każdy nauczyciel zapewni Ci przyjazną,
+            spokojną atmosferę, odpowiednią do przyswajania wiedzy. Na korepetycjach Matematify nie musisz martwić się
+            zbyt szybkim tempem pracy – dopasujemy się pod Ciebie. Podczas naszych spotkań 100% uwagi poświęcamy właśnie
+            Tobie. Jeśli jakieś zagadnienie wydaje Ci się niejasne, korepetytor wytłumaczy je ponownie.
+
+            Atmosfera naszych zajęć zdecydowanie zachęca do pracy i nauki oraz co więcej, pozawala pozbyć się wszelkiego
+            stresu i napięcia związanego z danym przedmiotem czy zaliczeniem. Gwarantujemy 100% satysfakcji oraz
+            oczekiwane przez Ciebie efekty.
+        </p>
     </div>
     <script src="https://kit.fontawesome.com/b353d3f355.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

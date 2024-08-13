@@ -99,4 +99,21 @@ document.addEventListener('DOMContentLoaded', function () {
 	observeElements('.about-us-bgc')
 	observeElements('.certif-bgc')
 	observeElements('.rev-bgc')
+	observeElements('.hero')
+})
+
+document.querySelectorAll('.faq-question').forEach(item => {
+	item.addEventListener('click', () => {
+		const faqItem = item.parentElement
+
+		// Zamknij inne otwarte pytania
+		document.querySelectorAll('.faq-item').forEach(i => {
+			if (i !== faqItem) {
+				i.classList.remove('active')
+			}
+		})
+
+		// Przełącz otwieranie i zamykanie aktualnego pytania
+		faqItem.classList.toggle('active')
+	})
 })
