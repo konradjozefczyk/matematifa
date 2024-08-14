@@ -117,52 +117,52 @@ document.querySelectorAll('.faq-question').forEach(item => {
 	})
 })
 
-let currentQuestion = 1;
+let currentQuestion = 1
 
 function nextQuestion() {
-    const currentElement = document.querySelector(`.question[data-question="${currentQuestion}"]`);
-    const input = currentElement.querySelector('input, textarea');
-    
-    if (input.checkValidity()) {
-        currentElement.classList.remove('active');
-        currentQuestion++;
-        document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.add('active');
-    } else {
-        input.nextElementSibling.style.display = 'block';
-    }
+	const currentElement = document.querySelector(`.question[data-question="${currentQuestion}"]`)
+	const input = currentElement.querySelector('input, textarea')
+
+	if (input.checkValidity()) {
+		currentElement.classList.remove('active')
+		currentQuestion++
+		document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.add('active')
+	} else {
+		input.nextElementSibling.style.display = 'block'
+	}
 }
 
 function previousQuestion() {
-    document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.remove('active');
-    currentQuestion--;
-    document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.add('active');
+	document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.remove('active')
+	currentQuestion--
+	document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.add('active')
 }
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const formData = new FormData(this);
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+	event.preventDefault()
 
-    fetch('send_email.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert('Formularz został wysłany.');
-        this.reset();
-        currentQuestion = 1;
-        document.querySelectorAll('.question').forEach(el => el.classList.remove('active'));
-        document.querySelector('.question[data-question="1"]').classList.add('active');
-    })
-    .catch(error => {
-        console.error('Błąd:', error);
-        alert('Wystąpił błąd. Spróbuj ponownie później.');
-    });
-});
+	const formData = new FormData(this)
+
+	fetch('send_email.php', {
+		method: 'POST',
+		body: formData,
+	})
+		.then(response => response.text())
+		.then(data => {
+			alert('Formularz został wysłany.')
+			this.reset()
+			currentQuestion = 1
+			document.querySelectorAll('.question').forEach(el => el.classList.remove('active'))
+			document.querySelector('.question[data-question="1"]').classList.add('active')
+		})
+		.catch(error => {
+			console.error('Błąd:', error)
+			alert('Wystąpił błąd. Spróbuj ponownie później.')
+		})
+})
 
 if (document.querySelector('.slick-slider')) {
-    const script = document.createElement('script');
-    script.src = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
-    document.head.appendChild(script);
+	const script = document.createElement('script')
+	script.src = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
+	document.head.appendChild(script)
 }
