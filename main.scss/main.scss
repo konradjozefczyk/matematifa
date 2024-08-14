@@ -1,27 +1,29 @@
 @use './colors' as *;
+@use './animations' as *;
 :root {
 	font-size: 10px;
 }
-
 body {
 	box-sizing: border-box;
 	background: linear-gradient(90deg, rgba(65, 132, 200, 1) 0%, rgba(226, 110, 187, 1) 100%);
-	h1 {
-		font-size: 4rem;
+	h1, h2, h3 {
 		font-family: 'Kodchasan', sans-serif;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+		text-shadow: 1.5px 1.5px 1.5px black;
+		margin: 2rem 0;
+	}
+	h1 {
+		font-size: 5rem;
 	}
 	h2 {
 		font-size: 3rem;
-		font-family: 'Kodchasan', sans-serif;
-		text-align: center;
-		color: white;
-		font-weight: bold;
-		margin-top: 40px;
+		padding-top: 3rem;
+		
 	}
 	h3 {
 		font-size: 2.5rem;
-		font-family: 'Kodchasan', sans-serif;
-		color: white;
 	}
 	font-family: 'Montserrat', sans-serif;
 	font-size: 2rem;
@@ -29,15 +31,14 @@ body {
 }
 a {
 	text-decoration: none;
-	color: black;
+	color: white;
+	overflow: hidden;
 }
 .container {
-	max-width: 1400px;
+	max-width: 1440px;
 }
-
 header {
 	background-color: #6fa5dd;
-
 	.top {
 		display: flex;
 		padding: 3.5px;
@@ -46,16 +47,15 @@ header {
 	span {
 		padding: 2px 10px;
 		height: 30px;
+		line-height: 24px;
 	}
 	.menu-right {
 		display: none;
 		width: 35%;
 		justify-content: center;
-
 		span {
 			background-color: #ff3ea2;
 			color: #e9fcff;
-			line-height: 24px;
 		}
 	}
 	.menu-left {
@@ -65,9 +65,7 @@ header {
 			background-color: #e9fcff;
 			color: #1b25ac;
 			margin: 0px 40px;
-			line-height: 24px;
 		}
-
 		.phone {
 			width: 40px;
 		}
@@ -76,16 +74,29 @@ header {
 .formul {
 	display: none;
 }
+.btn {
+	width: 300px;
+	padding: 10px 10px;
+	margin-top: 20px;
+	color: white;
+	border: none;
+	font-weight: bold;
+	box-shadow: 5px 5px 5px #333;
+	transition: 0.5s;
+	font-size: 2rem;
+}
+.btn:hover {
+	scale: 0.95;
+}
 // NAV
 .menu-nav {
 	position: fixed;
 	width: 100vw;
 	z-index: 100;
-	top: 50px;
+	top: 40px;
 	animation: nav-top 0.3s linear 1 forwards;
 	animation-play-state: paused;
 	animation-delay: calc(var(--scroll) * -40s);
-	color: #280f91;
 	.bar {
 		text-align: center;
 		background-color: white;
@@ -98,17 +109,16 @@ header {
 			height: 80px;
 		}
 		.menu-item {
-			font-weight: bold;
-			text-transform: uppercase;
 			margin-left: 10px;
 			font-size: 2rem;
+			font-weight: bold;
+			color: #280f91;
 		}
 	}
 	#menuitems {
 		display: none;
 	}
 }
-//GŁÓWNA
 
 //STATS
 .stats {
@@ -131,29 +141,28 @@ header {
 }
 
 //PRZEDMIOTY
-
+.offer-subject.show {
+	animation: showleft 2s forwards;
+}
 .offer-subject {
+	transform: translateX(-50%);
+	overflow: hidden;
+	opacity: 0;
+	padding-top: 50px;
 	.sub-but {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		padding-bottom: 10px;
 	}
-	button {
-		width: 300px;
-		height: 100px;
-		font-size: 1.8rem;
-		font-weight: bold;
-		color: white;
-		box-shadow: 4px 4px 20px rgba($color: #00343b, $alpha: 0.5);
-		transition: 0.5s;
-	}
-	button:hover {
+
+	a:hover {
 		scale: 0.9;
 	}
-	button:first-of-type {
+	a:first-of-type {
 		background-color: #1b25ac;
 	}
-	button:last-of-type {
+	a:last-of-type {
 		background-color: #a12665;
 	}
 	p {
@@ -283,11 +292,11 @@ header {
 }
 .card-body {
 	background-color: white;
+	h3 {
+		text-shadow: none;
+	}
 }
-.card-group > .card:not(:first-child) .card-img-top {
-	border-top-left-radius: 50%;
-	border-top-right-radius: 50%;
-}
+.card-group > .card:not(:first-child) .card-img-top,
 .card-group > .card:not(:last-child) .card-img-top {
 	border-top-left-radius: 50%;
 	border-top-right-radius: 50%;
@@ -306,73 +315,10 @@ header {
 	display: flex;
 	justify-content: space-around;
 }
-.btn-aft {
-	display: flex;
-	justify-content: center;
-}
-.btn-after-arch {
-	color: white;
-	padding: 20px 10px;
-	margin-top: 30px;
-	background-color: #00bfdb;
-}
+
 //CENNIK
 
-.tech {
-	display: flex;
-	margin-top: 50px;
 
-	.right-side-tech {
-		width: 10%;
-		background-color: green;
-
-		writing-mode: vertical-rl;
-		text-orientation: mixed;
-		text-align: center;
-		font-size: 50px;
-	}
-	.center-tech {
-		width: 80%;
-		display: flex;
-		.tech-icon {
-			margin: 10px;
-			height: 300px;
-			width: 300px;
-			display: flex;
-			flex-direction: column;
-			background-color: #00bfdb;
-			justify-content: center;
-
-			align-items: center;
-			overflow: hidden;
-			.back-tech-def {
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: 370px;
-				height: 100%;
-				width: 100%;
-			}
-			.back-tech1 {
-				background-image: url('../images/index/googgle\ meet\ osobno.png');
-			}
-			.back-tech2 {
-				background-image: url('../images/index/ziteboard\ osobno.png');
-			}
-			.back-tech3 {
-				background-image: url('../images/index/osobno\ skype.png');
-			}
-			.back-tech4 {
-				background-image: url('../images/index/jamboard\ osobno.png');
-			}
-			p {
-				font-size: 20px;
-				color: white;
-				font-weight: bold;
-				padding-top: 10px;
-			}
-		}
-	}
-}
 .add {
 	height: auto;
 	width: 100%;
@@ -553,6 +499,7 @@ header {
 }
 
 .text-info {
+	overflow: hidden;
 	font-size: 2rem;
 	p {
 		margin-top: 40px;
@@ -670,6 +617,7 @@ header {
 
 .foot {
 	display: flex;
+	overflow: hidden;
 	justify-content: center;
 	background-color: rgba($color: black, $alpha: 0.5);
 	font-size: 1.5rem;
@@ -715,10 +663,10 @@ footer {
 	}
 	header {
 		a:hover {
-			transform: scale(1.2);
+			transform: scale(1.1);
 		}
 		.menu-left {
-			width: 65%;
+			width: 80%;
 		}
 		.menu-right {
 			display: flex;
@@ -745,6 +693,7 @@ footer {
 		display: block;
 	}
 	.menu-nav {
+		top:50px;
 		.bar {
 			display: none;
 			height: 7 rem;
@@ -782,7 +731,7 @@ footer {
 		}
 	}
 	.hero {
-		button {
+		a {
 			width: 500px;
 		}
 	}
@@ -790,97 +739,5 @@ footer {
 @media (max-width: 361px) {
 	header {
 		font-size: 1.5rem;
-	}
-}
-
-@keyframes nav-top {
-	to {
-		top: 0px;
-	}
-}
-/* ----------------------------------------------
- * Generated by Animista on 2024-8-12 16:45:9
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation heartbeat
- * ----------------------------------------
- */
-@-webkit-keyframes heartbeat {
-	from {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		-webkit-transform-origin: center center;
-		transform-origin: center center;
-		-webkit-animation-timing-function: ease-out;
-		animation-timing-function: ease-out;
-	}
-	10% {
-		-webkit-transform: scale(0.91);
-		transform: scale(0.91);
-		-webkit-animation-timing-function: ease-in;
-		animation-timing-function: ease-in;
-	}
-	17% {
-		-webkit-transform: scale(0.98);
-		transform: scale(0.98);
-		-webkit-animation-timing-function: ease-out;
-		animation-timing-function: ease-out;
-	}
-	33% {
-		-webkit-transform: scale(0.87);
-		transform: scale(0.87);
-		-webkit-animation-timing-function: ease-in;
-		animation-timing-function: ease-in;
-	}
-	45% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		-webkit-animation-timing-function: ease-out;
-		animation-timing-function: ease-out;
-	}
-}
-@keyframes heartbeat {
-	from {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		-webkit-transform-origin: center center;
-		transform-origin: center center;
-		-webkit-animation-timing-function: ease-out;
-		animation-timing-function: ease-out;
-	}
-	10% {
-		-webkit-transform: scale(0.91);
-		transform: scale(0.91);
-		-webkit-animation-timing-function: ease-in;
-		animation-timing-function: ease-in;
-	}
-	17% {
-		-webkit-transform: scale(0.98);
-		transform: scale(0.98);
-		-webkit-animation-timing-function: ease-out;
-		animation-timing-function: ease-out;
-	}
-	33% {
-		-webkit-transform: scale(0.87);
-		transform: scale(0.87);
-		-webkit-animation-timing-function: ease-in;
-		animation-timing-function: ease-in;
-	}
-	45% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		-webkit-animation-timing-function: ease-out;
-		animation-timing-function: ease-out;
-	}
-}
-@keyframes showleft {
-	to {
-		transform: translateX(0);
-		opacity: 1;
 	}
 }

@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	observeElements('.about-us-bgc')
 	observeElements('.certif-bgc')
 	observeElements('.rev-bgc')
+	observeElements('.offer-subject')
 })
 
 document.querySelectorAll('.faq-question').forEach(item => {

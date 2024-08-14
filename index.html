@@ -12,8 +12,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
-
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <style>
         .hero {
@@ -28,39 +26,30 @@
             align-items: center;
             flex-direction: column;
             border-radius: 20px;
+            position: relative;
         }
 
         .hero h1 {
-            color: white;
             text-shadow: 5px 5px 5px #333;
-            /* Załóżmy, że $darkcolor to #333 */
+            margin-top: 100px;
         }
 
-        .hero button {
-            width: 300px;
-            margin-top: 20px;
-            padding: 20px 2px;
-            margin-top: 40px;
-            color: white;
-            border: none;
-            font-weight: bold;
-            box-shadow: 10px 5px 5px black;
-            transition: 0.5s;
+        .hero a {
+            transform: translateX(-100%);
+            opacity: 0;
+            animation: showleft 1s forwards;
         }
 
-        .hero button:hover {
-            scale: 0, 9;
-        }
-
-        .hero button:first-of-type {
+        .hero a:first-of-type {
             background-color: #ff3ea2;
+            margin-top: 0px;
         }
 
-        .hero button:last-of-type {
+        .hero a:last-of-type {
             background-color: #00bfdb;
+            animation: showleft 1s .3s forwards;
         }
 
-        /* Dodanie animacji */
         @keyframes showleft {
             to {
                 transform: translateX(0);
@@ -68,58 +57,60 @@
             }
         }
     </style>
-    <link rel="preload" href="images/Zdjęcia/zdjęcie tytuł strony.png" as="image">
+    <link rel="preload" href="images/hero.avif" as="image">
     <link rel="stylesheet" href="./css/main.css">
-
-
 </head>
 
 <body>
     <header>
         <div class="container top">
             <div class="menu-left top">
-                <a href="#"><span class="rounded-pill phone"><i class="fa-solid fa-phone"></i> 577
-                        617 797</span></a>
+                <a href="#"><span class="rounded-pill phone"><i class="fa-solid fa-phone"></i> 577 617 797</span></a>
                 <a href="#"><span class="rounded-pill"><i class="fa-regular fa-envelope"></i></span></a>
-                <a href="#"><span class="rounded-pill formul">formularz</span></a>
+                <a href="#form"><span class="rounded-pill formul">formularz</span></a>
             </div>
             <div class="menu-right top">
                 <a href="#"><span class="rounded-pill">zaloguj się</span></a>
             </div>
         </div>
     </header>
-
     <div class="menu-nav">
-
         <button aria-label="menu" class="bar" onclick="menuOpen()"><i class="fa-solid fa-bars"></i></button>
         <div class="menu" id="menuitems">
             <img src="./images/logo z tekstem.png" alt="logo matematify" loading="lazy">
-            <div class="menu-item">
-                <p>O nas</p>
-            </div>
-            <div class="menu-item">
-                <p>Oferta</p>
-            </div>
-            <div class="menu-item">
-                <p>Cennik</p>
-            </div>
-            <div class="menu-item">
-                <p>Opinie</p>
-            </div>
-            <div class="menu-item">
-                <p>Jak zacząć?</p>
-            </div>
-
+            <a href="#Oferta">
+                <div class="menu-item">
+                    <p>Oferta</p>
+                </div>
+            </a>
+            <a href="#Cennik">
+                <div class="menu-item">
+                    <p>Cennik</p>
+                </div>
+            </a>
+            <a href="#Jakzaczac">
+                <div class="menu-item">
+                    <p>Jak zacząć?</p>
+                </div>
+            </a>
+            <a href="#Onas">
+                <div class="menu-item">
+                    <p>O nas</p>
+                </div>
+            </a>
+            <a href="#Opinie">
+                <div class="menu-item">
+                    <p>Opinie</p>
+                </div>
+            </a>
         </div>
     </div>
-
     <div>
-
         <section class="hero">
             <h1>Korepetycje <br>Online
             </h1>
-            <button class="rounded-pill">Zacznij od darmowej lekcji próbnej</button>
-            <button class="rounded-pill">Zobacz naszą ofertę</button>
+            <a href="#form" class="btn rounded-pill">Zacznij od darmowej lekcji próbnej</a>
+            <a href="#Oferta" class="btn rounded-pill">Zobacz naszą ofertę</a>
 
         </section>
         <div class="row stats">
@@ -140,10 +131,10 @@
                 <p>lat doświadczenia</p>
             </div>
         </div>
-        <div class="container offer-subject">
+        <div class="container offer-subject" id="Oferta">
             <h2>Korepetycje - Przedmioty</h2>
             <p>W szkole .matematify na pierwszym miejscu stawiamy ucznia i jego potrzeby. Wszystkie lekcje, które
-                prowadzimy są indywidualne, a przerabiany materiał i tempo nauki dostosujemy do Ciebie!
+                prowadzimy są nakierunkowane na ucznia, a przerabiany materiał i tempo nauki dostosujemy do Ciebie!
             </p>
             <p class="yellow-text">Zapoznaj się z naszą ofertą:</p>
             <div class="row">
@@ -178,12 +169,12 @@
             <p class="blue-text">Z chęcią pomożemy Ci znaleźć nauczyciela, który poprowadzi lekcje na jak najwyższym
                 poziomie z wybranych przedmiotów.
             </p>
-            <div class="sub-but"> <button class="rounded-pill">Formularz kontaktowy</button>
-                <button class="rounded-pill">Cennik</button>
+            <div class="sub-but"> <a href="#form" class="rounded-pill btn">Formularz kontaktowy</a>
+                <a href="#Cennik" class="rounded-pill btn">Cennik</a>
             </div>
 
         </div>
-        <h2>Indywidualnie czy w grupie?</h2>
+        <h2>Indywidualnie lub w grupie</h2>
         <div class="card-group container">
 
             <div class="card">
@@ -230,32 +221,10 @@
                 </div>
             </div>
         </div>
-        <div class="btn-aft"><button class="rounded-pill btn-after-arch">Zapisz się na lekcję próbną</button></div>
+     
         <div>
             <h2>Prowadzimy korepetycje za pomocą</h2>
-            <div class="tech container">
-                <div class="right-side-tech">
-                    <p>Komunikatory głosowe</p>
-                </div>
-                <div class="row center-tech">
-                    <div class="tech-icon">
-                        <div class="back-tech1 back-tech-def"></div>
-
-                    </div>
-                    <div class="tech-icon">
-                        <div class="back-tech2 back-tech-def"></div>
-
-                    </div>
-                    <div class="tech-icon">
-                        <div class="back-tech3 back-tech-def"></div>
-                    </div>
-                    <div class="tech-icon">
-                        <div class="back-tech4 back-tech-def"></div>
-
-                    </div>
-                </div>
-                <div class="right-side-tech">Wirtualne tablice</div>
-            </div>
+           
         </div>
         <div class="add">
             <div class="add-text">
