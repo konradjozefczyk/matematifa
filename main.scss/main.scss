@@ -109,49 +109,6 @@ header {
 	}
 }
 //GŁÓWNA
-.hero.show {
-	animation: showleft 2s forwards;
-}
-.hero {
-	transform: translateY(50%);
-	opacity: 0;
-	height: 100vh;
-	background-image: url(../images/Zdjęcia/zdjęcie\ tytuł\ strony.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	border-radius: 20px;
-
-	h1 {
-		color: white;
-		text-shadow: 5px 5px 5px $darkcolor;
-	}
-	button {
-		width: 300px;
-		margin-top: 20px;
-		padding: 20px 2px;
-		margin-top: 40px;
-		color: white;
-		border: none;
-		font-weight: bold;
-		box-shadow: 10px 5px 5px black;
-		transition: 0.5s;
-	}
-	button:hover {
-		scale: 0.9;
-	}
-	button:first-of-type {
-		background-color: #ff3ea2;
-	}
-	button:last-of-type {
-		background-color: #00bfdb;
-	}
-}
 
 //STATS
 .stats {
