@@ -857,6 +857,9 @@ footer {
   .text-info .rev-bgc .rev img {
     width: 30%;
   }
+  .hero {
+    background-image: url(../images/hero.avif);
+  }
   .hero a {
     width: 500px;
   }

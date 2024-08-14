@@ -446,22 +446,22 @@ header {
 	background-color: rgba($color: white, $alpha: 0.2);
 	margin-bottom: 20px;
 	text-align: left;
-} 
+}
 .steps {
 	margin-top: 100px;
 	display: block;
-	
+
 	justify-content: space-between;
 	align-items: center;
-	.step1.show{
-animation: showscale 1s forwards;
+	.step1.show {
+		animation: showscale 1s forwards;
 	}
-	.step2.show{
-animation: showscale 1s .5s forwards;
+	.step2.show {
+		animation: showscale 1s 0.5s forwards;
 	}
-	
+
 	.step3.show {
-animation: showscale 1s 1s forwards;
+		animation: showscale 1s 1s forwards;
 	}
 	.step1 {
 		opacity: 0;
@@ -473,7 +473,6 @@ animation: showscale 1s 1s forwards;
 		opacity: 0;
 	}
 	.step {
-		
 		min-width: 200px;
 		position: relative;
 		background-color: #e9fcff;
@@ -823,6 +822,7 @@ footer {
 		}
 	}
 	.hero {
+		background-image: url(../images/hero.avif);
 		a {
 			width: 500px;
 		}
