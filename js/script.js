@@ -14,16 +14,68 @@ const handleQuiz = e => {
 
 form.addEventListener('submit', handleQuiz)
 
+function updateSubjects() {
+	const zajecia = document.querySelector('input[name=question-1]:checked').value
+
+	// Pobierz wszystkie przedmioty
+	const przedmioty = document.querySelectorAll('input[name=question-3]')
+
+	// Resetuj stan przedmiotów
+	przedmioty.forEach(przedmiot => {
+		przedmiot.disabled = false // Odblokuj wszystkie
+		przedmiot.checked = false // Odznacz wszystkie
+	})
+
+	// Pobierz wszystkie poziomy edukacji
+	const poziomy = document.querySelectorAll('input[name=question-2]')
+
+	// Resetuj stan poziomów
+	poziomy.forEach(poziom => {
+		poziom.disabled = false // Odblokuj wszystkie poziomy
+		poziom.checked = false // Odznacz wszystkie poziomy
+		
+	})
+
+	if (zajecia === '200') {
+		// 2-osobowe
+		przedmioty.forEach(przedmiot => {
+			if (przedmiot.value > 3) {
+				// Pozostaw aktywne tylko Matematyka, Fizyka, Chemia (wartości 1, 2, 3)
+				przedmiot.disabled = true
+			}
+		})
+	} else if (zajecia === '300') {
+		// Wykład maturalny
+		przedmioty.forEach(przedmiot => {
+			if (przedmiot.value !== '1') {
+				// Pozostaw aktywną tylko Matematykę (wartość 1)
+				przedmiot.disabled = true
+			}
+		})
+
+		// Zablokuj opcje "Szkoła podstawowa" i "Studia wyższe"
+		poziomy.forEach(poziom => {
+			if (poziom.value === '10' || poziom.value === '40') {
+				poziom.disabled = true
+			}
+		})
+	}
+}
+
 function cennik() {
 	let var1 = document.querySelector('input[name=question-1]:checked').value
 	let var2 = document.querySelector('input[name=question-2]:checked').value
 	let var3 = document.querySelector('input[name=question-3]:checked').value
+
 	console.log(var1)
 	console.log(var2)
 	console.log(var3)
 
-	cena = parseInt(var1) + parseInt(var2) + parseInt(var3)
-	document.getElementById('change').innerHTML = cena
+	let cena = parseInt(var1) + parseInt(var2) + parseInt(var3)
+	document.getElementById('change').innerHTML =
+		'Cena Twoich zajęć to ' +
+		cena +
+		' zł. <br> Cena za zajęcia indywidualne to cena za jedną godzinę zegarową zajęć. Cena zajęć grupowych jest za cały miesiąc'
 }
 
 window.addEventListener(
@@ -99,6 +151,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	observeElements('.certif-bgc')
 	observeElements('.rev-bgc')
 	observeElements('.offer-subject')
+	observeElements('.add')
+	observeElements('.step1')
+	observeElements('.step2')
+	observeElements('.step3')
 })
 
 document.querySelectorAll('.faq-question').forEach(item => {
