@@ -113,6 +113,7 @@ header {
 	animation: showleft 2s forwards;
 }
 .hero {
+	will-change: transform, opacity;
 	transform: translateY(50%);
 	opacity: 0;
 	height: 100vh;
