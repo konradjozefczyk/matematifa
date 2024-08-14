@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-	// Obserwacja elementów z klasą 'about-us-bgc' i 'certif-bgc'
 	observeElements('.about-us-bgc')
 	observeElements('.certif-bgc')
 	observeElements('.rev-bgc')
@@ -162,3 +161,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     });
 });
 
+if (document.querySelector('.slick-slider')) {
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
+    document.head.appendChild(script);
+}
