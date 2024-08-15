@@ -243,3 +243,33 @@ if (document.querySelector('.slick-slider')) {
 	script.src = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
 	document.head.appendChild(script)
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	const reviewsBoxWrapper = document.querySelector('.reviews__box-wrapper')
+	const reviewsBoxes = document.querySelector('.reviews__boxes')
+	const leftArrow = document.querySelector('.reviews__arrow--left')
+	const rightArrow = document.querySelector('.reviews__arrow--right')
+
+	let currentIndex = 0
+	const boxWidth = document.querySelector('.reviews__box').offsetWidth
+	const visibleBoxes = 2 // Liczba widocznych boxów
+	const totalBoxes = document.querySelectorAll('.reviews__box').length
+
+	function updatePosition() {
+		reviewsBoxes.style.transform = `translateX(-${currentIndex * boxWidth}px)`
+	}
+
+	rightArrow.addEventListener('click', () => {
+		if (currentIndex < totalBoxes - visibleBoxes) {
+			currentIndex++
+			updatePosition()
+		}
+	})
+
+	leftArrow.addEventListener('click', () => {
+		if (currentIndex > 0) {
+			currentIndex--
+			updatePosition()
+		}
+	})
+})
