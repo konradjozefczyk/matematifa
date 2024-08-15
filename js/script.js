@@ -1,3 +1,13 @@
+// Definiowanie pustych funkcji dla zdarzeń dotykowych
+function noop() {}
+
+// Ustawianie zdarzeń dotykowych jako pasywne
+document.addEventListener('touchstart', noop, { passive: true })
+document.addEventListener('touchmove', noop, { passive: true })
+
+// Ustawianie zdarzenia przewijania jako pasywne
+window.addEventListener('scroll', noop, { passive: true })
+
 const form = document.querySelector('.quiz-box')
 const answers = Array.from(document.querySelectorAll('.answer'))
 const modal = document.querySelector('.modal')
@@ -33,7 +43,6 @@ function updateSubjects() {
 	poziomy.forEach(poziom => {
 		poziom.disabled = false // Odblokuj wszystkie poziomy
 		poziom.checked = false // Odznacz wszystkie poziomy
-		
 	})
 
 	if (zajecia === '200') {

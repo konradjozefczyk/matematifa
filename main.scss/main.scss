@@ -1,9 +1,11 @@
 @use './colors' as *;
 @use './animations' as *;
-
+// Globalne ustawienia
 :root {
-	font-size: 10px;
+    font-size: 10px;
 }
+
+
 body {
 	box-sizing: border-box;
 	background: linear-gradient(90deg, rgba(65, 132, 200, 1) 0%, rgba(226, 110, 187, 1) 100%);
