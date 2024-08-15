@@ -8,6 +8,18 @@ document.addEventListener('touchmove', noop, { passive: true })
 // Ustawianie zdarzenia przewijania jako pasywne
 window.addEventListener('scroll', noop, { passive: true })
 
+// Lazy loading modułu podczas ładowania strony
+document.addEventListener('DOMContentLoaded', () => {
+	import('./myModule.js')
+		.then(module => {
+			const myFunction = module.default
+			myFunction()
+		})
+		.catch(err => {
+			console.error('Error loading module:', err)
+		})
+})
+
 const form = document.querySelector('.quiz-box')
 const answers = Array.from(document.querySelectorAll('.answer'))
 const modal = document.querySelector('.modal')
