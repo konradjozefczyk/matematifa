@@ -50,7 +50,7 @@ body h3 {
   color: white;
   text-align: center;
   text-shadow: 1.5px 1.5px 1.5px black;
-  margin: 2rem 0;
+  margin: 20px 0;
 }
 body h1 {
   font-size: 5rem;
@@ -194,13 +194,13 @@ header .menu-left .phone {
   padding-top: 50px;
 }
 .offer-subject .sub-but {
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding-bottom: 10px;
 }
 .offer-subject a:hover {
   scale: 0.9;
+  color: white;
 }
 .offer-subject a:first-of-type {
   background-color: #1b25ac;
@@ -210,13 +210,11 @@ header .menu-left .phone {
 }
 .offer-subject p {
   margin: 40px 40px 40px 40px;
-  color: white;
   text-align: center;
 }
 .offer-subject .yellow-text {
   color: #fdcd12;
   font-weight: bold;
-  text-align: center;
 }
 .offer-subject .blue-text {
   color: #4ae8ff;
@@ -227,9 +225,6 @@ header .menu-left .phone {
   width: 300px;
   border-radius: 10px;
   margin: 20px;
-  background-position: center;
-  background-size: 300px auto;
-  background-repeat: no-repeat;
   box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
   background-size: cover;
   display: flex;
@@ -340,7 +335,8 @@ header .menu-left .phone {
 }
 
 .card-title {
-  font-size: 2rem;
+  color: #280f91;
+  font-size: 2.5rem;
   text-align: center;
   font-weight: bold;
 }
@@ -499,6 +495,10 @@ header .menu-left .phone {
 .pricebox button {
   margin: 20px;
   background-color: #ff3ea2;
+}
+
+#Jakzaczac, #contactForm {
+  padding-top: 100px;
 }
 
 #change {
@@ -909,33 +909,37 @@ footer {
     align-items: center;
     height: 100%;
   }
-  .menu-nav .menu-item {
-    text-align: center;
-    align-self: center;
+  .menu-nav .menu-item:hover {
+    border-top: #1b25ac 2px solid;
   }
-  .text-info .about-us-bgc {
+  .menu-nav .menu-item {
+    padding: 0px 10px;
+    border-top: white 2px solid;
+    transition: border-top 0.2s;
+  }
+  .menu-nav .text-info .about-us-bgc {
     margin-right: 100px;
   }
-  .text-info .certif-bgc {
+  .menu-nav .text-info .certif-bgc {
     margin-left: 100px;
   }
-  .text-info .rev-bgc {
+  .menu-nav .text-info .rev-bgc {
     margin-right: 100px;
   }
-  .text-info .rev-bgc .rev .rev-img {
+  .menu-nav .text-info .rev-bgc .rev .rev-img {
     text-align: center;
   }
-  .text-info .rev-bgc .rev img {
+  .menu-nav .text-info .rev-bgc .rev img {
     width: 30%;
   }
-  .hero {
+  .menu-nav .hero {
     background-image: url(../images/hero.avif);
   }
-  .hero a {
+  .menu-nav .hero a {
     width: 500px;
   }
 }
-@media (max-width: 361px) {
+@media (min-width: 992px) and (max-width: 361px) {
   header {
     font-size: 1.5rem;
   }

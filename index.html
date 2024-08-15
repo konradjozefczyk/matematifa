@@ -17,7 +17,7 @@
     <style>
         .hero {
             background-image: url(./images/heromobile.avif);
-            height: 60vh;
+            height: 80vh;
             background-position: top;
             background-size: cover;
             background-repeat: no-repeat;
@@ -39,6 +39,10 @@
             transform: translateX(-100%);
             opacity: 0;
             animation: showleft 1s forwards;
+        }
+
+        .hero a:hover {
+            color: white;
         }
 
         .hero a:first-of-type {
@@ -447,6 +451,34 @@
         </div>
     </div>
     </div>
+    <div class="formuser container">
+        <h2>Wypełnij formularz i odbierz bezpłatną lekcję próbną</h2>
+        <form id="contactForm">
+            <div class="question active" data-question="1">
+                <label for="name">Imię:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError">Proszę podać swoje imię.</span>
+                <button type="button" onclick="nextQuestion()">Dalej</button>
+            </div>
+    
+            <div class="question" data-question="2">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError">Proszę podać prawidłowy adres email.</span>
+                <button type="button" onclick="previousQuestion()">Wstecz</button>
+                <button type="button" onclick="nextQuestion()">Dalej</button>
+            </div>
+    
+            <div class="question" data-question="3">
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error" id="messageError">Proszę wpisać wiadomość.</span>
+                <button type="button" onclick="previousQuestion()">Wstecz</button>
+                <button type="submit">Wyślij</button>
+            </div>
+        </form>
+    </div>
+    
     <div class="faq-section container">
         <h2>Często zadawane pytania</h2>
         <div class="faq-item">
@@ -520,30 +552,7 @@
             </div>
         </div>
     </div>
-    <form id="contactForm">
-        <div class="question active" data-question="1">
-            <label for="name">Imię:</label>
-            <input type="text" id="name" name="name" required>
-            <span class="error" id="nameError">Proszę podać swoje imię.</span>
-            <button type="button" onclick="nextQuestion()">Dalej</button>
-        </div>
-
-        <div class="question" data-question="2">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <span class="error" id="emailError">Proszę podać prawidłowy adres email.</span>
-            <button type="button" onclick="previousQuestion()">Wstecz</button>
-            <button type="button" onclick="nextQuestion()">Dalej</button>
-        </div>
-
-        <div class="question" data-question="3">
-            <label for="message">Wiadomość:</label>
-            <textarea id="message" name="message" required></textarea>
-            <span class="error" id="messageError">Proszę wpisać wiadomość.</span>
-            <button type="button" onclick="previousQuestion()">Wstecz</button>
-            <button type="submit">Wyślij</button>
-        </div>
-    </form>
+    
     <div class="text-info">
         <h2>Dowiedz się więcej o Matematify</h2>
         <div class="about-us-bgc">
@@ -646,7 +655,8 @@
                 <p>Miej to na uwadze wybierając korepetycje.</p>
                 <div class="row">
                     <div class="ben-box">
-                        <div class="ben-img"><img src="./images/telefon/kafelki/benefity/onlinetel.avif" alt="" loading="lazy"></div>
+                        <div class="ben-img"><img src="./images/telefon/kafelki/benefity/onlinetel.avif" alt=""
+                                loading="lazy"></div>
                         <div class="ben-text">Zajęcia online z każdego miejsca na świecie</div>
                     </div>
                     <div class="ben-box">
@@ -694,7 +704,8 @@
                         </div>
                     </div>
                     <div class="subdown">
-                        <div class="subdown-img"><img src="./images/telefon/kafelki/kompleksowa/matmatel.avif" alt="" loading="lazy">
+                        <div class="subdown-img"><img src="./images/telefon/kafelki/kompleksowa/matmatel.avif" alt=""
+                                loading="lazy">
                         </div>
                         <div class="subdown-text">
                             <p>Matematyka, Fizyka, Chemia</p><span>Poznaj tajniki delty, zrozum znaczenie zasad Newtona
@@ -703,7 +714,8 @@
                         </div>
                     </div>
                     <div class="subdown">
-                        <div class="subdown-img"><img src="./images/telefon/kafelki/kompleksowa/fizykatel.avif" alt="" loading="lazy">
+                        <div class="subdown-img"><img src="./images/telefon/kafelki/kompleksowa/fizykatel.avif" alt=""
+                                loading="lazy">
                         </div>
                         <div class="subdown-text">
                             <p>Język polski</p><span>Nie jest łatwy, wiedzą o tym przede wszystkim obcokrajowcy. Co

@@ -17,7 +17,7 @@ body {
 		color: white;
 		text-align: center;
 		text-shadow: 1.5px 1.5px 1.5px black;
-		margin: 2rem 0;
+		margin: 20px 0;
 	}
 	h1 {
 		font-size: 5rem;
@@ -158,14 +158,14 @@ header {
 	opacity: 0;
 	padding-top: 50px;
 	.sub-but {
+		padding-bottom: 10px;
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
-		padding-bottom: 10px;
 	}
 
 	a:hover {
 		scale: 0.9;
+		color: white;
 	}
 	a:first-of-type {
 		background-color: #1b25ac;
@@ -175,13 +175,11 @@ header {
 	}
 	p {
 		margin: 40px 40px 40px 40px;
-		color: white;
 		text-align: center;
 	}
 	.yellow-text {
 		color: #fdcd12;
 		font-weight: bold;
-		text-align: center;
 	}
 	.blue-text {
 		color: #4ae8ff;
@@ -193,9 +191,6 @@ header {
 	width: 300px;
 	border-radius: 10px;
 	margin: 20px;
-	background-position: center;
-	background-size: 300px auto;
-	background-repeat: no-repeat;
 	box-shadow: 3px 3px 10px #2e2e2e2e;
 	background-size: cover;
 	display: flex;
@@ -300,7 +295,8 @@ header {
 	border: none;
 }
 .card-title {
-	font-size: 2rem;
+	color: #280f91;
+	font-size: 2.5rem;
 	text-align: center;
 	font-weight: bold;
 }
@@ -458,6 +454,9 @@ header {
 		margin: 20px;
 		background-color: #ff3ea2;
 	}
+}
+#Jakzaczac, #contactForm{
+	padding-top: 100px;
 }
 #change {
 	background-color: rgba($color: white, $alpha: 0.2);
@@ -874,11 +873,14 @@ footer {
 			align-items: center;
 			height: 100%;
 		}
+		.menu-item:hover {
+			border-top: #1b25ac 2px solid;
+		  }
 		.menu-item {
-			text-align: center;
-			align-self: center;
+			padding: 0px 10px;
+			border-top: white 2px solid;
+			transition: border-top .2s;
 		}
-	}
 	.text-info {
 		.about-us-bgc {
 			margin-right: 100px;
@@ -909,4 +911,5 @@ footer {
 	header {
 		font-size: 1.5rem;
 	}
+}
 }
