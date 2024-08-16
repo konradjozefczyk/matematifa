@@ -8,7 +8,6 @@ document.addEventListener('touchmove', noop, { passive: true })
 // Ustawianie zdarzenia przewijania jako pasywne
 window.addEventListener('scroll', noop, { passive: true })
 
-
 const form = document.querySelector('.quiz-box')
 const answers = Array.from(document.querySelectorAll('.answer'))
 const modal = document.querySelector('.modal')
@@ -104,6 +103,16 @@ function menuOpen() {
 		menu.style.display = 'block'
 	}
 }
+// Dodajemy event listener do każdego elementu w menu, aby zamknąć menu po kliknięciu
+document.addEventListener('DOMContentLoaded', () => {
+	var menuItems = document.querySelectorAll('#menuitems a') // Zakładam, że elementy menu to linki <a>
+
+	menuItems.forEach(item => {
+		item.addEventListener('click', () => {
+			menuOpen() // Zamknięcie menu po kliknięciu w dowolny element
+		})
+	})
+})
 
 document.addEventListener('DOMContentLoaded', () => {
 	const counters = document.querySelectorAll('.counter')
@@ -165,6 +174,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	observeElements('.step1')
 	observeElements('.step2')
 	observeElements('.step3')
+	observeElements('.card')
+	observeElements('.benefits-bgc')
 })
 
 document.querySelectorAll('.faq-question').forEach(item => {
@@ -243,23 +254,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	const boxWidth = document.querySelector('.reviews__box').offsetWidth
 	const visibleBoxes = 2 // Liczba widocznych boxów
 	const totalBoxes = document.querySelectorAll('.reviews__box').length
+	const maxIndex = totalBoxes - visibleBoxes
 
 	function updatePosition() {
 		reviewsBoxes.style.transform = `translateX(-${currentIndex * boxWidth}px)`
 	}
 
 	rightArrow.addEventListener('click', () => {
-		if (currentIndex < totalBoxes - visibleBoxes) {
-			currentIndex++
+		if (currentIndex < maxIndex) {
+			currentIndex += visibleBoxes // Przesuwa o liczbę widocznych boxów
+			if (currentIndex > maxIndex) currentIndex = maxIndex // Zapobiega wyjściu poza granice
 			updatePosition()
 		}
 	})
 
 	leftArrow.addEventListener('click', () => {
 		if (currentIndex > 0) {
-			currentIndex--
+			currentIndex -= visibleBoxes // Przesuwa o liczbę widocznych boxów
+			if (currentIndex < 0) currentIndex = 0 // Zapobiega wyjściu poza granice
 			updatePosition()
 		}
 	})
 })
-  

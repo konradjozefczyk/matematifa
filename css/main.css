@@ -187,6 +187,30 @@ header .menu-left .phone {
   animation: showleft 2s forwards;
 }
 
+.cities-bgc {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-bottom: 40px;
+}
+.cities-bgc h2 {
+  margin-bottom: 5px;
+}
+.cities-bgc h3 {
+  padding: 0;
+  margin-bottom: 40px;
+}
+.cities-bgc .short-list {
+  display: flex;
+  justify-content: center;
+}
+.cities-bgc .short-list button {
+  width: 300px;
+}
+.cities-bgc .short-list ul.dropdown-menu {
+  width: 290px;
+  padding-left: 10px;
+  font-size: 1.5rem;
+}
+
 .offer-subject {
   transform: translateX(-50%);
   overflow: hidden;
@@ -328,10 +352,16 @@ header .menu-left .phone {
   padding-top: 20px;
 }
 
+.card.show {
+  animation: showleft 0.5s forwards;
+}
+
 .card {
   margin: 50px;
   background: none;
   border: none;
+  transform: translateY(50%);
+  opacity: 0;
 }
 
 .card-title {
@@ -396,6 +426,9 @@ header .menu-left .phone {
 .tech img {
   max-height: 150px;
 }
+.tech .tech-type__img {
+  text-align: center;
+}
 .tech .tech-type {
   display: flex;
   justify-content: space-around;
@@ -445,12 +478,15 @@ header .menu-left .phone {
   width: 300px;
 }
 
-.pricebox {
+.form-bgc {
   background-color: #00bfdb;
-  padding-top: 40px;
-  text-align: center;
   border-bottom: 2px solid #280f91;
   border-top: 2px solid #280f91;
+}
+
+.pricebox {
+  padding-top: 40px;
+  text-align: center;
 }
 .pricebox form {
   text-align: left;
@@ -497,7 +533,8 @@ header .menu-left .phone {
   background-color: #ff3ea2;
 }
 
-#Jakzaczac, #contactForm {
+#Jakzaczac,
+#contactForm {
   padding-top: 100px;
 }
 
@@ -575,11 +612,14 @@ header .menu-left .phone {
   background-color: #fdcd12;
 }
 
+.faq-bgc {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .faq-section {
   padding: 20px;
   padding-bottom: 100px;
   margin: 50px auto;
-  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   color: #280f91;
 }
@@ -649,20 +689,12 @@ header .menu-left .phone {
 }
 .text-info .about-us-bgc.show,
 .text-info .certif-bgc.show,
-.text-info .rev-bgc.show {
+.text-info .rev-bgc.show,
+.text-info .benefits-bgc.show {
   animation: showleft 2s forwards;
 }
 .text-info .about-us-bgc {
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
   background-color: #00bfdb;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  margin-right: 20px;
-  display: flex;
-  justify-content: center;
-  padding: 50px 0px;
 }
 .text-info .about-us-bgc .about-us {
   width: 80%;
@@ -675,69 +707,50 @@ header .menu-left .phone {
   border-radius: 20px;
 }
 .text-info .certif-bgc {
-  transform: translateX(50%);
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
   background-color: #ff3ea2;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  margin-left: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0px;
-  margin-top: 100px;
 }
 .text-info .certif-bgc .certif {
   width: 80%;
   padding-right: 40px;
-  text-align: justify;
+  text-align: center;
+}
+.text-info .certif-bgc .certif .row {
+  justify-content: space-around;
+}
+.text-info .certif-bgc .certif-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 30px;
+  border-radius: 20px;
 }
 .text-info .certif-bgc .orly {
   background-image: url(../images/telefon/certyfikaty/orly21tel.avif);
   height: 230px;
   width: 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 .text-info .certif-bgc .fgz22 {
   height: 230px;
-  width: 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  width: 230px;
   background-image: url(../images/telefon/certyfikaty/zaufanie22tel.avif);
 }
 .text-info .certif-bgc .fgz21 {
   height: 230px;
-  width: 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  width: 230px;
   background-image: url(../images/telefon/certyfikaty/zaufanie21tel.avif);
 }
 .text-info .certif-bgc .lz {
-  height: 230px;
-  width: 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: 300px;
+  width: 430px;
   background-image: url(../images/telefon/certyfikaty/laur21certtel.avif);
 }
 .text-info .rev-bgc {
-  background-color: #E9FCFF;
+  background-color: #e9fcff;
   transform: translateX(-50%);
   opacity: 0;
-  transition: all 0.5s ease-in-out;
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-right: 20px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding: 50px 0px;
 }
 .text-info .rev-bgc h3 {
   color: #280f91;
@@ -745,14 +758,20 @@ header .menu-left .phone {
 .text-info .rev-bgc .rev {
   width: 80%;
   padding-left: 40px;
-  text-align: justify;
+  text-align: center;
 }
 .text-info .rev-bgc .rev p {
   color: #280f91;
 }
 .text-info .rev-bgc .rev img {
-  width: 100%;
-  margin-top: 50px;
+  width: 30%;
+  max-width: 300px;
+  min-width: 200px;
+  margin: 50px;
+}
+.text-info .rev-bgc .rev .rev-img {
+  display: flex;
+  justify-content: center;
 }
 .text-info .rev-bgc button {
   background-color: #ff3ea2;
@@ -765,20 +784,37 @@ header .menu-left .phone {
   text-align: center;
 }
 
-.benefits-bgc {
+.last-bgc {
   transition: all 0.5s ease-in-out;
-  background-color: #00BFDB;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  margin-left: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0px;
   margin-top: 100px;
 }
+
+.last-bgc-left {
+  transform: translateX(-50%);
+  opacity: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-right: 20px;
+}
+
+.last-bgc-right {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-left: 20px;
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.benefits-bgc {
+  background-color: #00bfdb;
+  text-align: center;
+}
 .benefits-bgc .ben-box {
-  background-color: #E9FCFF;
+  background-color: #e9fcff;
   width: 300px;
   height: 300px;
   margin: 0px 10px;
