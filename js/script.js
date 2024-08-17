@@ -103,14 +103,44 @@ function menuOpen() {
 		menu.style.display = 'block'
 	}
 }
+
 // Dodajemy event listener do każdego elementu w menu, aby zamknąć menu po kliknięciu
 document.addEventListener('DOMContentLoaded', () => {
 	var menuItems = document.querySelectorAll('#menuitems a') // Zakładam, że elementy menu to linki <a>
 
 	menuItems.forEach(item => {
 		item.addEventListener('click', () => {
-			menuOpen() // Zamknięcie menu po kliknięciu w dowolny element
+			// Sprawdź, czy szerokość ekranu jest mniejsza niż 992px (w wersji desktopowej menu nie powinno się ukrywać)
+			if (window.innerWidth < 992) {
+				menuOpen() // Zamknięcie menu po kliknięciu w dowolny element tylko na małych ekranach
+			}
 		})
+	})
+
+	// Dodajemy event listener na zmianę rozmiaru okna
+	window.addEventListener('resize', () => {
+		var menu = document.getElementById('menuitems')
+
+		// Jeżeli szerokość okna jest większa lub równa 992px, pokaż menu
+		if (window.innerWidth >= 992) {
+			menu.style.display = 'flex' // Ustawienie 'flex' zamiast 'block', ponieważ takie jest wymaganie na desktopie
+		} else {
+			menu.style.display = 'none' // Na mniejszych ekranach z powrotem ukryj menu
+		}
+	})
+
+	// Dodajemy event listener do kliknięcia poza menu w wersji mobilnej
+	document.addEventListener('click', event => {
+		var menu = document.getElementById('menuitems')
+		var menuButton = document.querySelector('.bar') // Przycisk otwierający menu
+
+		// Sprawdź, czy szerokość ekranu jest mniejsza niż 992px (czyli wersja mobilna)
+		if (window.innerWidth < 992) {
+			// Sprawdź, czy menu jest otwarte i czy kliknięto poza menu oraz przyciskiem otwierającym menu
+			if (menu.style.display === 'block' && !menu.contains(event.target) && !menuButton.contains(event.target)) {
+				menu.style.display = 'none' // Zamknij menu
+			}
+		}
 	})
 })
 
@@ -196,29 +226,11 @@ document.querySelectorAll('.faq-question').forEach(item => {
 
 let currentQuestion = 1
 
-function nextQuestion() {
-	const currentElement = document.querySelector(`.question[data-question="${currentQuestion}"]`)
-	const input = currentElement.querySelector('input, textarea')
-
-	if (input.checkValidity()) {
-		currentElement.classList.remove('active')
-		currentQuestion++
-		document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.add('active')
-	} else {
-		input.nextElementSibling.style.display = 'block'
-	}
-}
-
-function previousQuestion() {
-	document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.remove('active')
-	currentQuestion--
-	document.querySelector(`.question[data-question="${currentQuestion}"]`).classList.add('active')
-}
-
-document.getElementById('contactForm').addEventListener('submit', function (event) {
+// Funkcja do obsługi wysyłania formularza
+document.querySelector('.contactForm1').addEventListener('submit', function (event) {
 	event.preventDefault()
 
-	const formData = new FormData(this)
+	const formData = new FormData(this) // Teraz 'this' odnosi się do formularza 'contactForm1'
 
 	fetch('send_email.php', {
 		method: 'POST',
@@ -229,8 +241,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 			alert('Formularz został wysłany.')
 			this.reset()
 			currentQuestion = 1
-			document.querySelectorAll('.question').forEach(el => el.classList.remove('active'))
-			document.querySelector('.question[data-question="1"]').classList.add('active')
+			showQuestion(currentQuestion)
 		})
 		.catch(error => {
 			console.error('Błąd:', error)
@@ -238,11 +249,89 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 		})
 })
 
-if (document.querySelector('.slick-slider')) {
-	const script = document.createElement('script')
-	script.src = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
-	document.head.appendChild(script)
+// Funkcja do wyświetlania pytania
+function showQuestion(index) {
+    // Ukrywa wszystkie pytania
+    document.querySelectorAll('.question').forEach(el => {
+        el.classList.remove('active');
+    });
+    // Pokazuje pytanie o danym indeksie
+    const currentQuestionElement = document.querySelector(`.question[data-question="${index}"]`);
+    currentQuestionElement.classList.add('active');
+    
+    // Ustawia fokus na pierwsze pole w bieżącym pytaniu, jeśli to drugie pytanie lub dalej
+    if (index > 1) {
+        const firstInput = currentQuestionElement.querySelector('input, textarea');
+        if (firstInput) {
+            firstInput.focus();
+        }
+    }
 }
+
+
+// Funkcja do przejścia do następnego pytania
+function nextQuestion() {
+	const currentElement = document.querySelector(`.question[data-question="${currentQuestion}"]`)
+	const input = currentElement.querySelector('input, textarea')
+	const errorSpan = input.nextElementSibling
+
+	if (input.checkValidity()) {
+		currentElement.classList.remove('active')
+		currentQuestion++
+		showQuestion(currentQuestion)
+		if (errorSpan) {
+			errorSpan.style.display = 'none' // Ukrywa komunikat o błędzie, gdy dane wejściowe są prawidłowe
+		}
+	} else {
+		if (errorSpan) {
+			errorSpan.style.display = 'block' // Pokazuje komunikat o błędzie
+		}
+	}
+}
+
+// Funkcja do powrotu do poprzedniego pytania
+function previousQuestion() {
+	const currentElement = document.querySelector(`.question[data-question="${currentQuestion}"]`)
+	currentElement.classList.remove('active')
+	currentQuestion--
+	showQuestion(currentQuestion)
+}
+
+// Funkcja do obsługi zdarzenia naciśnięcia klawisza
+function handleKeyPress(event) {
+	const isTextarea = event.target.tagName === 'TEXTAREA'
+	const isEnterKey = event.key === 'Enter'
+
+	if (isEnterKey) {
+		if (isTextarea) {
+			// Jeśli jesteśmy w polu textarea i naciśnięto Enter, dodaj nową linię
+			if (!event.shiftKey) {
+				event.preventDefault() // Zapobiega domyślnemu działaniu klawisza Enter
+				// Dodaj nową linię w textarea
+				event.target.value += '\n'
+			}
+		} else {
+			// Jeśli nie jesteśmy w polu textarea i naciśnięto Enter, przejdź do następnego pytania
+			event.preventDefault() // Zapobiega domyślnemu działaniu klawisza Enter
+			if (currentQuestion === document.querySelectorAll('.question').length) {
+				// Jeśli jesteśmy na ostatnim pytaniu, kliknij przycisk Wyślij
+				document.querySelector('.contactForm1').submit() // Użyj submit() zamiast requestSubmit()
+			} else {
+				nextQuestion()
+			}
+		}
+	}
+}
+
+// Nasłuchiwanie na naciśnięcia klawiszy w całym formularzu
+document.querySelectorAll('.question input, .question textarea').forEach(element => {
+	element.addEventListener('keydown', handleKeyPress)
+})
+
+// Pokazuje pierwsze pytanie na starcie
+document.addEventListener('DOMContentLoaded', () => {
+	showQuestion(currentQuestion)
+})
 
 document.addEventListener('DOMContentLoaded', () => {
 	const reviewsBoxWrapper = document.querySelector('.reviews__box-wrapper')
@@ -251,28 +340,62 @@ document.addEventListener('DOMContentLoaded', () => {
 	const rightArrow = document.querySelector('.reviews__arrow--right')
 
 	let currentIndex = 0
-	const boxWidth = document.querySelector('.reviews__box').offsetWidth
-	const visibleBoxes = 2 // Liczba widocznych boxów
-	const totalBoxes = document.querySelectorAll('.reviews__box').length
-	const maxIndex = totalBoxes - visibleBoxes
+	let boxWidth = document.querySelector('.reviews__box').offsetWidth
+	let visibleBoxes = window.innerWidth >= 992 ? 2 : 1 // Ustawienie liczby widocznych boxów na podstawie szerokości ekranu
+	let totalBoxes = document.querySelectorAll('.reviews__box').length
+	let maxIndex = totalBoxes - visibleBoxes
+
+	function updateBoxWidth() {
+		boxWidth = document.querySelector('.reviews__box').offsetWidth
+	}
+
+	function updateVisibleBoxes() {
+		visibleBoxes = window.innerWidth >= 992 ? 2 : 1
+		maxIndex = totalBoxes - visibleBoxes
+	}
 
 	function updatePosition() {
 		reviewsBoxes.style.transform = `translateX(-${currentIndex * boxWidth}px)`
+		updateArrowsVisibility()
+	}
+
+	function updateArrowsVisibility() {
+		if (currentIndex === 0) {
+			leftArrow.style.display = 'none'
+		} else {
+			leftArrow.style.display = 'block'
+		}
+
+		if (currentIndex >= maxIndex) {
+			rightArrow.style.display = 'none'
+		} else {
+			rightArrow.style.display = 'block'
+		}
 	}
 
 	rightArrow.addEventListener('click', () => {
 		if (currentIndex < maxIndex) {
-			currentIndex += visibleBoxes // Przesuwa o liczbę widocznych boxów
-			if (currentIndex > maxIndex) currentIndex = maxIndex // Zapobiega wyjściu poza granice
+			currentIndex += visibleBoxes
+			if (currentIndex > maxIndex) currentIndex = maxIndex
 			updatePosition()
 		}
 	})
 
 	leftArrow.addEventListener('click', () => {
 		if (currentIndex > 0) {
-			currentIndex -= visibleBoxes // Przesuwa o liczbę widocznych boxów
-			if (currentIndex < 0) currentIndex = 0 // Zapobiega wyjściu poza granice
+			currentIndex -= visibleBoxes
+			if (currentIndex < 0) currentIndex = 0
 			updatePosition()
 		}
+	})
+
+	// Zaktualizuj widoczność strzałek na początku
+	updateArrowsVisibility()
+
+	// Zaktualizuj pozycję, widoczność boxów i strzałek przy zmianie rozmiaru okna
+	window.addEventListener('resize', () => {
+		updateBoxWidth()
+		updateVisibleBoxes()
+		updatePosition()
 	})
 })

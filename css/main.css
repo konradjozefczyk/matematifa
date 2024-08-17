@@ -158,6 +158,9 @@ header .menu-left .phone {
 .menu-nav #menuitems {
   display: none;
 }
+.menu-nav #menuitems img {
+  display: none;
+}
 
 .stats {
   background-color: rgba(255, 255, 255, 0.2);
@@ -296,14 +299,16 @@ header .menu-left .phone {
 .reviews__box-wrapper {
   position: relative;
   overflow: hidden; /* Ukrywa zawartość poza kontenerem */
+  width: 100%;
 }
 
 .reviews__boxes {
   display: flex;
-  transition: transform 0.3s ease; /* Płynne przewijanie */
+  transition: transform 0.3s ease-in-out; /* Płynne przewijanie */
 }
 
 .reviews__box {
+  min-width: 100%;
   flex: 0 0 50%; /* Dwa boxy widoczne na raz */
   box-sizing: border-box;
   padding: 100px;
@@ -675,6 +680,70 @@ header .menu-left .phone {
   display: none;
 }
 
+.formuser {
+  height: 100vh;
+  background-color: rgba(255, 62, 162, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.contactForm1 {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgba(249, 249, 249, 0.3);
+}
+.contactForm1 .question {
+  display: none; /* Domyślnie wszystkie pytania są ukryte */
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(20px);
+  text-align: center;
+}
+.contactForm1 .question.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.contactForm1 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.contactForm1 input,
+.contactForm1 textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contactForm1 button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contactForm1 button:hover {
+  background-color: #0056b3;
+}
+.contactForm1 .error {
+  display: none;
+  color: #e74c3c;
+  font-size: 0.875em;
+}
+.contactForm1 .error.show {
+  display: block;
+}
+
 .text-info {
   overflow: hidden;
   font-size: 2rem;
@@ -744,7 +813,8 @@ header .menu-left .phone {
   width: 430px;
   background-image: url(../images/telefon/certyfikaty/laur21certtel.avif);
 }
-.text-info .rev-bgc {
+
+.rev-bgc {
   background-color: #e9fcff;
   transform: translateX(-50%);
   opacity: 0;
@@ -752,35 +822,35 @@ header .menu-left .phone {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-.text-info .rev-bgc h3 {
+.rev-bgc h3 {
   color: #280f91;
 }
-.text-info .rev-bgc .rev {
+.rev-bgc .rev {
   width: 80%;
   padding-left: 40px;
   text-align: center;
 }
-.text-info .rev-bgc .rev p {
+.rev-bgc .rev p {
   color: #280f91;
 }
-.text-info .rev-bgc .rev img {
+.rev-bgc .rev img {
   width: 30%;
   max-width: 300px;
   min-width: 200px;
   margin: 50px;
 }
-.text-info .rev-bgc .rev .rev-img {
+.rev-bgc .rev .rev-img {
   display: flex;
   justify-content: center;
 }
-.text-info .rev-bgc button {
+.rev-bgc button {
   background-color: #ff3ea2;
   padding: 10px 5px;
   color: white;
   border: none;
   margin-top: 20px;
 }
-.text-info .rev-bgc .reviews {
+.rev-bgc .reviews {
   text-align: center;
 }
 
@@ -886,6 +956,9 @@ footer {
 }
 
 @media (min-width: 992px) {
+  .reviews__box {
+    min-width: 50%; /* Na szerokich ekranach każda opinia zajmuje 50% szerokości wrappera */
+  }
   body {
     font-size: 2.5rem;
   }
@@ -945,6 +1018,9 @@ footer {
     align-items: center;
     height: 100%;
   }
+  .menu-nav #menuitems img {
+    display: flex;
+  }
   .menu-nav .menu-item:hover {
     border-top: #1b25ac 2px solid;
   }
@@ -953,29 +1029,20 @@ footer {
     border-top: white 2px solid;
     transition: border-top 0.2s;
   }
-  .menu-nav .text-info .about-us-bgc {
-    margin-right: 100px;
-  }
-  .menu-nav .text-info .certif-bgc {
-    margin-left: 100px;
-  }
-  .menu-nav .text-info .rev-bgc {
-    margin-right: 100px;
-  }
-  .menu-nav .text-info .rev-bgc .rev .rev-img {
-    text-align: center;
-  }
-  .menu-nav .text-info .rev-bgc .rev img {
-    width: 30%;
-  }
-  .menu-nav .hero {
+  .hero {
     background-image: url(../images/hero.avif);
   }
-  .menu-nav .hero a {
+  .hero a {
     width: 500px;
   }
+  .text-info .last-bgc-left {
+    margin-right: 100px;
+  }
+  .text-info .last-bgc-right {
+    margin-left: 100px;
+  }
 }
-@media (min-width: 992px) and (max-width: 361px) {
+@media (max-width: 361px) {
   header {
     font-size: 1.5rem;
   }
