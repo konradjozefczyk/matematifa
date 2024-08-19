@@ -63,7 +63,7 @@
         }
     </style>
     <link rel="preload" href="images/hero.avif" as="image">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/mainmin.css">
 </head>
 
 <body>
@@ -293,7 +293,7 @@
                 <span>I w wielu innych miejscowościach</span>
             </div>
         </div>
-       
+
 
         <div>
             <h2>Prowadzimy korepetycje za pomocą</h2>
@@ -365,7 +365,7 @@
                     <input type="radio" name="question-1" id="answer-3" class="answer" value="300"
                         onchange="updateSubjects()">
                     <label for="answer-3">Wykład maturalny</label>
-    
+
                 </div>
                 <div class="answer-box">
                     <p class="question1">Poziom:</p>
@@ -410,11 +410,11 @@
                             <label for="answer-14">Informatyka</label>
                         </div>
                     </div>
-    
-    
+
+
                 </div>
                 <button class="btn rounded-pill" onclick="cennik()">Zobacz ofertę</button>
-    
+
             </form>
             <div id="change"></div>
             <div class="modal modal-active">
@@ -423,7 +423,7 @@
             </div>
         </section>
     </div>
-   
+
 
     <h2 id="Jakzaczac">Jak zapisać się na korepetycje?</h2>
     <div class="steps container">
@@ -473,7 +473,7 @@
                 <span class="error" id="nameError">Proszę podać swoje imię.</span>
                 <button type="button" onclick="nextQuestion()">Dalej</button>
             </div>
-    
+
             <div class="question" data-question="2">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -481,7 +481,7 @@
                 <button type="button" onclick="previousQuestion()">Wstecz</button>
                 <button type="button" onclick="nextQuestion()">Dalej</button>
             </div>
-    
+
             <div class="question" data-question="3">
                 <label for="message">Wiadomość:</label>
                 <textarea id="message" name="message" required></textarea>
@@ -500,30 +500,36 @@
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Lekcje online są prowadzone z wykorzystaniem komunikatora głosowego (Skype, Google Meets, Discord)
-                        oraz wirtualnej tablicy (Ziteboard). Przed pierwszymi zajęciami uczeń otrzymuje maila z instrukcją
+                    <p>Lekcje online są prowadzone z wykorzystaniem komunikatora głosowego (Skype, Google Meets,
+                        Discord)
+                        oraz wirtualnej tablicy (Ziteboard). Przed pierwszymi zajęciami uczeń otrzymuje maila z
+                        instrukcją
                         oraz szczegółami dotyczącymi tej formy zajęć.
-    
-                        Poza tym, oferujemy bezpłatną 30-minutową próbną lekcję. Podczas lekcji próbnej korepetytor poznaje
-                        ucznia, tłumaczy wybrane przez korepetytora zagadnienie celem zademonstrowania organizacji lekcji
+
+                        Poza tym, oferujemy bezpłatną 30-minutową próbną lekcję. Podczas lekcji próbnej korepetytor
+                        poznaje
+                        ucznia, tłumaczy wybrane przez korepetytora zagadnienie celem zademonstrowania organizacji
+                        lekcji
                         online.
                     </p>
                 </div>
             </div>
-    
+
             <div class="faq-item">
                 <div class="faq-question">
                     <span>2. Czy jest możliwość korepetycji z dojazdem?</span>
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Lekcje z dojazdem są możliwe w większych miastach, jednak ich dostępność jest ograniczona ze względu
+                    <p>Lekcje z dojazdem są możliwe w większych miastach, jednak ich dostępność jest ograniczona ze
+                        względu
                         na grafik korepetytorów. W przypadku zajęć online jest o wiele większa dostępność terminów niż w
-                        przypadku zajęć stacjonarnych. Próbna indywidualna 30-minutowa lekcja, zajęcia grupowe oraz wykłady
+                        przypadku zajęć stacjonarnych. Próbna indywidualna 30-minutowa lekcja, zajęcia grupowe oraz
+                        wykłady
                         odbywają się zawsze w formie zdalnej. </p>
                 </div>
             </div>
-    
+
             <div class="faq-item">
                 <div class="faq-question">
                     <span>3. Kim są korepetytorzy Matematify?</span>
@@ -532,42 +538,49 @@
                 <div class="faq-answer">
                     <p>Nasi pracownicy to studenci kierunkowi, którzy posiadają doświadczenie w prowadzeniu zajęć oraz
                         zawodowi nauczyciele. W Matematify ciągle pracujemy nad ulepszeniem jakości naszych usług, więc
-                        podczas rekrutacji korepetytorzy przechodzą odpowiednie testy wiedzy, a po zatrudnieniu uczestniczą
+                        podczas rekrutacji korepetytorzy przechodzą odpowiednie testy wiedzy, a po zatrudnieniu
+                        uczestniczą
                         w szkoleniach podnoszących ich kwalifikacje.</p>
                 </div>
             </div>
-    
+
             <div class="faq-item">
                 <div class="faq-question">
                     <span>4. Jak można zapłacić za zajęcia?</span>
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Szczegółowe informacje o płatności klient otrzymuje w mailu powitalnym, który otrzyma po zapisaniu
+                    <p>Szczegółowe informacje o płatności klient otrzymuje w mailu powitalnym, który otrzyma po
+                        zapisaniu
                         się na zajęcia. Możliwa jest płatność przelewem.</p>
                 </div>
             </div>
-    
+
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>5. Czy muszę rezygnować z zajęć jeśli czuję, że korepetytor lub partner z którym jestem w grupie
+                    <span>5. Czy muszę rezygnować z zajęć jeśli czuję, że korepetytor lub partner z którym jestem w
+                        grupie
                         mi nie odpowiadają?
                     </span>
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>W Matematify na pierwszym miejscu stawiamy uczniów, ich plany i potrzeby. Jeśli odnosisz wrażenie, że
-                        korepetytor lub partner do których zostałeś przydzielony nie spełniają Twoich oczekiwań lub czujesz,
+                    <p>W Matematify na pierwszym miejscu stawiamy uczniów, ich plany i potrzeby. Jeśli odnosisz
+                        wrażenie, że
+                        korepetytor lub partner do których zostałeś przydzielony nie spełniają Twoich oczekiwań lub
+                        czujesz,
                         że zajęcia grupowe nie są dla Ciebie dobrym rozwiązaniem, poinformuj nas o tym. W zależności od
-                        sytuacji, możemy dopasować Ciebie do innej grupy z tym samym lub innym korepetytorem, oraz zawsze
-                        możesz po zakończeniu miesiąca przejść na zajęcia indywidualne. Wierzymy, że każdy uczeń jest inny i
+                        sytuacji, możemy dopasować Ciebie do innej grupy z tym samym lub innym korepetytorem, oraz
+                        zawsze
+                        możesz po zakończeniu miesiąca przejść na zajęcia indywidualne. Wierzymy, że każdy uczeń jest
+                        inny i
                         staramy się dopasować nasze zajęcia idealnie do potrzeb naszych uczniów.</p>
                 </div>
             </div>
         </div>
     </div>
-   
-    
+
+
     <div class="text-info">
         <h2>Dowiedz się więcej o Matematify</h2>
         <div class="about-us-bgc last-bgc last-bgc-left" id="Onas">
@@ -591,20 +604,22 @@
                 <h3>Certyfikowane centrum korepetycji</h3>
                 <p>Posiadamy certyfikaty Laur Zaufania oraz jesteśmy kilkukrotnymi laureatami certyfikatów Orły Edukacji
                     oraz Firma Godna Zaufania</p>
-                    <div class="row">
-                        <div class="orly certif-img">
-                        </div>
-                        <div class="fgz22 certif-img"></div>
-                        <div class="fgz21 certif-img"></div>
-                        <div class="lz certif-img"></div>
+                <div class="row">
+                    <div class="orly certif-img">
                     </div>
-               
+                    <div class="fgz22 certif-img"></div>
+                    <div class="fgz21 certif-img"></div>
+                    <div class="lz certif-img"></div>
+                </div>
+
             </div>
         </div>
         <div class="rev-bgc last-bgc last-bgc-left" id="Opinie">
             <div class="rev">
                 <h3>Opinie</h3>
-                <p>Ponad 200 pozytywnych opinii w Google i w najpopularniejszym serwisie związanym z korepetycjami. Według naszych uczniów korepetycje w Matematify są najlepsze. Opinie pochodzą z serwisu e-korepetycje.net oraz naszego profilu Google.</p>
+                <p>Ponad 200 pozytywnych opinii w Google i w najpopularniejszym serwisie związanym z korepetycjami.
+                    Według naszych uczniów korepetycje w Matematify są najlepsze. Opinie pochodzą z serwisu
+                    e-korepetycje.net oraz naszego profilu Google.</p>
                 <div class="rev-img row">
                     <img src="./images/telefon/certyfikaty/gwiazdki5tel.avif" alt="ocena pięć gwiazdek" loading="lazy">
                     <img src="./images/telefon/certyfikaty/gwiazdki4tel.avif" alt="ocena cztery i pół gwiazdki"
@@ -696,7 +711,7 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="rev-bgc last-bgc" >
+        <div class="rev-bgc last-bgc">
             <div class="rev">
                 <h3>Korepetycje w Matematify</h3>
                 <h4>Kompleksowa nauka</h4>
