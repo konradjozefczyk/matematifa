@@ -31,6 +31,11 @@
     opacity: 1;
   }
 }
+@keyframes rotate {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
 .row {
   display: flex;
   justify-content: center;
@@ -69,6 +74,33 @@
   overflow: hidden;
   opacity: 0;
   padding-top: 50px;
+  position: relative;
+}
+.offer-subject .plus {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  opacity: 0.2;
+  scale: 4;
+  animation: rotate 60s infinite;
+}
+.offer-subject .divide {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  opacity: 0.2;
+  animation: rotate 60s infinite;
+}
+.offer-subject .divide i {
+  font-size: 30px;
+}
+.offer-subject .chem {
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  opacity: 0.2;
+  font-size: 55px;
+  animation: rotate 60s infinite;
 }
 .offer-subject .sub-but {
   padding-bottom: 10px;

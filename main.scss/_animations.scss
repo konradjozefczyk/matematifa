@@ -32,3 +32,8 @@
         opacity: 1;
     }
 }
+@keyframes rotate {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
