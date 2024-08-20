@@ -12,7 +12,7 @@
     <style>
         .hero {
             background-image: url(images/heromobile.avif);
-            height: 80vh;
+            height: 90vh;
             background-size: cover;
             background-position: top;
             background-repeat: no-repeat;
@@ -21,19 +21,22 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            border-radius: 20px;
-            position: relative
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: relative;
         }
 
         .hero h1 {
             text-shadow: 5px 5px 5px #333;
-            margin-top: 100px
+            margin-top: 10px;
         }
 
         .hero a {
             transform: translateX(-100%);
             opacity: 0;
-            animation: showleft 1s forwards
+            animation: showleft 1s forwards;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         .hero a:hover {
@@ -41,13 +44,13 @@
         }
 
         .hero a:first-of-type {
-            background-color: #ff3ea2;
-            margin-top: 0
+            background-color: #a12665;
+            margin-top: 0;
         }
 
         .hero a:last-of-type {
-            background-color: #00bfdb;
-            animation: showleft 1s .3s forwards
+            background-color: #125a91;
+            animation: showleft 1s .3s forwards;
         }
 
         @keyframes showleft {
@@ -131,9 +134,6 @@
             </div>
         </div>
         <div class="container offer-subject" id=Oferta>
-            <div class="plus"><i class="fa-solid fa-plus"></i></div>
-            <div class="divide"><i class="fa-solid fa-divide"></i></div>
-            <div class="chem"><i class="fa-solid fa-vial"></i></div>
             <h2>Korepetycje - Przedmioty</h2>
             <p>W szkole .matematify na pierwszym miejscu stawiamy ucznia i jego potrzeby. Wszystkie lekcje, które
                 prowadzimy są nakierunkowane na ucznia, a przerabiany materiał i tempo nauki dostosujemy do Ciebie!

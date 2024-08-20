@@ -76,32 +76,6 @@
   padding-top: 50px;
   position: relative;
 }
-.offer-subject .plus {
-  position: absolute;
-  top: 50px;
-  left: 40px;
-  opacity: 0.2;
-  scale: 4;
-  animation: rotate 60s infinite;
-}
-.offer-subject .divide {
-  position: absolute;
-  top: 50px;
-  right: 30px;
-  opacity: 0.2;
-  animation: rotate 60s infinite;
-}
-.offer-subject .divide i {
-  font-size: 30px;
-}
-.offer-subject .chem {
-  position: absolute;
-  bottom: 20px;
-  left: 100px;
-  opacity: 0.2;
-  font-size: 55px;
-  animation: rotate 60s infinite;
-}
 .offer-subject .sub-but {
   padding-bottom: 10px;
   display: flex;
@@ -867,6 +841,7 @@ footer {
     width: 80%;
   }
   header .menu-left span {
+    margin: 0px 50px;
     margin-left: 0;
   }
   header .menu-right {
@@ -920,8 +895,14 @@ footer {
   .hero {
     background-image: url(../images/hero.avif);
   }
+  .hero h1 {
+    margin-top: 100px;
+  }
   .hero a {
     width: 500px;
+  }
+  .hero .btn {
+    padding: 30px 0px;
   }
   .text-info .last-bgc-left {
     margin-right: 100px;

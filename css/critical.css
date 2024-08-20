@@ -73,7 +73,6 @@ header .menu-left {
 header .menu-left span {
   background-color: #e9fcff;
   color: #280f91;
-  margin: 0px 50px;
 }
 header .menu-left .phone {
   width: 40px;
@@ -103,7 +102,7 @@ header .menu-left .phone {
   position: fixed;
   width: 100vw;
   z-index: 100;
-  top: 37px;
+  top: 36px;
   animation: nav-top 0.3s linear 1 forwards;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -40s);
@@ -113,6 +112,10 @@ header .menu-left .phone {
   background-color: white;
   cursor: pointer;
   width: 100vw;
+  border: none;
+  height: 50px;
+  font-size: 3rem;
+  color: #280f91;
 }
 .menu-nav .menu {
   background-color: white;
@@ -136,6 +139,7 @@ header .menu-left .phone {
 .stats {
   background-color: rgba(255, 255, 255, 0.2);
   width: 100%;
+  margin: 0;
 }
 .stats .stats-item {
   text-align: center;

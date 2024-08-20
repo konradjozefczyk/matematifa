@@ -39,32 +39,6 @@
 	opacity: 0;
 	padding-top: 50px;
 	position: relative;
-	.plus {
-		position: absolute;
-		top: 50px;
-		left: 40px;
-		opacity: 0.2;
-		scale: 4;
-		animation: rotate 60s infinite;
-	}
-	.divide {
-		position: absolute;
-		top: 50px;
-		right: 30px;
-		opacity: 0.2;
-		i {
-			font-size: 30px;
-		}
-		animation: rotate 60s infinite;
-	}
-	.chem {
-		position: absolute;
-		bottom: 20px;
-		left: 100px;
-		opacity: 0.2;
-		font-size: 55px;
-		animation: rotate 60s infinite;
-	}
 	.sub-but {
 		padding-bottom: 10px;
 		display: flex;
@@ -821,6 +795,7 @@ footer {
 			justify-content: start;
 			width: 80%;
 			span {
+				margin: 0px 50px;
 				margin-left: 0;
 			}
 		}
@@ -878,8 +853,14 @@ footer {
 	}
 	.hero {
 		background-image: url(../images/hero.avif);
+		h1 {
+			margin-top: 100px;
+		}
 		a {
 			width: 500px;
+		}
+		.btn{
+			padding: 30px 0px;
 		}
 	}
 	.text-info {
