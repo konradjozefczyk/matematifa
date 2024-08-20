@@ -36,6 +36,14 @@
     transform: rotateZ(360deg);
   }
 }
+@keyframes jumper {
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .row {
   display: flex;
   justify-content: center;
@@ -81,14 +89,14 @@
   display: flex;
   justify-content: space-around;
 }
-.offer-subject a:hover {
+.offer-subject .sub-but a:hover {
   scale: 0.9;
   color: white;
 }
-.offer-subject a:first-of-type {
+.offer-subject .sub-but a:first-of-type {
   background-color: #1b25ac;
 }
-.offer-subject a:last-of-type {
+.offer-subject .sub-but a:last-of-type {
   background-color: #a12665;
 }
 .offer-subject p {
@@ -96,14 +104,36 @@
   text-align: center;
 }
 .offer-subject .blue-text {
-  color: #1B25AC;
+  color: #1b25ac;
+}
+
+.but-cal {
+  text-align: center;
+  padding: 50px 0;
+}
+.but-cal a {
+  background-color: #ff3ea2;
+  color: white;
+}
+.but-cal a:hover {
+  color: white;
+}
+
+.subject-a {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 0;
+  transition: 2s;
 }
 
 .subject {
   height: 300px;
   width: 300px;
-  border-radius: 10px;
-  margin: 20px;
   box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
   background-size: cover;
   display: flex;
@@ -273,7 +303,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 100%;
 }
 .tech h3 {
   text-decoration: underline;
@@ -547,6 +577,9 @@
   margin: auto;
   padding: 20px;
   border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
   background-color: rgba(249, 249, 249, 0.3);
 }
@@ -556,6 +589,7 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
   transform: translateY(20px);
   text-align: center;
+  width: 100%;
 }
 .contactForm1 .question.active {
   display: block;
@@ -574,6 +608,17 @@
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.contactForm1 input::-moz-placeholder, .contactForm1 textarea::-moz-placeholder {
+  color: #999; /* Kolor tekstu placeholdera */
+  font-style: italic; /* Styl czcionki (opcjonalnie) */
+  font-size: 1.5rem;
+}
+.contactForm1 input::placeholder,
+.contactForm1 textarea::placeholder {
+  color: #999; /* Kolor tekstu placeholdera */
+  font-style: italic; /* Styl czcionki (opcjonalnie) */
+  font-size: 1.5rem;
 }
 .contactForm1 button {
   padding: 10px 15px;
@@ -910,9 +955,14 @@ footer {
   .text-info .last-bgc-right {
     margin-left: 100px;
   }
-}
-@media (max-width: 361px) {
-  header {
-    font-size: 1.5rem;
+  .subject-a:hover {
+    animation: jumper 1s infinite ease-in-out;
+  }
+  .but-cal {
+    text-align: center;
+  }
+  .but-cal a {
+    width: 400px;
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=main.css.map */

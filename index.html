@@ -76,12 +76,13 @@
 
     <header>
         <div class="top">
-            <div class="menu-left"><a href=# aria-label=zadzwoń><span class="rounded-pill phone"><i
-                            class="fa-solid fa-phone"></i> 577 617 797</span></a> <a href=#
+            <div class="menu-left"><a href="tel:+48577617797" aria-label=zadzwoń><span class="rounded-pill phone"><i
+                            class="fa-solid fa-phone"></i> 577 617 797</span></a> <a href="mailto:biuro@matematify.com"
                     aria-label="wyślij e-mail"><span class=rounded-pill><i
                             class="fa-envelope fa-regular"></i></span></a> <a href=#contactForm
                     aria-label="Wypełnij formularz"><span class="rounded-pill formul">formularz</span></a></div>
-            <div class="top menu-right"><a href=#><span class=rounded-pill>zaloguj się</span></a></div>
+            <div class="top menu-right"><a href=http://platform.matematify.pl target="_blank"><span class=rounded-pill>zaloguj
+                        się</span></a></div>
         </div>
     </header>
     <div class=menu-nav><button class=bar onclick=menuOpen() aria-label=menu><i class="fa-solid fa-bars"></i></button>
@@ -130,7 +131,7 @@
                     data-target=2500>0</span><span>+</span>
                 <p>zdanych egzaminów
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 stats-item"><span class=counter data-target=5>0</span>
+            <div class="col-lg-3 col-md-4 col-sm-6 stats-item"><span class=counter data-target=10>0</span>
                 <p>lat doświadczenia
             </div>
         </div>
@@ -140,27 +141,41 @@
                 prowadzimy są nakierunkowane na ucznia, a przerabiany materiał i tempo nauki dostosujemy do Ciebie!
             <p class=blue-text>Zapoznaj się z naszą ofertą:
             <div class=row>
-                <div class="subject subject1">
-                    <div class="rounded-pill sub-name">Matematyka</div>
-                </div>
-                <div class="subject subject2">
-                    <div class="rounded-pill sub-name">Biologia</div>
-                </div>
-                <div class="subject subject3">
-                    <div class="rounded-pill sub-name">Informatyka</div>
-                </div>
-                <div class="subject subject4">
-                    <div class="rounded-pill sub-name">Fizyka</div>
-                </div>
-                <div class="subject subject5">
-                    <div class="rounded-pill sub-name">Chemia</div>
-                </div>
-                <div class="subject subject6">
-                    <div class="rounded-pill sub-name">Język polski</div>
-                </div>
-                <div class="subject subject7">
-                    <div class="rounded-pill sub-name">Angielski</div>
-                </div>
+                <a class="subject-a" href="./przedmioty/math.html">
+                    <div class="subject subject1">
+                        <div class="rounded-pill sub-name">Matematyka</div>
+                    </div>
+                </a>
+                <a class="subject-a" href="./przedmioty/biol.html">
+                    <div class="subject subject2">
+                        <div class="rounded-pill sub-name">Biologia</div>
+                    </div>
+                </a>
+                <a class="subject-a" href="./przedmioty/informatyka.html">
+                    <div class="subject subject3">
+                        <div class="rounded-pill sub-name">Informatyka</div>
+                    </div>
+                </a>
+                <a class="subject-a" href="./przedmioty/fizyka.html">
+                    <div class="subject subject4">
+                        <div class="rounded-pill sub-name">Fizyka</div>
+                    </div>
+                </a>
+                <a class="subject-a" href="./przedmioty/chem.html">
+                    <div class="subject subject5">
+                        <div class="rounded-pill sub-name">Chemia</div>
+                    </div>
+                </a>
+                <a class="subject-a" href="./przedmioty/pol.html">
+                    <div class="subject subject6">
+                        <div class="rounded-pill sub-name">Język polski</div>
+                    </div>
+                </a>
+                <a class="subject-a" href="https://www.tutees.org" target="_blank">
+                    <div class="subject subject7">
+                        <div class="rounded-pill sub-name">Angielski</div>
+                    </div>
+                </a>
             </div>
             <p>W Matematify ciągle pracujemy nad ulepszeniem jakości naszych usług, żeby jak najlepiej dopasować je do
                 naszych uczniów. Skontaktuj się z nami żeby dowiedzieć się więcej co do dostępności korepetytorów
@@ -210,6 +225,10 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="but-cal">
+            <a href="tel:+48577617797"
+                    class="rounded-pill btn">Zadzwoń: 577 617 797</a>
         </div>
         <div class=cities-bgc>
             <div class=container>
@@ -276,7 +295,7 @@
                     <div class=tech-box>
                         <h3>Komunikatory głosowe</h3>
                     </div>
-                    <div class="row tech-type">
+                    <div class="tech-type">
                         <div class=tech-type__item>
                             <div class=tech-type__img><img alt="ikona google meet" loading=lazy
                                     src=./images/telefon/platformy/googlemeettel.avif></div>
@@ -293,7 +312,7 @@
                     <div class=tech-box>
                         <h3>Wirtualne tablice</h3>
                     </div>
-                    <div class="row tech-type">
+                    <div class="tech-type">
                         <div class=tech-type__item>
                             <div class=tech-type__img><img alt="ikona jamboard" loading=lazy
                                     src=./images/telefon/platformy/jamboardtel.avif></div>
@@ -353,9 +372,6 @@
                         <div class=radio-item><input id=answer-12 name=question-3 type=radio class=answer value=5>
                             <label for=answer-12>Język polski</label>
                         </div>
-                        <div class=radio-item><input id=answer-13 name=question-3 type=radio class=answer value=6>
-                            <label for=answer-13>Język angielski</label>
-                        </div>
                         <div class=radio-item><input id=answer-14 name=question-3 type=radio class=answer value=7>
                             <label for=answer-14>Informatyka</label>
                         </div>
@@ -403,23 +419,48 @@
             </div>
         </div>
     </div>
-    <div class=formuser id=contactForm>
+    <div class="formuser" id="contactForm">
         <h2>Wypełnij formularz i odbierz<br>bezpłatną lekcję próbną</h2>
-        <form class=contactForm1>
-            <div class="question active" data-question=1><label for=name>Imię:</label> <input id=name name=name
-                    required>
-                <span class=error id=nameError>Proszę podać swoje imię.</span> <button onclick=nextQuestion()
-                    type=button>Dalej</button>
+        <form class="contactForm1">
+            <!-- Pytanie 1: Imię -->
+            <div class="question active" data-question="1">
+                <label for="name">Imię:</label>
+                <input id="name" name="name" required>
+                <span class="error" id="nameError">Proszę podać swoje imię.</span>
+                <button onclick="nextQuestion()" type="button">Dalej</button>
             </div>
-            <div class=question data-question=2><label for=email>Email:</label> <input id=email name=email type=email
-                    required> <span class=error id=emailError>Proszę podać prawidłowy adres email.</span> <button
-                    onclick=previousQuestion() type=button>Wstecz</button> <button onclick=nextQuestion()
-                    type=button>Dalej</button></div>
-            <div class=question data-question=3><label for=message>Wiadomość:</label> <textarea id=message name=message
-                    required></textarea> <span class=error id=messageError>Proszę wpisać wiadomość.</span> <button
-                    onclick=previousQuestion() type=button>Wstecz</button> <button type=submit>Wyślij</button></div>
+    
+            <!-- Pytanie 2: Email -->
+            <div class="question" data-question="2">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" required>
+                <span class="error" id="emailError">Proszę podać prawidłowy adres email.</span>
+                <button onclick="previousQuestion()" type="button">Wstecz</button>
+                <button onclick="nextQuestion()" type="button">Dalej</button>
+            </div>
+    
+            <!-- Pytanie 3: Wiadomość -->
+            <div class="question" data-question="3">
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message" placeholder="Przekaż nam jak najwięcej informacji, czyli jaki etap edukacji, jaki poziom, jaki przedmiot Cię interesuje?" required></textarea>
+                <span class="error" id="messageError">Proszę wpisać wiadomość.</span>
+                <button onclick="previousQuestion()" type="button">Wstecz</button>
+                <button onclick="nextQuestion()" type="button">Dalej</button>
+            </div>
+    
+            <!-- Pytanie 4: Numer telefonu -->
+            <div class="question" data-question="4">
+                <label for="phone">Numer telefonu:</label>
+                <input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="123-456-789" required>
+                <span class="error" id="phoneError">Proszę podać numer telefonu w formacie 123-456-789.</span>
+                <button onclick="previousQuestion()" type="button">Wstecz</button>
+                <button type="submit">Wyślij</button>
+            </div>
         </form>
     </div>
+    
+
+    
     <div class=faq-bgc>
         <div class="container faq-section">
             <h2>Często zadawane pytania</h2>

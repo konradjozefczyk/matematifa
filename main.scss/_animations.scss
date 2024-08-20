@@ -37,3 +37,11 @@
         transform: rotateZ(360deg);
     }
 }
+@keyframes jumper {
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
