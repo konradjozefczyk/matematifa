@@ -4,19 +4,20 @@
 
 body {
 	box-sizing: border-box;
-	background: linear-gradient(90deg, rgba(65, 132, 200, 1) 0%, rgba(226, 110, 187, 1) 100%);
+	background: linear-gradient(90deg, rgba(255,162,229,1) 0%, rgba(200,196,234,1) 50%, rgba(191,222,255,1) 100%);
 	h1,
 	h2,
 	h3 {
 		font-family: 'Kodchasan', sans-serif;
 		font-weight: bold;
-		color: white;
+		color: #280f91;
 		text-align: center;
 		text-shadow: 1.5px 1.5px 1.5px black;
 		margin: 20px 0;
 	}
 	h1 {
 		font-size: 5rem;
+		color: white;
 	}
 	h2 {
 		font-size: 3rem;
@@ -27,7 +28,7 @@ body {
 	}
 	font-family: 'Montserrat', sans-serif;
 	font-size: 2rem;
-	color: white;
+	color: #280f91;
 }
 a {
 	text-decoration: none;
@@ -39,6 +40,7 @@ a {
 }
 header {
 	background-color: #6fa5dd;
+	font-size: 2rem;
 	.top {
 		display: flex;
 		padding: 3.5px;
@@ -52,7 +54,9 @@ header {
 	.menu-right {
 		display: none;
 		width: 35%;
-		justify-content: center;
+		justify-content: end;
+		margin-right: 40px;
+
 		span {
 			background-color: #ff3ea2;
 			color: #e9fcff;
@@ -60,11 +64,12 @@ header {
 	}
 	.menu-left {
 		width: 100%;
-		justify-content: start;
+		margin: 0px 40px;
+		text-align: center;
 		span {
 			background-color: #e9fcff;
-			color: #1b25ac;
-			margin: 0px 40px;
+			color: #280f91;
+			margin: 0px 50px;
 		}
 		.phone {
 			width: 40px;
@@ -93,10 +98,11 @@ header {
 	position: fixed;
 	width: 100vw;
 	z-index: 100;
-	top: 40px;
+	top: 37px;
 	animation: nav-top 0.3s linear 1 forwards;
 	animation-play-state: paused;
 	animation-delay: calc(var(--scroll) * -40s);
+	
 	.bar {
 		text-align: center;
 		background-color: white;
@@ -105,12 +111,13 @@ header {
 	}
 	.menu {
 		background-color: white;
+		font-size: 2rem;
 		img {
 			height: 80px;
 		}
+
 		.menu-item {
-			margin-left: 10px;
-			font-size: 2rem;
+			margin-left: 4vw;
 			font-weight: bold;
 			color: #280f91;
 		}

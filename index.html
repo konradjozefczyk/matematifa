@@ -13,8 +13,8 @@
         .hero {
             background-image: url(images/heromobile.avif);
             height: 80vh;
-            background-position: top;
             background-size: cover;
+            background-position: top;
             background-repeat: no-repeat;
             text-align: center;
             display: flex;
@@ -72,8 +72,8 @@
 
 
     <header>
-        <div class="container top">
-            <div class="top menu-left"><a href=# aria-label=zadzwoń><span class="rounded-pill phone"><i
+        <div class="top">
+            <div class="menu-left"><a href=# aria-label=zadzwoń><span class="rounded-pill phone"><i
                             class="fa-solid fa-phone"></i> 577 617 797</span></a> <a href=#
                     aria-label="wyślij e-mail"><span class=rounded-pill><i
                             class="fa-envelope fa-regular"></i></span></a> <a href=#contactForm
@@ -82,28 +82,31 @@
         </div>
     </header>
     <div class=menu-nav><button class=bar onclick=menuOpen() aria-label=menu><i class="fa-solid fa-bars"></i></button>
-        <div class=menu id=menuitems><img alt="logo matematify" loading=lazy src=./images/telefon/logotel.avif> <a
-                href=#Oferta>
-                <div class=menu-item>
-                    <p>Oferta
-                </div>
-            </a><a href=#Cennik>
-                <div class=menu-item>
-                    <p>Cennik
-                </div>
-            </a><a href=#Jakzaczac>
-                <div class=menu-item>
-                    <p>Jak zacząć?
-                </div>
-            </a><a href=#Onas>
-                <div class=menu-item>
-                    <p>O nas
-                </div>
-            </a><a href=#Opinie>
-                <div class=menu-item>
-                    <p>Opinie
-                </div>
-            </a></div>
+        <div class=menu id=menuitems><img alt="logo matematify" loading=lazy src=./images/telefon/logotel.avif> 
+            <div class="menu-nav-flex">
+                <a href=#Oferta>
+                    <div class=menu-item>
+                        <p>Oferta
+                    </div>
+                </a><a href=#Cennik>
+                    <div class=menu-item>
+                        <p>Cennik
+                    </div>
+                </a><a href=#Jakzaczac>
+                    <div class=menu-item>
+                        <p>Jak zacząć?
+                    </div>
+                </a><a href=#Onas>
+                    <div class=menu-item>
+                        <p>O nas
+                    </div>
+                </a><a href=#Opinie>
+                    <div class=menu-item>
+                        <p>Opinie
+                    </div>
+                </a></div>
+            </div>
+       
     </div>
     <div>
         <section class=hero>
@@ -134,7 +137,7 @@
             <h2>Korepetycje - Przedmioty</h2>
             <p>W szkole .matematify na pierwszym miejscu stawiamy ucznia i jego potrzeby. Wszystkie lekcje, które
                 prowadzimy są nakierunkowane na ucznia, a przerabiany materiał i tempo nauki dostosujemy do Ciebie!
-            <p class=yellow-text>Zapoznaj się z naszą ofertą:
+            <p class=blue-text>Zapoznaj się z naszą ofertą:
             <div class=row>
                 <div class="subject subject1">
                     <div class="rounded-pill sub-name">Matematyka</div>

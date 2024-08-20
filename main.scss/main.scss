@@ -85,12 +85,9 @@
 		margin: 40px 40px 40px 40px;
 		text-align: center;
 	}
-	.yellow-text {
-		color: #fdcd12;
-		font-weight: bold;
-	}
+
 	.blue-text {
-		color: #4ae8ff;
+		color: #1B25AC;
 	}
 }
 
@@ -820,7 +817,12 @@ footer {
 			transform: scale(1.1);
 		}
 		.menu-left {
+			display: flex;
+			justify-content: start;
 			width: 80%;
+			span {
+				margin-left: 0;
+			}
 		}
 		.menu-right {
 			display: flex;
@@ -843,17 +845,23 @@ footer {
 		display: block;
 	}
 	.menu-nav {
-		top: 50px;
+		top: 43px;
 		.bar {
 			display: none;
 			height: 7 rem;
+		}
+		.menu-nav-flex {
+			display: flex;
+			justify-content: end;
 		}
 		#menuitems {
 			display: flex;
 			border-bottom-left-radius: 25px;
 			border-bottom-right-radius: 25px;
-			justify-content: space-around;
+			justify-content: space-between;
 			align-items: center;
+			padding: 0px 40px;
+
 			height: 100%;
 			img {
 				display: flex;
