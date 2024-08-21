@@ -44,6 +44,23 @@
     transform: translateY(0);
   }
 }
+@keyframes call {
+  10% {
+    transform: rotateZ(20deg);
+  }
+  30% {
+    transform: rotateZ(0);
+  }
+  60% {
+    transform: rotateZ(15deg);
+  }
+  70% {
+    transform: rotateZ(0);
+  }
+  90% {
+    transform: rotateZ(10deg);
+  }
+}
 .row {
   display: flex;
   justify-content: center;
@@ -964,5 +981,8 @@ footer {
   .but-cal a {
     width: 400px;
     font-size: 2.5rem;
+  }
+  .call {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

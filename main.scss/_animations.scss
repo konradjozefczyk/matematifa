@@ -45,3 +45,20 @@
         transform: translateY(0);
     }
 }
+@keyframes call {
+    10% {
+        transform: rotateZ(20deg);
+    }
+    30% {
+        transform: rotateZ(0);
+    }
+    60% {
+        transform: rotateZ(15deg);
+    }
+    70% {
+        transform: rotateZ(0);
+    }
+    90% {
+        transform: rotateZ(10deg);
+    }
+}
