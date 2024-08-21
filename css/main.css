@@ -807,6 +807,9 @@
 .benefits-bgc .ben-box .ben-img img {
   height: 200px;
 }
+.benefits-bgc .ben-box p {
+  color: #1b25ac;
+}
 .benefits-bgc iframe {
   display: block;
   margin: 0 auto;

@@ -723,10 +723,14 @@ textarea::placeholder {
 		height: 300px;
 		margin: 0px 10px;
 		border-radius: 20px;
+		
 		.ben-img {
 			img {
 				height: 200px;
 			}
+		}
+		p {
+			color: #1b25ac;
 		}
 	}
 	iframe {
