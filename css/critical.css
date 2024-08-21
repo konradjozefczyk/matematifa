@@ -158,16 +158,16 @@ header .menu-left .phone {
 
 .call {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 20px;
+  right: 20px;
   background-color: white;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   z-index: 10;
   text-align: center;
-  font-size: 50px;
-  padding-top: 15px;
+  font-size: 40px;
+  padding-top: 10px;
   animation: call 3s infinite;
 }
 .call a {
