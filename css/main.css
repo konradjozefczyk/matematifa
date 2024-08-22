@@ -103,8 +103,7 @@
 }
 .offer-subject .sub-but {
   padding-bottom: 10px;
-  display: flex;
-  justify-content: space-around;
+  text-align: center;
 }
 .offer-subject .sub-but a:hover {
   scale: 0.9;
@@ -270,7 +269,7 @@
 
 .card-title {
   color: #280f91;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: bold;
 }
@@ -280,7 +279,7 @@
   color: #280f91;
 }
 .card-body .card-text li {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .card-body h3 {
   text-shadow: none;
@@ -340,7 +339,7 @@
 }
 .tech .tech-type__text {
   text-align: center;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px #280f91;
   font-weight: bold;
 }
 
@@ -434,7 +433,7 @@
 }
 .pricebox button {
   margin: 20px;
-  background-color: #ff3ea2;
+  background-color: #a12665;
 }
 
 #Jakzaczac,
@@ -500,7 +499,7 @@
   animation: pulse 3s infinite;
 }
 .steps .step a {
-  background-color: #ff3ea2;
+  background-color: #a12665;
 }
 .steps .step-text {
   padding: 100px 30px;
@@ -758,7 +757,7 @@
   justify-content: center;
 }
 .rev-bgc button {
-  background-color: #ff3ea2;
+  background-color: #a12665;
   padding: 10px 5px;
   color: white;
   border: none;
@@ -984,8 +983,16 @@ footer {
   .but-cal a {
     width: 400px;
     font-size: 2.5rem;
+    background-color: #a12665;
+  }
+  .card-body {
+    font-size: 2rem;
   }
   .call {
     display: none;
+  }
+  .offer-subject .sub-but {
+    display: flex;
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=main.css.map */

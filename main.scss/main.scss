@@ -41,8 +41,7 @@
 	position: relative;
 	.sub-but {
 		padding-bottom: 10px;
-		display: flex;
-		justify-content: space-around;
+		text-align: center;
 		a:hover {
 			scale: 0.9;
 			color: white;
@@ -201,7 +200,7 @@
 }
 .card-title {
 	color: #280f91;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	text-align: center;
 	font-weight: bold;
 }
@@ -211,7 +210,7 @@
 	color: #280f91;
 	.card-text {
 		li {
-			font-size: 1.5rem;
+			font-size: 2rem;
 		}
 	}
 	h3 {
@@ -269,7 +268,7 @@
 		width: 100%;
 		&__text {
 			text-align: center;
-			text-shadow: 1px 1px 1px black;
+			text-shadow: 1px 1px 1px #280f91;
 			font-weight: bold;
 		}
 	}
@@ -361,7 +360,7 @@
 	}
 	button {
 		margin: 20px;
-		background-color: #ff3ea2;
+		background-color: #a12665;
 	}
 }
 #Jakzaczac,
@@ -425,7 +424,7 @@
 			}
 		}
 		a {
-			background-color: #ff3ea2;
+			background-color: #a12665;
 		}
 	}
 
@@ -550,12 +549,12 @@
 		border: 1px solid #ccc;
 		border-radius: 4px;
 	}
-input::placeholder,
-textarea::placeholder {
-    color: #999; /* Kolor tekstu placeholdera */
-    font-style: italic; /* Styl czcionki (opcjonalnie) */
-	font-size: 1.5rem;
-}
+	input::placeholder,
+	textarea::placeholder {
+		color: #999; /* Kolor tekstu placeholdera */
+		font-style: italic; /* Styl czcionki (opcjonalnie) */
+		font-size: 1.5rem;
+	}
 
 	button {
 		padding: 10px 15px;
@@ -681,7 +680,7 @@ textarea::placeholder {
 		}
 	}
 	button {
-		background-color: #ff3ea2;
+		background-color: #a12665;
 		padding: 10px 5px;
 		color: white;
 		border: none;
@@ -723,7 +722,7 @@ textarea::placeholder {
 		height: 300px;
 		margin: 0px 10px;
 		border-radius: 20px;
-		
+
 		.ben-img {
 			img {
 				height: 200px;
@@ -914,9 +913,19 @@ footer {
 		a {
 			width: 400px;
 			font-size: 2.5rem;
+			background-color: #a12665;
 		}
+	}
+	.card-body {
+		font-size: 2rem;
 	}
 	.call {
 		display: none;
+	}
+	.offer-subject {
+		.sub-but {
+			display: flex;
+			justify-content: space-around;
+		}
 	}
 }
