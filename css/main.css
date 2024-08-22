@@ -339,7 +339,7 @@
 }
 .tech .tech-type__text {
   text-align: center;
-  text-shadow: 1px 1px 1px #280f91;
+  text-shadow: 1px 0.25px 0.25px rgba(40, 15, 145, 0.4);
   font-weight: bold;
 }
 
