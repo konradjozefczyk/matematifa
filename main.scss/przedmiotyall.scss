@@ -61,3 +61,18 @@ footer {
 .text {
 	background-color: rgba($color: white, $alpha: .7);
 }
+.firstimg {
+	background-image: url(../images/przedmioty/telefon/zdjecia/plecakkalkulatortel.avif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@media (min-width: 992px) {
+	.sec {
+		.firstimg {
+			background-image: url(../images/przedmioty/komputer/zdjęcia/kalkulatorpion.avif);
+			background-position: top;
+		}
+		
+	}
+}

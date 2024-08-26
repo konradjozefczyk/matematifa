@@ -4,9 +4,6 @@
 
 body {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
-  color: #280f91;
 }
 body h1,
 body h2,
@@ -27,6 +24,11 @@ body h2 {
 }
 body h3 {
   font-size: 2.5rem;
+}
+body p, body ul, body li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #280f91;
 }
 
 .container {
@@ -132,14 +134,21 @@ footer {
 .text {
   border-radius: 30px;
   padding: 50px;
-  margin-top: 30px;
   text-align: justify;
+  margin-top: 30px;
+}
+
+.firstimg {
+  height: 400px;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.sec {
+  padding: 0;
 }
 
 @media (min-width: 992px) {
-  body {
-    font-size: 2.5rem;
-  }
   body h1 {
     font-size: 6rem;
   }
@@ -148,6 +157,9 @@ footer {
   }
   body h3 {
     font-size: 3.5rem;
+  }
+  body p, body ul, body li {
+    font-size: 2.5rem;
   }
   .formul {
     display: block;
@@ -203,5 +215,17 @@ footer {
   }
   .call {
     display: none;
+  }
+  .sec {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sec .text {
+    width: 48%;
+    height: 900px;
+  }
+  .sec .firstimg {
+    width: 48%;
+    height: 900px;
   }
 }/*# sourceMappingURL=przedmiotycritical.css.map */

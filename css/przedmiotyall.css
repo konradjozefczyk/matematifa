@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes nav-top {
   to {
     top: 0px;
@@ -119,4 +120,18 @@ footer {
 
 .text {
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.firstimg {
+  background-image: url(../images/przedmioty/telefon/zdjecia/plecakkalkulatortel.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 992px) {
+  .sec .firstimg {
+    background-image: url(../images/przedmioty/komputer/zdjęcia/kalkulatorpion.avif);
+    background-position: top;
+  }
 }/*# sourceMappingURL=przedmiotyall.css.map */
