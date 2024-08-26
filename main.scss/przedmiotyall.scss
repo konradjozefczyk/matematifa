@@ -1,4 +1,12 @@
 @use './animations' as *;
+body {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 162, 229, 1) 0%,
+		rgba(200, 196, 234, 1) 50%,
+		rgba(191, 222, 255, 1) 100%
+	);
+}
 a {
 	text-decoration: none;
 	color: white;
