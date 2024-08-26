@@ -1,0 +1,52 @@
+@use './animations' as *;
+a {
+	text-decoration: none;
+	color: white;
+	overflow: hidden;
+}
+header {
+	background-color: #6fa5dd;
+	.menu-right {
+		span {
+			background-color: #ff3ea2;
+			color: #e9fcff;
+		}
+	}
+	.menu-left {
+		span {
+			background-color: #e9fcff;
+			color: #280f91;
+		}
+	}
+}
+.menu-nav {
+	z-index: 100;
+	animation: nav-top 0.3s linear 1 forwards;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -40s);
+	.bar {
+		background-color: white;
+		cursor: pointer;
+		color: #280f91;
+	}
+	.menu {
+		background-color: white;
+		.menu-item {
+			color: #280f91;
+		}
+	}
+}
+.call {
+	background-color: white;
+	animation: call 3s infinite;
+	z-index: 10;
+	a {
+		color: #280f91;
+	}
+}
+.foot {
+	background-color: rgba($color: black, $alpha: 0.5);
+}
+footer {
+	color: #280f91;
+}
