@@ -18,13 +18,14 @@
 	}
 	h3 {
 		padding: 0;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 	.short-list {
 		display: flex;
 		justify-content: center;
 		button {
 			width: 300px;
+			background-color: #A12665;
 		}
 		ul.dropdown-menu {
 			width: 290px;
@@ -67,7 +68,7 @@
 	text-align: center;
 	padding: 50px 0;
 	a {
-		background-color: #ff3ea2;
+		background-color: #A12665;
 		color: white;
 	}
 	a:hover {
@@ -145,17 +146,21 @@
 	flex: 0 0 50%; /* Dwa boxy widoczne na raz */
 	box-sizing: border-box;
 	padding: 100px;
+	font-size: 2.2rem;
+	
+	color: #99245D;
+	
 }
 
 .reviews__arrow {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	background: rgba(0, 0, 0, 0.5);
-	color: #fff;
+	background: none;
+	color: #99245D;
 	border: none;
 	cursor: pointer;
-	font-size: 24px;
+	font-size: 54px;
 	padding: 10px;
 	z-index: 10;
 }
@@ -244,7 +249,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center;
+	align-items: start;
+	padding-bottom: 50px;
 	.tech-big {
 		display: flex;
 		flex-direction: column;
@@ -257,7 +263,7 @@
 		text-shadow: none;
 	}
 	img {
-		max-height: 150px;
+		height: 50px;
 	}
 	.tech-type__img {
 		text-align: center;
@@ -266,6 +272,7 @@
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
+		padding-top: 50px;
 		&__text {
 			text-align: center;
 			text-shadow: 1px .25px .25px rgba(40,15,145,.4);
@@ -296,9 +303,15 @@
 	}
 	a {
 		color: #1b25ac;
-		padding: 5px 20px;
-		margin: 20px 100px;
-		background-color: white;
+		padding: 20px 20px;
+		margin: 20px 30px;
+		background-color: #E9FCFF;
+		font-weight: bold;
+		text-shadow: 1px .25px .25px rgba(40,15,145,.4);
+		width: 350px;
+	}
+	a:hover {
+		color: #1b25ac;
 	}
 	.add-img {
 		img {
@@ -310,14 +323,15 @@
 	}
 }
 .form-bgc {
-	background-color: #00bfdb;
-	border-bottom: 2px solid #280f91;
-	border-top: 2px solid #280f91;
+	background-color: #E9FCFF;
+	border-bottom: 1px solid #280f91;
+	border-top: 1px solid #280f91;
+	box-shadow: 3px 3px 10px #2e2e2e2e;
 }
 .pricebox {
 	padding-top: 40px;
 	text-align: center;
-
+	text-shadow: .1px .1px .1px rgba(40,15,145,.4);
 	form {
 		.answer-bo {
 			display: flex;
@@ -327,14 +341,13 @@
 			-webkit-appearance: none;
 			width: 15px;
 			height: 15px;
-			border: 1px solid #fab800;
+			border: 3px solid #a12665;
 			border-radius: 50%;
 			outline: none;
-			box-shadow: 0 0 5px 0px #ff3ea2 inset;
 			margin-left: 40px;
 		}
 		input[type='radio']:hover {
-			box-shadow: 0 0 5px 0px #ff3ea2 inset;
+			
 		}
 		input[type='radio']:before {
 			content: '';
@@ -345,7 +358,7 @@
 			border-radius: 50%;
 		}
 		input[type='radio']:checked:before {
-			background: #ff3ea2;
+			background: #a12665;
 		}
 		label {
 			margin-left: 12px;
@@ -426,10 +439,13 @@
 		a {
 			background-color: #a12665;
 		}
+		span {
+			font-weight: bold;
+		}
 	}
 
 	.step-text {
-		padding: 100px 30px;
+		padding: 100px 30px 40px 30px;
 		font-size: 2rem;
 		text-align: center;
 	}
@@ -526,7 +542,7 @@
 		transition: opacity 0.5s ease, transform 0.5s ease;
 		transform: translateY(20px);
 		text-align: center;
-		width: 100%;
+		max-width: 500px;
 	}
 
 	.question.active {
@@ -559,15 +575,16 @@
 	button {
 		padding: 10px 15px;
 		border: none;
-		border-radius: 4px;
-		background-color: #007bff;
+		border-radius: 40px;
+		background-color: #1B25AC;
 		color: white;
 		cursor: pointer;
-		transition: background-color 0.3s ease;
+		transition: scale 0.3s ease;
 	}
 
 	button:hover {
-		background-color: #0056b3;
+		background-color: #1B25AC;
+		scale: 1.05;
 	}
 
 	.error {
@@ -589,7 +606,7 @@
 		color: white;
 	}
 	h2 {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 	.about-us-bgc.show,
 	.certif-bgc.show,
@@ -598,12 +615,15 @@
 		animation: showleft 2s forwards;
 	}
 	.about-us-bgc {
-		background-color: #00bfdb;
+		background-color: #4AE8FF;
 		.about-us {
 			width: 80%;
 			padding-left: 40px;
 			text-align: justify;
-
+			p {
+				color: #280f91;
+			}
+			
 			img {
 				width: 100%;
 				margin-top: 20px;
@@ -612,7 +632,7 @@
 		}
 	}
 	.certif-bgc {
-		background-color: #ff3ea2;
+		background-color:  #ffa2e5 ;
 		.certif {
 			width: 80%;
 			padding-right: 40px;
@@ -679,7 +699,7 @@
 			justify-content: center;
 		}
 	}
-	button {
+	.btnfc {
 		background-color: #a12665;
 		padding: 10px 5px;
 		color: white;
@@ -698,6 +718,9 @@
 	align-items: center;
 	padding: 50px 0px;
 	margin-top: 100px;
+}
+.last-bgc:first-of-type {
+	margin-top: 20px;
 }
 .last-bgc-left {
 	transform: translateX(-50%);
@@ -811,6 +834,9 @@ footer {
 	}
 	.tech {
 		flex-direction: row;
+		img {
+			height: 150px;
+		}
 	}
 	.formul {
 		display: block;
@@ -847,7 +873,7 @@ footer {
 		.step {
 			width: 33%;
 			margin: 0;
-			height: 500px;
+			min-height: 450px;
 		}
 	}
 	.add {
