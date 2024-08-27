@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes nav-top {
   to {
     top: 0px;
@@ -117,35 +118,17 @@ footer {
   color: #280f91;
 }
 
-.text {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.firstimg, .secondimg, .thirdimg {
-  background-position: center;
+.hero {
+  background-image: url(../images/miasta/0każdastrona/każdastronatel/plecakkalkulatortel.avif);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
-
-.btn {
-  background-color: #a12665;
-  transition: 0.2s;
+.hero .herobg {
+  background-color: rgba(255, 255, 255, 0.8);
 }
-.btn p {
-  color: white;
-}
-
-.btn:hover {
-  scale: 1.1;
-}
-
-.bgimg {
-  background-repeat: no-repeat;
+.hero .herobg .heroimg {
   background-position: top;
-  background-size: cover;
-}
-
-.dices {
   background-repeat: no-repeat;
-  background-position: center;
-}/*# sourceMappingURL=przedmiotyall.css.map */
+  background-size: 100%;
+}/*# sourceMappingURL=miastaall.css.map */

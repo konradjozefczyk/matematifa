@@ -58,31 +58,18 @@ header {
 footer {
 	color: #280f91;
 }
-.text {
-	background-color: rgba($color: white, $alpha: .7);
-}
-.firstimg, .secondimg, .thirdimg {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.btn {
-	background-color: #a12665;
-	transition: .2s;
-	p {
-		color: white;
-}
-}
-.btn:hover {
-	scale: 1.1;
-}
-.bgimg {
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-}
-.dices {
-	background-repeat: no-repeat;
-	background-position: center;
+.hero {
+    background-image: url(../images/miasta/0każdastrona/każdastronatel/plecakkalkulatortel.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .herobg {
+        background-color: rgba($color: white, $alpha: .8);
+        .heroimg {
+            
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
 }
