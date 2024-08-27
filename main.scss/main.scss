@@ -6,6 +6,9 @@
 .row {
 	display: flex;
 	justify-content: center;
+	a {
+		color: #280f91;
+	}
 }
 .offer-subject.show {
 	animation: showleft 2s forwards;
@@ -345,9 +348,6 @@
 			border-radius: 50%;
 			outline: none;
 			margin-left: 40px;
-		}
-		input[type='radio']:hover {
-			
 		}
 		input[type='radio']:before {
 			content: '';

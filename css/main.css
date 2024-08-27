@@ -65,6 +65,9 @@
   display: flex;
   justify-content: center;
 }
+.row a {
+  color: #280f91;
+}
 
 .offer-subject.show {
   animation: showleft 2s forwards;
