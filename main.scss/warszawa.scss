@@ -1,3 +1,18 @@
 .heroimg {
     background-image: url(../images/miasta/1warszawa/warszawatel/warsawtel.avif);
 }
+    .secimg {
+        background-image: url(../images/miasta/1warszawa/warszawatel/warsawgirltel.avif);
+    }
+.graph {
+    background-image: url(../images/miasta/0każdastrona/każdastronakomp/3dgrafikaksiazki.avif);
+}
+@media (min-width: 992px) {
+    .heroimg {
+        background-image: url(../images/miasta/1warszawa/warszawakomputer/warsaw.avif);
+    }
+    .secimg {
+        background-image: url(../images/miasta/1warszawa/warszawakomputer/warsawgirl.avif);
+    }
+    
+}
