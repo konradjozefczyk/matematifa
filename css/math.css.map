@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"math.css"}
+{"version":3,"sources":["math.css","../main.scss/math.scss"],"names":[],"mappings":"AAAA,gBAAgB;ACAhB;EACI,mFAAA;ADEJ;;ACAA;EACI,oFAAA;ADGJ;;ACAA;EACI,2EAAA;ADGJ;;ACDA;EACI,2EAAA;ADIJ;;ACFA;EACI,0EAAA;ADKJ;;ACHA;EAEE;IACC,gFAAA;IACA,wBAAA;EDKD;ECHM;IACI,yEAAA;EDKV;ECHM;IACI,yEAAA;EDKV;AACF","file":"math.css"}

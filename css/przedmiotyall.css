@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes nav-top {
   to {
     top: 0px;
@@ -122,16 +121,31 @@ footer {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.firstimg {
-  background-image: url(../images/przedmioty/telefon/zdjecia/plecakkalkulatortel.avif);
+.firstimg, .secondimg, .thirdimg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media (min-width: 992px) {
-  .sec .firstimg {
-    background-image: url(../images/przedmioty/komputer/zdjęcia/kalkulatorpion.avif);
-    background-position: top;
-  }
+.btn {
+  background-color: #a12665;
+  transition: 0.2s;
+}
+.btn p {
+  color: white;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+.bgimg {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.dices {
+  background-repeat: no-repeat;
+  background-position: center;
 }/*# sourceMappingURL=przedmiotyall.css.map */

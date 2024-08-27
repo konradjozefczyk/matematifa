@@ -1,1 +1,33 @@
-/*# sourceMappingURL=math.css.map */
+@charset "UTF-8";
+.bgimg {
+  background-image: url(../images/przedmioty/komputer/zdjęcia/kalkulatorpoziomo.avif);
+}
+
+.firstimg {
+  background-image: url(../images/przedmioty/telefon/zdjecia/plecakkalkulatortel.avif);
+}
+
+.secondimg {
+  background-image: url(../images/przedmioty/telefon/zdjecia/ksiazkitel.avif);
+}
+
+.thirdimg {
+  background-image: url(../images/przedmioty/telefon/zdjecia/tablicatel.avif);
+}
+
+.dices {
+  background-image: url(../images/przedmioty/telefon/grafiki/kostkitel.avif);
+}
+
+@media (min-width: 992px) {
+  .sec .firstimg {
+    background-image: url(../images/przedmioty/komputer/zdjęcia/kalkulatorpion.avif);
+    background-position: top;
+  }
+  .sec .secondimg {
+    background-image: url(../images/przedmioty/komputer/zdjęcia/ksiazki.avif);
+  }
+  .sec .thirdimg {
+    background-image: url(../images/przedmioty/komputer/zdjęcia/tablica.avif);
+  }
+}/*# sourceMappingURL=math.css.map */
