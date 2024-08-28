@@ -143,9 +143,16 @@ footer {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .dices {
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-device-width: 768px) {
+  .bgimg {
+    background-attachment: local;
+  }
 }/*# sourceMappingURL=przedmiotyall.css.map */

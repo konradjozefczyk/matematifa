@@ -119,3 +119,8 @@ footer {
 		background-attachment: local;
 	}
 }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-device-width: 768px) {
+    .secimg {
+        background-attachment: local;
+    }
+}
