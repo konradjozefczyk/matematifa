@@ -16,7 +16,7 @@ header {
 	background-color: #6fa5dd;
 	.menu-right {
 		span {
-			background-color: #A12665;
+			background-color: #a12665;
 			color: #e9fcff;
 		}
 	}
@@ -59,9 +59,11 @@ footer {
 	color: #280f91;
 }
 .text {
-	background-color: rgba($color: white, $alpha: .7);
+	background-color: rgba($color: white, $alpha: 0.7);
 }
-.firstimg, .secondimg, .thirdimg {
+.firstimg,
+.secondimg,
+.thirdimg {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -69,10 +71,10 @@ footer {
 
 .btn {
 	background-color: #a12665;
-	transition: .2s;
+	transition: 0.2s;
 	p {
 		color: white;
-}
+	}
 }
 .btn:hover {
 	scale: 1.1;
@@ -81,14 +83,14 @@ footer {
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: local;
 }
 .dices {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-device-width: 768px) {
-    .bgimg {
-        background-attachment: local;
-    }
+@media (min-width: 992px) {
+	.bgimg {
+		background-position: fixed;
+	}
 }
