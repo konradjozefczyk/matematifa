@@ -88,6 +88,9 @@ header .menu-left span {
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -40s);
 }
+.menu-nav svg {
+  scale: 1.8;
+}
 .menu-nav .bar {
   background-color: white;
   cursor: pointer;
@@ -107,6 +110,13 @@ header .menu-left span {
 }
 .call a {
   color: #280f91;
+}
+.call svg {
+  scale: 2;
+}
+
+svg {
+  transform: translateY(-10%);
 }
 
 .foot .foot-menu a {

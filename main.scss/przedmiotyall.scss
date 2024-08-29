@@ -32,6 +32,9 @@ header {
 	animation: nav-top 0.3s linear 1 forwards;
 	animation-play-state: paused;
 	animation-delay: calc(var(--scroll) * -40s);
+	svg {
+		scale: 1.8;
+	}
 	.bar {
 		background-color: white;
 		cursor: pointer;
@@ -51,6 +54,12 @@ header {
 	a {
 		color: #280f91;
 	}
+	svg {
+		scale: 2;
+	}
+}
+svg {
+	transform: translateY(-10%);
 }
 .foot {
 	.foot-menu {

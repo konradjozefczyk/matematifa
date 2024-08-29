@@ -51,6 +51,9 @@ header {
 	a {
 		color: #280f91;
 	}
+	svg {
+		scale: 2;
+	}
 }
 .foot {
 	background-color: rgba($color: black, $alpha: 0.5);
@@ -108,6 +111,9 @@ footer {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+svg {
+	transform: translateY(-10%);
 }
 @media (min-width: 992px) {
 	.stats {

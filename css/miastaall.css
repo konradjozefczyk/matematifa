@@ -109,6 +109,9 @@ header .menu-left span {
 .call a {
   color: #280f91;
 }
+.call svg {
+  scale: 2;
+}
 
 .foot {
   background-color: rgba(0, 0, 0, 0.5);
@@ -172,6 +175,10 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+svg {
+  transform: translateY(-10%);
 }
 
 @media (min-width: 992px) {
