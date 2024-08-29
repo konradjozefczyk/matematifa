@@ -109,8 +109,8 @@ header .menu-left span {
   color: #280f91;
 }
 
-.foot {
-  background-color: rgba(0, 0, 0, 0.5);
+.foot .foot-menu a {
+  color: #280f91;
 }
 
 footer {
@@ -121,12 +121,22 @@ footer {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.firstimg,
 .secondimg,
 .thirdimg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.firstimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .btn {
@@ -135,6 +145,7 @@ footer {
 }
 .btn p {
   color: white;
+  font-weight: bold;
 }
 
 .btn:hover {
@@ -153,8 +164,17 @@ footer {
   background-position: center;
 }
 
+.usebtn a {
+  animation: jump 1s infinite;
+}
+
 @media (min-width: 992px) {
   .bgimg {
-    background-position: fixed;
+    background-attachment: fixed;
+  }
+}
+@keyframes jump {
+  50% {
+    scale: 1.02;
   }
 }/*# sourceMappingURL=przedmiotyall.css.map */

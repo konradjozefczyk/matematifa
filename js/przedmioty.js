@@ -40,3 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 })
+// Plik: scripts.js
+document.addEventListener("DOMContentLoaded", function() {
+    const options = {
+        threshold: 0.2 // Jak tylko 10% elementu jest widoczne
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Przestaje obserwować po pierwszym pojawieniu
+            }
+        });
+    }, options);
+
+    const elements = document.querySelectorAll('.hidden');
+    elements.forEach(el => observer.observe(el));
+});
+

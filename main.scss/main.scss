@@ -148,7 +148,7 @@
 	min-width: 100%;
 	flex: 0 0 50%; /* Dwa boxy widoczne na raz */
 	box-sizing: border-box;
-	padding: 100px;
+	padding: 100px 20px;
 	font-size: 2.2rem;
 	
 	color: #99245D;
@@ -169,11 +169,11 @@
 }
 
 .reviews__arrow--left {
-	left: 10px;
+	left: -10px;
 }
 
 .reviews__arrow--right {
-	right: 10px;
+	right: -10px;
 }
 
 .atuty {
@@ -245,8 +245,6 @@
 	justify-content: space-around;
 }
 
-//CENNIK
-
 .tech {
 	min-height: 400px;
 	display: flex;
@@ -280,6 +278,7 @@
 			text-align: center;
 			text-shadow: 1px .25px .25px rgba(40,15,145,.4);
 			font-weight: bold;
+			margin-top: 10px;
 		}
 	}
 }
@@ -347,7 +346,7 @@
 			border: 3px solid #a12665;
 			border-radius: 50%;
 			outline: none;
-			margin-left: 40px;
+			margin-left: 20px;
 		}
 		input[type='radio']:before {
 			content: '';
@@ -361,7 +360,6 @@
 			background: #a12665;
 		}
 		label {
-			margin-left: 12px;
 			font-size: 2rem;
 		}
 		text-align: left;
@@ -378,7 +376,7 @@
 }
 #Jakzaczac,
 #contactForm {
-	padding-top: 100px;
+	padding-top: 20px;
 }
 #change {
 	background-color: rgba($color: white, $alpha: 0.2);
@@ -517,7 +515,7 @@
 	display: none;
 }
 .formuser {
-	height: 100vh;
+	height: auto;
 	background-color: rgba($color: #ff3ea2, $alpha: 0.3);
 	display: flex;
 	justify-content: center;
@@ -528,6 +526,7 @@
 .contactForm1 {
 	max-width: 600px;
 	margin: auto;
+	margin-bottom: 30px;
 	padding: 20px;
 	border: 1px solid #ddd;
 	display: flex;
@@ -618,7 +617,6 @@
 		background-color: #4AE8FF;
 		.about-us {
 			width: 80%;
-			padding-left: 40px;
 			text-align: justify;
 			p {
 				color: #280f91;
@@ -682,8 +680,7 @@
 		color: #280f91;
 	}
 	.rev {
-		width: 80%;
-		padding-left: 40px;
+		width: 90%;
 		text-align: center;
 		p {
 			color: #280f91;
@@ -710,7 +707,11 @@
 		text-align: center;
 	}
 }
-
+.rev1 {
+	h4 {
+		color: #99245D;
+	}
+}
 .last-bgc {
 	transition: all 0.5s ease-in-out;
 	display: flex;
@@ -737,13 +738,14 @@
 	opacity: 0;
 }
 .benefits-bgc {
-	background-color: #00bfdb;
+	background-color: #4ae8ff;
 	text-align: center;
 	.ben-box {
 		background-color: #e9fcff;
 		width: 300px;
 		height: 300px;
-		margin: 0px 10px;
+		margin: 10px 10px;
+		padding-top: 10px;
 		border-radius: 20px;
 
 		.ben-img {
@@ -753,15 +755,46 @@
 		}
 		p {
 			color: #1b25ac;
+			margin: 20px 0;
 		}
 	}
 	iframe {
 		display: block;
 		margin: 0 auto;
+		width: 100%;
+		height: 56%;
 	}
 }
 .subdown {
 	width: 300px;
+	.subdown-img {
+		border-radius: 10px;
+		position: relative;
+		img {
+			margin: 5px;
+			border-radius: 10px;
+		}
+	}
+	.subdown-img::before {
+		content: '';
+		position: absolute;
+		top: -5px;
+		left: 30px;
+		right: 30px;
+		bottom: -5px;
+		background: linear-gradient(90deg, rgba(255,102,196,1) 0%, rgba(81,112,255,1) 100%);
+		z-index: -1;
+		border-radius: 10px;
+	}
+
+	p {
+		font-weight: bold;
+		font-size: 2.5rem;
+		margin: 20px 0 15px;
+	}
+	span {
+		color: #280f91;
+	}
 }
 
 .textse {
@@ -776,17 +809,25 @@
 
 .foot {
 	display: flex;
-	overflow: hidden;
+	flex-direction: column;
 	justify-content: center;
-	background-color: rgba($color: black, $alpha: 0.5);
-	font-size: 1.5rem;
-
+	overflow: hidden;
+	font-size: 1.6rem;
+border: 2px solid #280f91;
 	.foot-menu {
-		width: 33%;
 		padding-left: 10px;
+		a {
+			color: #280f91;
+			p {
+				font-weight: normal;
+				font-size: 1.6rem;
+			}
+		}
+		
 	}
 	p:first-child {
 		font-weight: bold;
+		font-size: 1.8rem;
 	}
 	p {
 		padding-top: 5px;
@@ -830,7 +871,15 @@ footer {
 		h3 {
 			font-size: 3.5rem;
 		}
+		h4 {
+			font-size: 2.8rem;
+		}
 		font-size: 2.5rem;
+	}
+	.rev-bgc {
+		.rev {
+			width: 80%;
+		}
 	}
 	.tech {
 		flex-direction: row;
@@ -842,8 +891,13 @@ footer {
 		display: block;
 	}
 	.foot {
+		flex-direction: row;
+		font-size: 1.8rem;
 		.foot-menu {
 			width: 20%;
+		}
+		p:first-child {
+			font-size: 2.2rem;
 		}
 	}
 	header {
@@ -896,7 +950,6 @@ footer {
 			justify-content: space-between;
 			align-items: center;
 			padding: 0px 40px;
-
 			height: 100%;
 			img {
 				display: flex;
@@ -906,9 +959,14 @@ footer {
 			border-top: #1b25ac 2px solid;
 		}
 		.menu-item {
-			padding: 0px 10px;
 			border-top: white 2px solid;
 			transition: border-top 0.2s;
+		}
+		.menu {
+			.menu-item {
+				padding: 0 10px;
+				margin-left: 45px;
+			}
 		}
 	}
 	.hero {
@@ -953,5 +1011,18 @@ footer {
 			display: flex;
 			justify-content: space-around;
 		}
+	}
+}
+@media (min-width: 583px) {
+	.benefits-bgc {
+		iframe {
+			height: 315px;
+			width: 560px;
+		}
+	}
+}
+@media (max-width: 992px) {
+	.tech-type__item {
+		width: 100px;
 	}
 }

@@ -53,7 +53,11 @@ header {
 	}
 }
 .foot {
-	background-color: rgba($color: black, $alpha: 0.5);
+	.foot-menu {
+		a {
+			color: #280f91;
+		}
+	}
 }
 footer {
 	color: #280f91;
@@ -61,19 +65,27 @@ footer {
 .text {
 	background-color: rgba($color: white, $alpha: 0.7);
 }
-.firstimg,
 .secondimg,
 .thirdimg {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
+.firstimg {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
 .btn {
 	background-color: #a12665;
 	transition: 0.2s;
 	p {
 		color: white;
+		font-weight: bold;
 	}
 }
 .btn:hover {
@@ -89,8 +101,18 @@ footer {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+.usebtn {
+	a {
+		animation: jump 1s infinite;
+	}
+}
 @media (min-width: 992px) {
 	.bgimg {
-		background-position: fixed;
+		background-attachment: fixed;
 	}
+}
+@keyframes jump {
+50% {
+	scale: 1.02;
+}
 }
