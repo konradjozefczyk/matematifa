@@ -177,4 +177,11 @@ header .menu-left .phone {
 }
 .call a {
   color: #280f91;
+}
+.call svg {
+  scale: 2;
+}
+
+svg {
+  transform: translateY(-10%);
 }/*# sourceMappingURL=critical.css.map */

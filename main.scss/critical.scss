@@ -175,4 +175,10 @@ header {
 	a{
 		color: #280f91;
 	}
+	svg {
+		scale: 2;
+	}
+}
+svg {
+	transform: translateY(-10%);
 }
