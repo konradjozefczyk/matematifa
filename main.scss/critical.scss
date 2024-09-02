@@ -609,16 +609,9 @@ svg {
 	}
 }
 .rev-bgc {
-	background-color: #e9fcff;
 	transform: translateX(-50%);
 	opacity: 0;
 	margin-right: 20px;
-	border-top-right-radius: 30px;
-	border-bottom-right-radius: 30px;
-
-	h3 {
-		color: #280f91;
-	}
 	.rev {
 		width: 90%;
 		text-align: center;
@@ -645,11 +638,6 @@ svg {
 	}
 	.reviews {
 		text-align: center;
-	}
-}
-.rev1 {
-	h4 {
-		color: #99245D;
 	}
 }
 .last-bgc {

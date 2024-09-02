@@ -451,6 +451,24 @@ header .menu-left span {
   background-image: url(../images/telefon/certyfikaty/laur21certtel.avif);
 }
 
+.rev-bgc {
+  background-color: #e9fcff;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.rev-bgc h3 {
+  color: #280f91;
+}
+
+.rev1 h4 {
+  color: #99245D;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    background-image: url(../images/hero.avif);
+  }
+}
 @keyframes showleft {
   to {
     transform: translateX(0);

@@ -371,8 +371,35 @@ header {
 		}
 	}
 }
+.rev-bgc {
+	background-color: #e9fcff;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	h3 {
+		color: #280f91;
+	}
+}
+.rev1 {
+	h4 {
+		color: #99245D;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 992px) {
-	background-image: url(../images/hero.avif);
+	.hero {
+		background-image: url(../images/hero.avif);
+	}
 }
 
 
