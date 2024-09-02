@@ -75,39 +75,6 @@ body h1 {
   color: white;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
-.hero {
-  background-image: url(../images/telefon/heromobile.avif);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  position: relative;
-  text-shadow: 1px 0.25px 0.25px rgba(40, 15, 145, 0.4);
-}
-
-.hero a {
-  transform: translateX(-100%);
-  opacity: 0;
-  animation: showleft 1s forwards;
-}
-
-.hero a:hover {
-  color: #fff;
-}
-
-.hero a:first-of-type {
-  background-color: #a12665;
-}
-
-.hero a:last-of-type {
-  background-color: #125a91;
-  animation: showleft 1s 0.3s forwards;
-}
-
 header {
   background-color: #6fa5dd;
 }
@@ -183,7 +150,7 @@ header .menu-left span {
   background-color: rgba(255, 255, 255, 0.3);
 }
 .cities-bgc .short-list button {
-  background-color: #A12665;
+  background-color: #a12665;
 }
 .cities-bgc .short-list ul.dropdown-menu {
   width: 290px;
@@ -202,7 +169,7 @@ header .menu-left span {
 }
 
 .but-cal a {
-  background-color: #A12665;
+  background-color: #a12665;
   color: white;
 }
 .but-cal a:hover {
@@ -252,12 +219,12 @@ header .menu-left span {
 }
 
 .reviews-box {
-  color: #99245D;
+  color: #99245d;
 }
 
 .reviews__arrow {
   background: none;
-  color: #99245D;
+  color: #99245d;
   border: none;
   cursor: pointer;
   z-index: 10;
@@ -334,7 +301,7 @@ header .menu-left span {
 }
 .add a {
   color: #1b25ac;
-  background-color: #E9FCFF;
+  background-color: #e9fcff;
   font-weight: bold;
   text-shadow: 1px 0.25px 0.25px rgba(40, 15, 145, 0.4);
 }
@@ -343,7 +310,7 @@ header .menu-left span {
 }
 
 .form-bgc {
-  background-color: #E9FCFF;
+  background-color: #e9fcff;
   border-bottom: 1px solid #280f91;
   border-top: 1px solid #280f91;
   box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
@@ -425,7 +392,7 @@ header .menu-left span {
   animation: showleft 2s forwards;
 }
 .text-info .about-us-bgc {
-  background-color: #4AE8FF;
+  background-color: #4ae8ff;
 }
 .text-info .about-us-bgc .about-us p {
   color: #280f91;
@@ -461,7 +428,7 @@ header .menu-left span {
 }
 
 .rev1 h4 {
-  color: #99245D;
+  color: #99245d;
 }
 
 @media (min-width: 992px) {

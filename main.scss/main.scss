@@ -18,34 +18,6 @@ body {
 	}
 	color: #280f91;
 }
-a {
-	text-decoration: none;
-	color: white;
-}
-.hero {
-	background-image: url(../images/telefon/heromobile.avif);
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	position: relative;
-	text-shadow: 1px 0.25px 0.25px rgba(40, 15, 145, 0.4);
-}
-.hero a {
-	transform: translateX(-100%);
-	opacity: 0;
-	animation: showleft 1s forwards;
-}
-.hero a:hover {
-	color: #fff;
-}
-.hero a:first-of-type {
-	background-color: #a12665;
-}
-
-.hero a:last-of-type {
-	background-color: #125a91;
-	animation: showleft 1s 0.3s forwards;
-}
 header {
 	background-color: #6fa5dd;
 	.menu-right {
@@ -58,12 +30,11 @@ header {
 		span {
 			background-color: #e9fcff;
 			color: #280f91;
-			
 		}
 	}
 }
 .btn {
-	box-shadow: 5px 5px 5px rgba($color: #333, $alpha: .5);
+	box-shadow: 5px 5px 5px rgba($color: #333, $alpha: 0.5);
 	transition: 0.5s;
 	color: white;
 	border: none;
@@ -104,7 +75,7 @@ header {
 	background-color: white;
 	z-index: 10;
 	animation: call 3s infinite;
-	a{
+	a {
 		color: #280f91;
 	}
 }
@@ -120,7 +91,7 @@ header {
 	background-color: rgba($color: white, $alpha: 0.3);
 	.short-list {
 		button {
-			background-color: #A12665;
+			background-color: #a12665;
 		}
 		ul.dropdown-menu {
 			width: 290px;
@@ -144,7 +115,7 @@ header {
 }
 .but-cal {
 	a {
-		background-color: #A12665;
+		background-color: #a12665;
 		color: white;
 	}
 	a:hover {
@@ -186,11 +157,11 @@ header {
 	transition: transform 0.3s ease-in-out; /* Płynne przewijanie */
 }
 .reviews-box {
-	color: #99245D;
+	color: #99245d;
 }
 .reviews__arrow {
 	background: none;
-	color: #99245D;
+	color: #99245d;
 	border: none;
 	cursor: pointer;
 	z-index: 10;
@@ -242,7 +213,7 @@ header {
 	}
 	.tech-type {
 		&__text {
-			text-shadow: 1px .25px .25px rgba(40,15,145,.4);
+			text-shadow: 1px 0.25px 0.25px rgba(40, 15, 145, 0.4);
 			font-weight: bold;
 		}
 	}
@@ -259,22 +230,22 @@ header {
 	}
 	a {
 		color: #1b25ac;
-		background-color: #E9FCFF;
+		background-color: #e9fcff;
 		font-weight: bold;
-		text-shadow: 1px .25px .25px rgba(40,15,145,.4);
+		text-shadow: 1px 0.25px 0.25px rgba(40, 15, 145, 0.4);
 	}
 	a:hover {
 		color: #1b25ac;
 	}
 }
 .form-bgc {
-	background-color: #E9FCFF;
+	background-color: #e9fcff;
 	border-bottom: 1px solid #280f91;
 	border-top: 1px solid #280f91;
 	box-shadow: 3px 3px 10px #2e2e2e2e;
 }
 .pricebox {
-	text-shadow: .1px .1px .1px rgba(40,15,145,.4);
+	text-shadow: 0.1px 0.1px 0.1px rgba(40, 15, 145, 0.4);
 }
 .steps {
 	.step1.show {
@@ -343,7 +314,7 @@ header {
 		animation: showleft 2s forwards;
 	}
 	.about-us-bgc {
-		background-color: #4AE8FF;
+		background-color: #4ae8ff;
 		.about-us {
 			p {
 				color: #280f91;
@@ -351,7 +322,7 @@ header {
 		}
 	}
 	.certif-bgc {
-		background-color:  #ffa2e5;
+		background-color: #ffa2e5;
 		.certif-img {
 			background-repeat: no-repeat;
 			background-position: center;
@@ -381,35 +352,15 @@ header {
 }
 .rev1 {
 	h4 {
-		color: #99245D;
+		color: #99245d;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 992px) {
 	.hero {
 		background-image: url(../images/hero.avif);
 	}
 }
-
-
-
-
-
-
-
-
-
 
 @keyframes showleft {
 	to {

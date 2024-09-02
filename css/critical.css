@@ -53,6 +53,34 @@ a {
   margin-top: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+  background-image: url(../images/telefon/heromobile.avif);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  text-shadow: 1px 0.25px 0.25px rgba(40, 15, 145, 0.4);
+}
+
+.hero a:hover {
+  color: #fff;
+}
+
+.hero a:first-of-type {
+  background-color: #a12665;
+}
+
+.hero a {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: showleft 1s forwards;
+}
+
 .hero a {
   padding-left: 20px;
   padding-right: 20px;
@@ -60,6 +88,11 @@ a {
 
 .hero a:first-of-type {
   margin-top: 0;
+}
+
+.hero a:last-of-type {
+  background-color: #125a91;
+  animation: showleft 1s 0.3s forwards;
 }
 
 header {
@@ -123,12 +156,22 @@ header .menu-left .phone {
 }
 .menu-nav .menu .menu-item {
   padding: 50px 0 50px 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
 }
 .menu-nav #menuitems {
   display: none;
 }
 .menu-nav #menuitems img {
   display: none;
+}
+.menu-nav #menuitems.open {
+  display: flex;
+}
+.menu-nav #menuitems.open .menu-item {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .stats {
@@ -578,13 +621,13 @@ svg {
   padding: 10px 15px;
   border: none;
   border-radius: 40px;
-  background-color: #1B25AC;
+  background-color: #1b25ac;
   color: white;
   cursor: pointer;
   transition: scale 0.3s ease;
 }
 .contactForm1 button:hover {
-  background-color: #1B25AC;
+  background-color: #1b25ac;
   scale: 1.05;
 }
 .contactForm1 .error {
