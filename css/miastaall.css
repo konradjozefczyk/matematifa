@@ -190,4 +190,7 @@ svg {
     background-size: 50%;
     background-position: right;
   }
+  .menu img {
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=miastaall.css.map */

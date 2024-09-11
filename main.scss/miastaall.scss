@@ -11,6 +11,7 @@ a {
 	text-decoration: none;
 	color: white;
 	overflow: hidden;
+
 }
 header {
 	background-color: #6fa5dd;
@@ -125,5 +126,10 @@ svg {
 		background-attachment: fixed;
 		background-size: 50%;
 		background-position: right;
+	}
+	.menu {
+		img {
+			cursor: pointer;
+		}
 	}
 }
