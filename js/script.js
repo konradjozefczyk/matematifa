@@ -408,31 +408,29 @@ document.addEventListener('DOMContentLoaded', () => {
 		updatePosition()
 	})
 })
- // Przykład funkcji włączającej usługę, np. Google Analytics, tylko jeśli zaakceptowano ciasteczka
- function enableAnalytics() {
-	// Kod aktywujący Google Analytics lub inne ciasteczka śledzące
-	console.log('Analytics włączone');
-	// Tu możesz dodać rzeczywisty kod do integracji np. z Google Analytics
+function checkCookieConsent() {
+	return localStorage.getItem('cookieConsent');
 }
 
-// Sprawdzanie zgody na ciasteczka po załadowaniu strony
+// Funkcja ustawiająca zgodę lub jej brak
+function setCookieConsent(consent) {
+	localStorage.setItem('cookieConsent', consent);
+	document.getElementById('cookie-banner').style.display = 'none';
+}
+
+// Wczytanie okienka po wejściu na stronę, jeśli zgoda nie została jeszcze udzielona
 window.onload = function() {
-	var consent = checkCookieConsent();
-	if (!consent) {
+	if (!checkCookieConsent()) {
 		document.getElementById('cookie-banner').style.display = 'block';
-	} else if (consent === 'accepted') {
-		enableAnalytics();  // Włącza śledzenie tylko po akceptacji
 	}
 }
 
 // Obsługa kliknięcia przycisku "Akceptuję"
 document.getElementById('accept-cookies').onclick = function() {
 	setCookieConsent('accepted');
-	enableAnalytics();  // Włącza śledzenie po akceptacji
 }
 
 // Obsługa kliknięcia przycisku "Odrzucam"
 document.getElementById('decline-cookies').onclick = function() {
 	setCookieConsent('declined');
-	console.log('Ciasteczka zostały odrzucone');  // Tu możesz np. usunąć wszystkie ciasteczka
 }

@@ -34,6 +34,7 @@ a {
 .container {
 	max-width: 1440px;
 }
+/* Stylizacja okienka */
 .cookie-banner {
 	display: none;
 	position: fixed;
@@ -55,7 +56,7 @@ a {
 }
 
 .cookie-banner .accept {
-	background-color: #4CAF50;
+	background-color: #4caf50;
 	color: white;
 }
 
