@@ -435,3 +435,14 @@ document.getElementById('decline-cookies').onclick = function () {
 	setCookieConsent('declined')
 	console.log('Ciasteczka zostały odrzucone') // Tu możesz np. usunąć wszystkie ciasteczka
 }
+function deleteCookies() {
+    document.cookie.split(";").forEach(function(c) { 
+        document.cookie = c.trim().split("=")[0] + 
+        "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/"; 
+    });
+}
+document.getElementById('decline-cookies').onclick = function() {
+    setCookieConsent('declined');
+    deleteCookies();  // Usuwa wszystkie istniejące ciasteczka
+    console.log('Ciasteczka zostały odrzucone i usunięte');
+}
