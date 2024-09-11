@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.heroimg {
+  background-image: url(../images/miasta/3wrocław/wrocławtel/wroclawtel.avif);
+}
+
+.secimg {
+  background-image: url(../images/miasta/3wrocław/wrocławtel/wroclawgirltel.avif);
+}
+
+.graph {
+  background-image: url(../images/miasta/0każdastrona/każdastronakomp/3dgrafikaksiazki.avif);
+}
+
+@media (min-width: 992px) {
+  .heroimg {
+    background-image: url(../images/miasta/3wrocław/wrócławkomp/wroclaw.avif);
+  }
+  .secimg {
+    background-image: url(../images/miasta/3wrocław/wrócławkomp/wroclawgirl.avif);
+  }
+}/*# sourceMappingURL=wroclaw.css.map */

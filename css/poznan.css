@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.heroimg {
+  background-image: url(../images/miasta/2poznań/poznańtelefon/poznantel.avif);
+}
+
+.secimg {
+  background-image: url(../images/miasta/2poznań/poznańtelefon/poznangirltel.avif);
+}
+
+.graph {
+  background-image: url(../images/miasta/0każdastrona/każdastronakomp/3dgrafikaksiazki.avif);
+}
+
+@media (min-width: 992px) {
+  .heroimg {
+    background-image: url(../images/miasta/2poznań/poznańkomputer/poznan.avif);
+  }
+  .secimg {
+    background-image: url(../images/miasta/2poznań/poznańkomputer/poznangirl.avif);
+  }
+}/*# sourceMappingURL=poznan.css.map */

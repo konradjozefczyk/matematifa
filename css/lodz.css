@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.heroimg {
+  background-image: url(../images/miasta/6łódź/łódźtelefon/lodztel.avif);
+}
+
+.secimg {
+  background-image: url(../images/miasta/6łódź/łódźtelefon/lodzgirltel.avif);
+}
+
+.graph {
+  background-image: url(../images/miasta/0każdastrona/każdastronakomp/3dgrafikaksiazki.avif);
+}
+
+@media (min-width: 992px) {
+  .heroimg {
+    background-image: url(../images/miasta/6łódź/łódźkomputer/lodz.avif);
+  }
+  .secimg {
+    background-image: url(../images/miasta/6łódź/łódźkomputer/lodzgirl.avif);
+  }
+}/*# sourceMappingURL=lodz.css.map */
