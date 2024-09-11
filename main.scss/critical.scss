@@ -34,6 +34,35 @@ a {
 .container {
 	max-width: 1440px;
 }
+.cookie-banner {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	z-index: 1000;
+}
+
+.cookie-banner button {
+	margin-left: 15px;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+}
+
+.cookie-banner .accept {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.cookie-banner .decline {
+	background-color: #f44336;
+	color: white;
+}
 .hero {
 	height: 90vh;
 	text-align: center;

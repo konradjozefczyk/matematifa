@@ -408,3 +408,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		updatePosition()
 	})
 })
+ // Przykład funkcji włączającej usługę, np. Google Analytics, tylko jeśli zaakceptowano ciasteczka
+ function enableAnalytics() {
+	// Kod aktywujący Google Analytics lub inne ciasteczka śledzące
+	console.log('Analytics włączone');
+	// Tu możesz dodać rzeczywisty kod do integracji np. z Google Analytics
+}
+
+// Sprawdzanie zgody na ciasteczka po załadowaniu strony
+window.onload = function() {
+	var consent = checkCookieConsent();
+	if (!consent) {
+		document.getElementById('cookie-banner').style.display = 'block';
+	} else if (consent === 'accepted') {
+		enableAnalytics();  // Włącza śledzenie tylko po akceptacji
+	}
+}
+
+// Obsługa kliknięcia przycisku "Akceptuję"
+document.getElementById('accept-cookies').onclick = function() {
+	setCookieConsent('accepted');
+	enableAnalytics();  // Włącza śledzenie po akceptacji
+}
+
+// Obsługa kliknięcia przycisku "Odrzucam"
+document.getElementById('decline-cookies').onclick = function() {
+	setCookieConsent('declined');
+	console.log('Ciasteczka zostały odrzucone');  // Tu możesz np. usunąć wszystkie ciasteczka
+}
