@@ -360,6 +360,11 @@ header {
 	.hero {
 		background-image: url(../images/hero.avif);
 	}
+	.stats {
+		.stats-item {
+			border-right: #280f91 solid 2px;
+		}
+	}
 }
 
 @keyframes showleft {
