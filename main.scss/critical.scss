@@ -167,7 +167,7 @@ header {
 			height: 80px;
 		}
 		.menu-item {
-			padding: 50px 0 50px 0;
+			padding: 30px 0 30px 0;
 		}
 	}
 	#menuitems {
@@ -724,6 +724,12 @@ svg {
 .benefits-bgc {
 	background-color: #4ae8ff;
 	text-align: center;
+	.benefits {
+		p {
+			color: #280f91;
+		}
+	}
+	
 	.ben-box {
 		background-color: #e9fcff;
 		width: 300px;
@@ -741,6 +747,9 @@ svg {
 			color: #1b25ac;
 			margin: 20px 0;
 		}
+	}
+	.ben-box:hover {
+		animation: jumper 1s infinite ease-in-out;
 	}
 	iframe {
 		display: block;
@@ -909,6 +918,7 @@ footer {
 			min-height: 450px;
 		}
 	}
+	
 	.add {
 		display: block;
 	}

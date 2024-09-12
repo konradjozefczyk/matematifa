@@ -186,7 +186,7 @@ header .menu-left .phone {
   height: 80px;
 }
 .menu-nav .menu .menu-item {
-  padding: 50px 0 50px 0;
+  padding: 30px 0 30px 0;
 }
 .menu-nav #menuitems {
   display: none;
@@ -775,6 +775,9 @@ svg {
   background-color: #4ae8ff;
   text-align: center;
 }
+.benefits-bgc .benefits p {
+  color: #280f91;
+}
 .benefits-bgc .ben-box {
   background-color: #e9fcff;
   width: 300px;
@@ -789,6 +792,9 @@ svg {
 .benefits-bgc .ben-box p {
   color: #1b25ac;
   margin: 20px 0;
+}
+.benefits-bgc .ben-box:hover {
+  animation: jumper 1s infinite ease-in-out;
 }
 .benefits-bgc iframe {
   display: block;

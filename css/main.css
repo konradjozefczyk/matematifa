@@ -400,6 +400,9 @@ header .menu-left span {
 .text-info .certif-bgc {
   background-color: #ffa2e5;
 }
+.text-info .certif-bgc p {
+  color: #280f91;
+}
 .text-info .certif-bgc .certif-img {
   background-repeat: no-repeat;
   background-position: center;

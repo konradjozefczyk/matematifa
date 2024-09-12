@@ -30,4 +30,9 @@
   .sec .thirdimg {
     background-image: url(../images/przedmioty/komputer/zdjęcia/tablica.avif);
   }
+}
+@media (max-height: 420px) {
+  .thirdimg {
+    background-image: url(../images/przedmioty/komputer/zdjęcia/tablica.avif);
+  }
 }/*# sourceMappingURL=math.css.map */
