@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"fizyka.css"}
+{"version":3,"sources":["../main.scss/fizyka.scss","fizyka.css"],"names":[],"mappings":"AAAA;EACI,gGAAA;ACCJ;;ADCA;EACI,iGAAA;ACEJ;;ADAA;EACI,0EAAA;ACGJ;;ADDA;EAEE;IACC,+FAAA;IACA,wBAAA;ECGD;AACF","file":"fizyka.css"}

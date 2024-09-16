@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"informatyka.css"}
+{"version":3,"sources":["../main.scss/informatyka.scss","informatyka.css"],"names":[],"mappings":"AAAA;EACI,2GAAA;ACCJ;;ADCA;EACI,8GAAA;ACEJ;;ADCA;EACI,8GAAA;ACEJ;;ADAA;EACI,0EAAA;ACGJ;;ADDA;EAEE;IACC,0GAAA;IACA,wBAAA;ECGD;EDDM;IACI,0GAAA;ECGV;AACF","file":"informatyka.css"}

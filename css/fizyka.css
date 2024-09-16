@@ -1,1 +1,18 @@
-/*# sourceMappingURL=fizyka.css.map */
+.bgimg {
+  background-image: url(../images/przedmioty/Grafikipodstronafizykaavif/fizykakomp/fizpoziom.avif);
+}
+
+.firstimg {
+  background-image: url(../images/przedmioty/Grafikipodstronafizykaavif/fizykatel/fiz1piontel.avif);
+}
+
+.dices {
+  background-image: url(../images/przedmioty/telefon/grafiki/kostkitel.avif);
+}
+
+@media (min-width: 992px) {
+  .sec .firstimg {
+    background-image: url(../images/przedmioty/Grafikipodstronafizykaavif/fizykakomp/fiz1pion.avif);
+    background-position: top;
+  }
+}/*# sourceMappingURL=fizyka.css.map */

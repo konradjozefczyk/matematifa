@@ -1,1 +1,25 @@
-/*# sourceMappingURL=informatyka.css.map */
+.bgimg {
+  background-image: url(../images/przedmioty/Grafikipodstronainformatykaavif/informatykakomp/infopoziom.avif);
+}
+
+.firstimg {
+  background-image: url(../images/przedmioty/Grafikipodstronainformatykaavif/informatykatelef/info1piontel.avif);
+}
+
+.secondimg {
+  background-image: url(../images/przedmioty/Grafikipodstronainformatykaavif/informatykatelef/info2piontel.avif);
+}
+
+.dices {
+  background-image: url(../images/przedmioty/telefon/grafiki/kostkitel.avif);
+}
+
+@media (min-width: 992px) {
+  .sec .firstimg {
+    background-image: url(../images/przedmioty/Grafikipodstronainformatykaavif/informatykakomp/info1pion.avif);
+    background-position: top;
+  }
+  .sec .secondimg {
+    background-image: url(../images/przedmioty/Grafikipodstronainformatykaavif/informatykakomp/info2pion.avif);
+  }
+}/*# sourceMappingURL=informatyka.css.map */

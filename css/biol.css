@@ -1,1 +1,25 @@
-/*# sourceMappingURL=biol.css.map */
+.bgimg {
+  background-image: url(../images/przedmioty/Grafikipodstronabiologiaavif/biologiakomp/biopoziom.avif);
+}
+
+.firstimg {
+  background-image: url(../images/przedmioty/Grafikipodstronabiologiaavif/biologiatel/bio1piontel.avif);
+}
+
+.secondimg {
+  background-image: url(../images/przedmioty/Grafikipodstronabiologiaavif/biologiatel/bio2piontel.avif);
+}
+
+.dices {
+  background-image: url(../images/przedmioty/telefon/grafiki/kostkitel.avif);
+}
+
+@media (min-width: 992px) {
+  .sec .firstimg {
+    background-image: url(../images/przedmioty/Grafikipodstronabiologiaavif/biologiakomp/bio1pion.avif);
+    background-position: top;
+  }
+  .sec .secondimg {
+    background-image: url(../images/przedmioty/Grafikipodstronabiologiaavif/biologiakomp/bio2pion.avif);
+  }
+}/*# sourceMappingURL=biol.css.map */

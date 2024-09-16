@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"biol.css"}
+{"version":3,"sources":["../main.scss/biol.scss","biol.css"],"names":[],"mappings":"AAAA;EACI,oGAAA;ACCJ;;ADCA;EACI,qGAAA;ACEJ;;ADCA;EACI,qGAAA;ACEJ;;ADAA;EACI,0EAAA;ACGJ;;ADDA;EAEE;IACC,mGAAA;IACA,wBAAA;ECGD;EDDM;IACI,mGAAA;ECGV;AACF","file":"biol.css"}

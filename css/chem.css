@@ -1,1 +1,18 @@
-/*# sourceMappingURL=chem.css.map */
+.bgimg {
+  background-image: url(../images/przedmioty/Grafikipodstronachemiaavif/chemkomp/chempoziom.avif);
+}
+
+.firstimg {
+  background-image: url(../images/przedmioty/Grafikipodstronachemiaavif/chemtel/chem1piontel.avif);
+}
+
+.dices {
+  background-image: url(../images/przedmioty/telefon/grafiki/kostkitel.avif);
+}
+
+@media (min-width: 992px) {
+  .sec .firstimg {
+    background-image: url(../images/przedmioty/Grafikipodstronachemiaavif/chemkomp/chem1pion.avif);
+    background-position: top;
+  }
+}/*# sourceMappingURL=chem.css.map */

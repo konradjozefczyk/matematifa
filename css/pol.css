@@ -1,1 +1,26 @@
-/*# sourceMappingURL=pol.css.map */
+.bgimg {
+  background-image: url(../images/przedmioty/Grafikipodstronapolskiavif/polskikomp/polskipoziom.avif);
+}
+
+.firstimg {
+  background-image: url(../images/przedmioty/Grafikipodstronapolskiavif/polskitel/polski1piontel.avif);
+}
+
+.secondimg {
+  background-image: url(../images/przedmioty/Grafikipodstronapolskiavif/polskitel/polski2piontel.avif);
+  background-position: bottom;
+}
+
+.dices {
+  background-image: url(../images/przedmioty/telefon/grafiki/kostkitel.avif);
+}
+
+@media (min-width: 992px) {
+  .sec .firstimg {
+    background-image: url(../images/przedmioty/Grafikipodstronapolskiavif/polskikomp/polski1pion.avif);
+    background-position: top;
+  }
+  .sec .secondimg {
+    background-image: url(../images/przedmioty/Grafikipodstronapolskiavif/polskikomp/polski2pion.avif);
+  }
+}/*# sourceMappingURL=pol.css.map */
