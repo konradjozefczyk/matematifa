@@ -515,7 +515,7 @@ svg {
 	font-size: 1.8rem;
 }
 .faq-item.active .faq-answer {
-	max-height: 300px; /* dostosuj w zależności od długości odpowiedzi */
+	max-height: 600px; /* dostosuj w zależności od długości odpowiedzi */
 }
 .faq-item.active .faq-toggle {
 	transform: rotate(45deg);
