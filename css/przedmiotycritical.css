@@ -28,6 +28,38 @@ body h3 {
   font-size: 2.5rem;
 }
 
+/* Stylizacja okienka */
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+  font-size: 1.4rem;
+}
+
+.cookie-banner button {
+  margin-left: 15px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.cookie-banner .accept {
+  background-color: #53bba7;
+  color: white;
+}
+
+.cookie-banner .decline {
+  background-color: #fb899b;
+  color: white;
+}
+
 .hidden {
   opacity: 0;
   transform: translateY(40px);

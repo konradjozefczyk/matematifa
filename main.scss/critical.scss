@@ -46,6 +46,7 @@ a {
 	padding: 20px;
 	text-align: center;
 	z-index: 1000;
+	font-size: 1.4rem;
 }
 
 .cookie-banner button {
@@ -56,12 +57,12 @@ a {
 }
 
 .cookie-banner .accept {
-	background-color: #4caf50;
+	background-color: #53bba7;
 	color: white;
 }
 
 .cookie-banner .decline {
-	background-color: #f44336;
+	background-color: #fb899b;
 	color: white;
 }
 .hero {
