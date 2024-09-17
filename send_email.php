@@ -1,40 +1,29 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ustawienia e-maila
-    $to = "konradjozefczyk@matematify.com";  // Zmień to na swój adres e-mail
-    $subject = "Nowa wiadomość z formularza kontaktowego";
-
-    // Pobierz dane z formularza
+    // Zbieranie danych z formularza
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
-    $subjectField = htmlspecialchars($_POST['subject']);
-    $level = htmlspecialchars($_POST['level']);
-    $type = htmlspecialchars($_POST['type']);
-    $phone = htmlspecialchars($_POST['phone']);
     $message = htmlspecialchars($_POST['message']);
+    $phone = htmlspecialchars($_POST['phone']);
 
-    // Zbuduj treść wiadomości
-    $body = "Otrzymałeś nową wiadomość z formularza kontaktowego:\n\n";
-    $body .= "Imię: $name\n";
-    $body .= "Email: $email\n";
-    $body .= "Numer telefonu: $phone\n";
-    $body .= "Przedmiot: $subjectField\n";
-    $body .= "Poziom: $level\n";
-    $body .= "Rodzaj zajęć: $type\n";
-    $body .= "Wiadomość:\n$message\n";
+    // Adres docelowy e-maila (Twój e-mail)
+    $to = "konradjozefczyk@matematify.com";
 
-    // Nagłówki e-maila
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
+    // Temat wiadomości
+    $subject = "Nowa wiadomość z formularza kontaktowego";
 
-    // Wyślij e-mail
+    // Treść wiadomości
+    $body = "Imię: $name\nEmail: $email\nWiadomość: $message\nNumer telefonu: $phone";
+
+    // Nagłówki
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
+    // Wysyłka e-maila
     if (mail($to, $subject, $body, $headers)) {
-        echo "Wiadomość została wysłana.";
+        echo "Twoja wiadomość została wysłana!";
     } else {
-        echo "Wystąpił błąd podczas wysyłania wiadomości.";
+        echo "Wystąpił problem z wysyłką wiadomości.";
     }
-} else {
-    echo "Nieprawidłowa metoda żądania.";
 }
 ?>
