@@ -473,4 +473,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		deleteCookies();  // Usuwa wszystkie istniejące ciasteczka
 		console.log('Ciasteczka zostały odrzucone i usunięte');
 	}
-	
